@@ -169,3 +169,4 @@ let g:NERDCommentEmptyLines = 0                         " Não deixa comentário
 let g:NERDTrimTrailingWhitespace = 1                    " Remove espaços em branco na direita quando descomenta
 
 " <leader>c<space> é a tecla padrão
+

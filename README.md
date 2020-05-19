@@ -29,7 +29,7 @@ Ubuntu:
 
 Terminal:
 - ubuntu terminal; // Probably changing in the future
-- bash shell; // Probably changing in the future
+- zsh;
 - tmux;
 
 Programming workflow:

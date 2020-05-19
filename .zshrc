@@ -87,13 +87,24 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias c="clear"
-alias ime="~/Desktop/IME/"
-alias bcc="~/Desktop/IME/"
-alias maratona="~/Desktop/Maratona/"
+alias ime="cd ~/Desktop/IME/"
+alias bcc="cd ~/Desktop/IME/"
+alias maratona="cd ~/Desktop/Maratona/"
+
+alias ohmyzsh="vim  ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
 alias zshconfigg="pushd ~ && vim .zshrc && cp .zshrc ~/.config/user/.zshrc && pushd ~/.config/user/ && git add .zshrc && git commit -m 'Editing .zshrc' && git push && popd && popd"
+alias tmuxconfg="vim ~/.tmux.conf"
+alias tmuxconfgg="pushd ~ && vim .tmux.conf && cp .tmux.conf ~/.config/user/.tmux.conf && pushd ~/.config/user/ && git add .tmux.conf && git commit -m 'Editing .tmux.conf' && git push && popd && popd"
+alias vimconfg="vim ~/.vimrc"
+alias vimconfgg="pushd ~ && vim .vimrc && cp .vimrc ~/.config/user/.vimrc && pushd ~/.config/user/ && git add .vimrc && git commit -m 'Editing .vimrc' && git push && popd && popd"
+alias latexmacrosconfg="vim ~/.config/user/giatro_macros.tex"
+alias latexmacrosconfgg="pushd ~/.config/user/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit -m 'Editing LaTeX macros' && git push && popd"
+alias latexpackagesconfg="vim ~/.config/user/giatro_packages.tex"
+alias latexpackagesconfgg="pushd ~/.config/user/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit -m 'Editing LaTeX packages' && git push && popd"
+
+alias userconfg="pushd ~/.config/user/"
 
 # Vim mode
 bindkey -v

@@ -92,7 +92,7 @@ alias ime="cd ~/Desktop/IME/"
 alias bcc="cd ~/Desktop/IME/"
 alias 3sem="ime && cd 3_Semestre/"
 alias maratona="cd ~/Desktop/Maratona/"
-alias patternmatching="cd media/sf_cppworkspace/PatternMatchingProject/"
+alias patternmatching="cd /media/sf_cppworkspace/PatternMatchingProject/"
 
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc"

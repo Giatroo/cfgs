@@ -35,6 +35,8 @@ autocmd BufWinEnter *.* silent loadview     " Abre o arquivo com as folds que cr
 " zf(movement) -> cria uma fold usando o movimento passado (e.g., zfa{ )
 " zc -> fecha a fold
 " zo -> abre a fold
+" zO -> abre todas as nested folds
+" zC -> fecha todas as nested folds
 " zd -> deleta a fold
 " zj -> move para a próxima fold (abaixo)
 " zk -> move para a fold anterior (acima)

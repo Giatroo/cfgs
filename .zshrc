@@ -90,7 +90,9 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias ime="cd ~/Desktop/IME/"
 alias bcc="cd ~/Desktop/IME/"
+alias 3sem="ime && cd 3_Semestre/"
 alias maratona="cd ~/Desktop/Maratona/"
+alias patternmatching="cd media/sf_cppworkspace/PatternMatchingProject/"
 
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc"
@@ -105,6 +107,8 @@ alias latexpackagesconfig="vim ~/.config/user/giatro_packages.tex"
 alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit -m 'Editing LaTeX packages' && git push && popd"
 
 alias userconfig="pushd ~/.config/user/"
+
+alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
 
 # Vim mode
 bindkey -v

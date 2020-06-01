@@ -14,6 +14,11 @@
 \newcommand{\ob}[1]{\overbrace{#1}}
 \newcommand{\ub}[1]{\underbrace{#1}}
 
+\newcommand{\pow}[2]{#1^{#2}}
+\newcommand{\sub}[2]{#1_{#2}}
+\newcommand{\powsub}[3]{#1^{#2}_{#3}}
+\newcommand{\subpow}[3]{#1^{#3}_{#2}}
+
 %%% Symbols
 
 \newcommand{\pinf}{+\infty}
@@ -23,8 +28,9 @@
 \newcommand{\Rp}{\R^p}
 \newcommand{\Rtwo}{\R^2}
 \newcommand{\Rthree}{\R^3}
+\newcommand{\inv}{^{-1}}
 
-%% Math commands
+%% Calculus
 
 \newcommand{\abs}[1]{\left| #1 \right|}
 \newcommand{\dlim}{\displaystyle\lim}
@@ -32,11 +38,9 @@
 \newcommand{\dprod}{\displaystyle\prod}
 \newcommand{\dint}{\displaystyle\int}
 \newcommand{\deriv}[1]{\dfrac{d}{d#1}}
-\newcommand{\inv}{^{-1}}
-\newcommand{\pow}[2]{#1^{#2}}
-\newcommand{\sub}[2]{#1_{#2}}
-\newcommand{\powsub}[3]{#1^{#2}_{#3}}
-\newcommand{\subpow}[3]{#1^{#3}_{#2}}
+\newcommand{\parderiv}[1][x]{\dfrac{\partial}{\partial #1}}
+\newcommand{\parx}{\parderiv{x}}
+\newcommand{\pary}{\parderiv{y}}
 \newcommand{\psint}[2]{\powsub{\dint}{#1}{#2}}
 \newcommand{\spint}[2]{\subpow{\dint}{#1}{#2}}
 \newcommand{\pssum}[2]{\powsub{\dsum}{#1}{#2}}
@@ -46,20 +50,20 @@
 \newcommand{\serie}[2][n]{\subpow{\dsum}{#1 = #2}{\pinf}}
 \newcommand{\slim}[2][x]{\sub{\dlim}{#1 \to #2}}
 \newcommand{\nlim}{\slim[n]{\pinf}{}}
-\newcommand{\dmax}{\displaystyle\max}
-\newcommand{\dmin}{\displaystyle\min}
 
 
 %%% Discrete Math
 
 \newcommand{\divi}{\mid}
-\newcommand\notdivi}{\nmid}
+\newcommand{\notdivi}{\nmid}
 \newcommand{\subgroup}{\triangleleft}
 \newcommand{\subgroupeq}{\trianglelefteq}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\mdc}{\textrm{mdc}}
 \newcommand{\mmc}{\textrm{mmc}}
+\newcommand{\dmax}{\displaystyle\max}
+\newcommand{\dmin}{\displaystyle\min}
 \newcommand{\Zmod}[1]{\mathbb{Z}/#1\mathbb{Z}}
 \newcommand{\class}[1]{\sqrtbracket{#1}}
 

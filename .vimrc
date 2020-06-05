@@ -4,12 +4,12 @@
 
 "colorscheme slate
 "colorscheme desert
-colorscheme torte
+"colorscheme torte
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Font and text
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set guifont=Courier\ New     " Seta a fonte para Courier New
+" set guifont=Courier\ New     " Seta a fonte para Courier New
 syntax on                    " Habilita o highlight de sintaxe
 set textwidth=100            " Limita a quantidade de caracteres por linha para 100
 "set colorcolumn=100          " Coloca uma indicação visual da coluna limite para a linha
@@ -26,8 +26,8 @@ set wrap                     " Se o texto passar da tela, ele pula para a linha 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Para os comandos abaixo funcionarem, precisamos criar a pasta ~/.vim/view/
-autocmd BufWinLeave *.* mkview              " Salva as folds do arquivo quando saímos dele
-autocmd BufWinEnter *.* silent loadview     " Abre o arquivo com as folds que criamos
+" autocmd BufWinLeave *.* mkview              " Salva as folds do arquivo quando saímos dele
+" autocmd BufWinEnter *.* silent loadview     " Abre o arquivo com as folds que criamos
 
 " Lembrete sobre as teclas:
 " V -> vai para o Line Visual Mode (para selecionar as linhas da fold que vamos criar)
@@ -81,6 +81,7 @@ call plug#begin('~/.vim/plugged')
  "Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }      " Autocompletar
  Plug 'neoclide/coc.nvim', {'branch': 'release'}              " VSCode no Vim
  Plug 'itchyny/lightline.vim'                                 " Status line
+ Plug 'morhetz/gruvbox'                                       " colorscheme
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -201,3 +202,8 @@ let g:NERDTrimTrailingWhitespace = 1                    " Remove espaços em bra
 
 " <leader>c<space> é a tecla padrão
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==:> gruvbox
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme gruvbox
+set background=dark

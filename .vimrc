@@ -82,6 +82,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'neoclide/coc.nvim', {'branch': 'release'}              " VSCode no Vim
  Plug 'itchyny/lightline.vim'                                 " Status line
  Plug 'morhetz/gruvbox'                                       " colorscheme
+ Plug 'shinchu/lightline-gruvbox.vim'                         " Um plugin para juntar os dois outros
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -175,18 +176,24 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 nnoremap <leader>f <esc>:Format<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==:> gruvbox
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme gruvbox
+set background=dark
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> LightLine
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:lightline = {
-    \ 'colorscheme': 'jellybeans',
-    \ }
+" let g:lightline = {
+    " \ 'colorscheme': 'jellybeans',
+    " \ }
 
 set laststatus=2
 
-if !has('gui_running')
-  set t_Co=256
-endif
+" if !has('gui_running')
+  " set t_Co=256
+" endif
 
 set noshowmode
 
@@ -203,7 +210,8 @@ let g:NERDTrimTrailingWhitespace = 1                    " Remove espaços em bra
 " <leader>c<space> é a tecla padrão
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ==:> gruvbox
+" ==:> lightline-gruvbox
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme gruvbox
-set background=dark
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
+

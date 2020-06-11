@@ -6,7 +6,7 @@
 \newcommand{\jump}{\nl\nl}
 \newcommand{\paren}[1]{\left( #1 \right)}
 \newcommand{\bracket}[1]{\left\{ #1 \right\}}
-\newcommand{\sqrtbracket}[1]{\left[ #1 \right]}
+\newcommand{\sbracket}[1]{\left[ #1 \right]}
 \newcommand{\angbracket}[1]{\left\langle #1 \right\rangle}
 
 \newcommand{\ol}[1]{\overline{#1}}
@@ -19,7 +19,7 @@
 \newcommand{\powsub}[3]{#1^{#2}_{#3}}
 \newcommand{\subpow}[3]{#1^{#3}_{#2}}
 
-%%% Symbols
+%%% Math symbols
 
 \newcommand{\pinf}{+\infty}
 \newcommand{\minf}{-\infty}
@@ -44,17 +44,18 @@
 \newcommand{\pary}{\parderiv[y]}
 
 \newcommand{\dint}{\displaystyle\int}
-\newcommand{\psint}[2]{\powsub{\dint}{#1}{#2}}
 \newcommand{\spint}[2]{\subpow{\dint}{#1}{#2}}
+\newcommand{\psint}[2]{\powsub{\dint}{#1}{#2}}
 
 \newcommand{\dsum}{\displaystyle\sum}
-\newcommand{\pssum}[2]{\powsub{\dsum}{#1}{#2}}
 \newcommand{\spsum}[2]{\subpow{\dsum}{#1}{#2}}
+\newcommand{\pssum}[2]{\powsub{\dsum}{#1}{#2}}
+\newcommand{\serie}[2][n]{\subpow{\dsum}{#1 = #2}{\pinf}}
 
 \newcommand{\dprod}{\displaystyle\prod}
-\newcommand{\psprod}[2]{\powsub{\dprod}{#1}{#2}}
 \newcommand{\spprod}[2]{\subpow{\dprod}{#1}{#2}}
-\newcommand{\serie}[2][n]{\subpow{\dsum}{#1 = #2}{\pinf}}
+\newcommand{\psprod}[2]{\powsub{\dprod}{#1}{#2}}
+
 
 \newcommand{\poly}[2][x]{#2_0 + #2_1 #1 + \cdots + #2_n #1^n}
 \newcommand{\sumpoly}[2][x]{\sum_{i=0}^n#2_i#1^i}
@@ -96,6 +97,13 @@
 \newcommand{\inN}{\myin{\N}}
 \newcommand{\inC}{\myin{\C}}
 \newcommand{\inI}{\myin{\I}}
+
+\newcommand{\union}{\displaystyle\bigcup}
+\newcommand{\spunion}[2]{\subpow{\union}{#1}{#2}}
+\newcommand{\psunion}[2]{\powsub{\union}{#1}{#2}}
+\newcommand{\inter}{\displaystyle\bigcap}
+\newcommand{\spinter}[2]{\subpow{\inter}{#1}{#2}}
+\newcommand{\psinter}[2]{\powsub{\inter}{#1}{#2}
 
 %%% Geometry
 

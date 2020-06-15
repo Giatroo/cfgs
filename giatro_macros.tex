@@ -39,6 +39,7 @@
 \newcommand{\nlim}{\slim[n]{\pinf}{}}
 
 \newcommand{\deriv}[1]{\dfrac{d}{d#1}}
+\newcommand{\fn}[1]{\pow{f}{(#1)}}
 \newcommand{\parderiv}[1][x]{\dfrac{\partial}{\partial #1}}
 \newcommand{\parx}{\parderiv[x]}
 \newcommand{\pary}{\parderiv[y]}
@@ -56,9 +57,8 @@
 \newcommand{\spprod}[2]{\subpow{\dprod}{#1}{#2}}
 \newcommand{\psprod}[2]{\powsub{\dprod}{#1}{#2}}
 
-
-\newcommand{\poly}[2][x]{#2_0 + #2_1 #1 + \cdots + #2_n #1^n}
-\newcommand{\sumpoly}[2][x]{\sum_{i=0}^n#2_i#1^i}
+\newcommand{\poly}[2][x]{{#2}_0 + {#2}_1 #1 + \cdots + {#2}_n {#1}^n}
+\newcommand{\sumpoly}[2][x]{\sum_{i=0}^n{#2}_i{#1}^i}
 \newcommand{\dsumpoly}[2][x]{\displaystyle\sumpoly[#1]{#2}}
 
 %%% Discrete Math
@@ -101,7 +101,7 @@
 \newcommand{\psunion}[2]{\powsub{\union}{#1}{#2}}
 \newcommand{\inter}{\displaystyle\bigcap}
 \newcommand{\spinter}[2]{\subpow{\inter}{#1}{#2}}
-\newcommand{\psinter}[2]{\powsub{\inter}{#1}{#2}
+\newcommand{\psinter}[2]{\powsub{\inter}{#1}{#2}}
 
 %%% Geometry
 

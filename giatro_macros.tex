@@ -57,7 +57,7 @@
 \newcommand{\spprod}[2]{\subpow{\dprod}{#1}{#2}}
 \newcommand{\psprod}[2]{\powsub{\dprod}{#1}{#2}}
 
-\newcommand{\poly}[2][x]{{#2}_0 + {#2}_1 #1 + \cdots + {#2}_n {#1}^n}
+\newcommand{\poly}[3][x]{{#2}_0 + {#2}_1 #1 + \cdots + {#2}_{#3} {#1}^{#3}}
 \newcommand{\sumpoly}[2][x]{\sum_{i=0}^n{#2}_i{#1}^i}
 \newcommand{\dsumpoly}[2][x]{\displaystyle\sumpoly[#1]{#2}}
 
@@ -65,8 +65,8 @@
 
 \newcommand{\divi}{\mid}
 \newcommand{\notdivi}{\nmid}
-\newcommand{\subgroup}{\triangleleft}
-\newcommand{\subgroupeq}{\trianglelefteq}
+\newcommand{\normalgroup}{\triangleleft}
+\newcommand{\normalgroupeq}{\trianglelefteq}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\mdc}{\textrm{mdc}}

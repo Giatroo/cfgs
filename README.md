@@ -42,4 +42,4 @@ Programming workflow:
 - valgrind;
 
 Misc:
-- miktex;
+- latexmk;

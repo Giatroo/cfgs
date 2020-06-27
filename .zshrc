@@ -110,6 +110,8 @@ alias userconfig="pushd ~/.config/user/"
 
 alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
 
+alias python="python3"
+
 # Vim mode
 bindkey -v
 export KEYTIMEOUT=1

@@ -19,6 +19,9 @@
 \newcommand{\powsub}[3]{#1^{#2}_{#3}}
 \newcommand{\subpow}[3]{#1^{#3}_{#2}}
 
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+
 %%% Math symbols
 
 \newcommand{\pinf}{+\infty}
@@ -40,9 +43,9 @@
 
 \newcommand{\deriv}[1]{\dfrac{d}{d#1}}
 \newcommand{\fn}[1]{\pow{f}{(#1)}}
-\newcommand{\parderiv}[1][x]{\dfrac{\partial}{\partial #1}}
-\newcommand{\parx}{\parderiv[x]}
-\newcommand{\pary}{\parderiv[y]}
+\newcommand{\parderiv}[2][x]{\dfrac{\partial {#1} }{\partial {#2} }}
+\newcommand{\parx}{\parderiv{x}}
+\newcommand{\pary}{\parderiv{y}}
 
 \newcommand{\dint}{\displaystyle\int}
 \newcommand{\spint}[2]{\subpow{\dint}{#1}{#2}}

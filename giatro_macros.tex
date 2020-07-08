@@ -41,9 +41,9 @@
 \newcommand{\slim}[2][x]{\sub{\dlim}{#1 \to #2}}
 \newcommand{\nlim}{\slim[n]{\pinf}{}}
 
-\newcommand{\deriv}[1]{\dfrac{d}{d#1}}
+\newcommand{\deriv}[2][x]{\dfrac{d{#2}}{d{#1}}}
 \newcommand{\fn}[1]{\pow{f}{(#1)}}
-\newcommand{\parderiv}[2][x]{\dfrac{\partial {#1} }{\partial {#2} }}
+\newcommand{\parderiv}[2][f]{\dfrac{\partial {#1} }{\partial {#2} }}
 \newcommand{\parx}{\parderiv{x}}
 \newcommand{\pary}{\parderiv{y}}
 
@@ -78,6 +78,7 @@
 \newcommand{\dmin}{\displaystyle\min}
 \newcommand{\Zmod}[1]{\mathbb{Z}/#1\mathbb{Z}}
 \newcommand{\class}[1]{\sqrtbracket{#1}}
+\newcommand{\irr}{\textrm{Irr}}
 
 %%% Set theory
 
@@ -105,6 +106,8 @@
 \newcommand{\inter}{\displaystyle\bigcap}
 \newcommand{\spinter}[2]{\subpow{\inter}{#1}{#2}}
 \newcommand{\psinter}[2]{\powsub{\inter}{#1}{#2}}
+
+\newcommand{\img}{\textrm{Im }}
 
 %%% Geometry
 

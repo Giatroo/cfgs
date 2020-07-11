@@ -69,13 +69,13 @@ plugins=(
   git
   colored-man-pages
   colorize
-  tmux
+  # tmux
   vi-mode
 )
 
 # TMUX Plugin:
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_CONFIG=$HOME/.config/user/.tmux.conf
+# ZSH_TMUX_AUTOSTART=false
+# ZSH_TMUX_CONFIG=$HOME/.tmux.conf
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,14 +92,13 @@ alias ime="cd ~/Desktop/IME/"
 alias bcc="cd ~/Desktop/IME/"
 alias 3sem="ime && cd 3_Semestre/"
 alias maratona="cd ~/Desktop/Maratona/"
-alias patternmatching="cd /media/sf_cppworkspace/PatternMatchingProject/"
 
 alias ohmyzsh="vim  ~/.oh-my-zsh"
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"
 alias zshconfigg="pushd ~ && vim .zshrc && cp .zshrc ~/.config/user/.zshrc && pushd ~/.config/user/ && git add .zshrc && git commit -m 'Editing .zshrc' && git push && popd && popd"
-alias tmuxconfig="vim ~/.tmux.conf"
+alias tmuxconfig="vim ~/.tmux.conf && cp ~/.tmux.conf ~/.config/user/.tmux.conf"
 alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf ~/.config/user/.tmux.conf && pushd ~/.config/user/ && git add .tmux.conf && git commit -m 'Editing .tmux.conf' && git push && popd && popd"
-alias vimconfig="vim ~/.vimrc"
+alias vimconfig="vim ~/.vimrc && cp ~/.vimrc ~/.config/user/.vimrc"
 alias vimconfigg="pushd ~ && vim .vimrc && cp .vimrc ~/.config/user/.vimrc && pushd ~/.config/user/ && git add .vimrc && git commit -m 'Editing .vimrc' && git push && popd && popd"
 alias latexmacrosconfig="vim ~/.config/user/giatro_macros.tex"
 alias latexmacrosconfigg="pushd ~/.config/user/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit -m 'Editing LaTeX macros' && git push && popd"
@@ -113,6 +112,7 @@ alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
 # Vim mode
 bindkey -v
 export KEYTIMEOUT=1
+export TERM=xterm-256color
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
@@ -121,4 +121,4 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Syntax-Highlighting (must be at the end of the configuration file)
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

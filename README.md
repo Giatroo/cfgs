@@ -43,3 +43,4 @@ Programming workflow:
 
 Misc:
 - miktex;
+- latexmk;

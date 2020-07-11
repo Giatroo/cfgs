@@ -68,6 +68,7 @@ set number                        " Ativa o número das linhas na esquerda
 set relativenumber                " Faz com que os números de linha sejam relativos a onde o cursor está
 set mouse=a                       " Habilita o mouse no Vim de terminal
 set incsearch                     " Busca incremental (mostra em tempo real o que você busca)
+set hlsearch                      " Deixa todos os matchs de uma busca em highlight
 
 autocmd BufWritePre * %s/\s\+$//e " Remove espaços após o final das linhas
 
@@ -83,6 +84,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'itchyny/lightline.vim'                                 " Status line
  Plug 'morhetz/gruvbox'                                       " colorscheme
  Plug 'shinchu/lightline-gruvbox.vim'                         " Um plugin para juntar os dois outros
+ Plug 'davidhalter/jedi-vim'                                  " Um autocomplete para Python
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

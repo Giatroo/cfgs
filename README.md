@@ -48,4 +48,4 @@ Misc:
 
 
 Usefull command:
-`sudo apt install latexmk arc-theme gnome-tweaks tmux gcc g++ clang clang-format git vim-gtk3 valgrind`
+`sudo apt install latexmk arc-theme gnome-tweaks tmux gcc g++ clang clang-format git vim-gtk3 valgrind zsh`

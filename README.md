@@ -22,9 +22,10 @@ Text editors:
 
 Ubuntu:
 - communitheme;
-- dash-to-panel;
-- gnome-tweaks;
-- arc-theme;
+- dash-to-panel; // https://extensions.gnome.org/extension/1160/dash-to-panel/
+- gnome-tweaks; 
+- arc-theme; // sudo apt install arc-theme
+- arc menu; // https://extensions.gnome.org/extension/1228/arc-menu/
 - nautilus;  // Probably changing in the future
 
 Terminal:
@@ -44,3 +45,7 @@ Programming workflow:
 Misc:
 - miktex;
 - latexmk;
+
+
+Usefull command:
+`sudo apt install latexmk arc-theme gnome-tweaks tmux gcc g++ clang clang-format git vim-gtk3 valgrind`

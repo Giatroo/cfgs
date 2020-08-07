@@ -69,13 +69,13 @@ plugins=(
   git
   colored-man-pages
   colorize
-  # tmux
+  tmux
   vi-mode
 )
 
 # TMUX Plugin:
-# ZSH_TMUX_AUTOSTART=false
-# ZSH_TMUX_CONFIG=$HOME/.tmux.conf
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_CONFIG=$HOME/.tmux.conf
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,6 +92,7 @@ alias ime="cd ~/Desktop/IME/"
 alias bcc="cd ~/Desktop/IME/"
 alias 3sem="ime && cd 3_Semestre/"
 alias maratona="cd ~/Desktop/Maratona/"
+alias ml='cd /media/sf_Coding/MachineLearningCoursera/'
 
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"

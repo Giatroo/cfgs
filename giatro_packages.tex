@@ -21,3 +21,39 @@
 \usepackage{blindtext} %% Used to create dummy text (usefull for formating)
 
 \usepackage[top=3cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
+
+\usepackage{listings} %% Used to format source code
+
+%% Formating code:
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{giatrostyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=giatrostyle}
+
+%% Inserting images
+\usepackage{graphicx} 
+\usepackage{wrapfig} % wraping figures (figures in the middle of the text)
+
+\graphicspath{ {./Res/} } % Specifies the Res (resourses) directiory

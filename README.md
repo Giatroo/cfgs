@@ -3,8 +3,8 @@
 Here is a list of essencial things I like to use when programming. It include lots of visual
 configurations for linux and tools for the console.
 
-Text editors:
-- Visual Studio Code:
+**Text editors**:
+- _Visual Studio Code_:
   * clang-format extension;
   * C++ intellisense extension;
   * C/C++ extension;
@@ -17,23 +17,23 @@ Text editors:
   * markdownlint extension;
   * Material Icon Theme extension;
   * Vim extension;
-- vim:
+- _vim_:
   * install vim-plugin and use .vimrc
 
-Ubuntu:
+**Ubuntu**:
 - communitheme;
-- dash-to-panel; // https://extensions.gnome.org/extension/1160/dash-to-panel/
+- [dash-to-panel;](https://extensions.gnome.org/extension/1160/dash-to-panel/)
 - gnome-tweaks; 
-- arc-theme; // sudo apt install arc-theme
-- arc menu; // https://extensions.gnome.org/extension/1228/arc-menu/
+- arc-theme; // `sudo apt install arc-theme`
+- [arc menu;](https://extensions.gnome.org/extension/1228/arc-menu/)
 - nautilus;  // Probably changing in the future
 
-Terminal:
+**Terminal**:
 - ubuntu terminal; // Probably changing in the future
 - zsh;
 - tmux;
 
-Programming workflow:
+**Programming workflow**:
 - gcc;
 - g++;
 - clang;
@@ -42,7 +42,11 @@ Programming workflow:
 - vim-gtk3;
 - valgrind;
 
-Misc:
+**Some fonts I like**:
+ - [Input](https://input.fontbureau.com/preview/)
+ - [Hack](https://sourcefoundry.org/hack/)
+
+**Misc**:
 - miktex;
 - latexmk;
 

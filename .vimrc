@@ -83,7 +83,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'neoclide/coc.nvim', {'branch': 'release'}              " VSCode no Vim
  Plug 'itchyny/lightline.vim'                                 " Status line
  Plug 'morhetz/gruvbox'                                       " colorscheme
- Plug 'shinchu/lightline-gruvbox.vim'                         " Um plugin para juntar os dois outros
+ " Plug 'shinchu/lightline-gruvbox.vim'                         " Um plugin para juntar os dois outros
  Plug 'davidhalter/jedi-vim'                                  " Um autocomplete para Python
 call plug#end()
 
@@ -180,24 +180,39 @@ nnoremap <leader>f <esc>:Format<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> gruvbox
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme gruvbox
+
+" colorscheme gruvbox
+" set background=dark
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==:> Solarized
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+syntax enable
 set background=dark
+colorscheme solarized
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> LightLine
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" let g:lightline = {
-    " \ 'colorscheme': 'jellybeans',
-    " \ }
+let g:lightline = {
+    \ 'colorscheme': 'solarized',
+    \ }
 
 set laststatus=2
 
-" if !has('gui_running')
-  " set t_Co=256
-" endif
+if !has('gui_running')
+  set t_Co=256
+endif
 
 set noshowmode
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==:> lightline-gruvbox
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:lightline = {}
+" let g:lightline.colorscheme = 'gruvbox'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> NerdCommenter
@@ -210,10 +225,3 @@ let g:NERDCommentEmptyLines = 0                         " Não deixa comentário
 let g:NERDTrimTrailingWhitespace = 1                    " Remove espaços em branco na direita quando descomenta
 
 " <leader>c<space> é a tecla padrão
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ==:> lightline-gruvbox
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
-

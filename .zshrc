@@ -90,9 +90,11 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias ime="cd ~/Desktop/IME/"
 alias bcc="cd ~/Desktop/IME/"
-alias 3sem="ime && cd 3_Semestre/"
+alias 4sem="ime && cd 4_Semestre/"
 alias maratona="cd ~/Desktop/Maratona/"
-alias ml='cd /media/sf_Coding/MachineLearningCoursera/'
+alias ml="cd /media/sf_Coding/MachineLearningCoursera/"
+alias lucas="cd /media/sf_Lucas/"
+alias Lucas="cd /media/sf_Lucas/"
 
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"
@@ -111,6 +113,7 @@ alias userconfig="pushd ~/.config/user/"
 alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
 
 alias python="python3"
+alias pip="pip3"
 
 # Vim mode
 bindkey -v
@@ -125,3 +128,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Syntax-Highlighting (must be at the end of the configuration file)
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Adding bin to PATH
+export PATH="$PATH:/home/giatro/.local/bin"

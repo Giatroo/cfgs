@@ -112,8 +112,8 @@ alias userconfig="pushd ~/.config/user/"
 
 alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
 
-alias python="python3"
-alias pip="pip3"
+# alias python="python3"
+# alias pip="pip3"
 
 # Vim mode
 bindkey -v

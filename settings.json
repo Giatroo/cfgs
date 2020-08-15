@@ -1,10 +1,10 @@
 {
     "C_Cpp.updateChannel": "Insiders",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": -1,
     "latex-workshop.view.pdf.viewer": "tab",
     "editor.wordWrapColumn": 100,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
+    "workbench.colorTheme": "Solarized Dark",
     "editor.fontFamily": "Courier New",
     "editor.fontSize": 14,
     "explorer.confirmDelete": false,
@@ -16,7 +16,6 @@
     "clang-format.language.apex.fallbackStyle": "/home/giatro/.clang_format",
     "clang-format.language.apex.style": "/home/giatro/.clang_format",
     "C_Cpp.clang_format_path": "./.clang-format",
-    "editor.fontLigatures": null,
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
     "breadcrumbs.enabled": false,
@@ -24,5 +23,8 @@
     "editor.formatOnSave": true,
     "clang-format.fallbackStyle": "Google",
     "C_Cpp.clang_format_fallbackStyle": "Google",
-    "launch": {}
+    "launch": {},
+    "[latex]": {
+        "editor.formatOnSave": false,
+    }
 }

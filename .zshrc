@@ -92,9 +92,9 @@ alias ime="cd ~/Desktop/IME/"
 alias bcc="cd ~/Desktop/IME/"
 alias 4sem="ime && cd 4_Semestre/"
 alias maratona="cd ~/Desktop/Maratona/"
-alias ml="cd /media/sf_Coding/MachineLearningCoursera/"
 alias lucas="cd /media/sf_Lucas/"
 alias Lucas="cd /media/sf_Lucas/"
+alias ml="lucas && cd Artificial\ Intelligence"
 
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"
@@ -130,4 +130,4 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Adding bin to PATH
-export PATH="$PATH:/home/giatro/.local/bin"
+export PATH="$PATH:/home/giatro/.local/bin:/home/giatro/bin"

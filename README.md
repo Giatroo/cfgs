@@ -52,4 +52,4 @@ configurations for linux and tools for the console.
 
 
 Usefull command:
-`sudo apt install latexmk arc-theme gnome-tweaks tmux gcc g++ clang clang-format git vim-gtk3 valgrind zsh fonts-powerline`
+`sudo apt install latexmk arc-theme gnome-tweaks tmux gcc g++ clang clang-format git vim-gtk3 valgrind zsh fonts-powerline curl nodejs`

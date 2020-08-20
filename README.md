@@ -53,4 +53,5 @@ configurations for linux and tools for the console.
 
 Usefull commands:
 `sudo apt install latexmk arc-theme build-essential linux-headers gnome-tweaks tmux git vim-gtk3 valgrind zsh fonts-powerline curl nodejs`
+
 `sudo apt install gcc g++ clang clang-format python3 octave`

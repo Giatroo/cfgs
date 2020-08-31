@@ -88,8 +88,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias c="clear"
-alias ime="cd ~/Desktop/IME/"
-alias bcc="cd ~/Desktop/IME/"
+alias ime="cd /media/sf_Lucas/_Estudos\ IME-USP"
+alias bcc="cd /media/sf_Lucas/_Estudos\ IME-USP"
 alias 4sem="ime && cd 4_Semestre/"
 alias maratona="cd ~/Desktop/Maratona/"
 alias lucas="cd /media/sf_Lucas/"

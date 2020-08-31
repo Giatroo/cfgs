@@ -88,12 +88,12 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias c="clear"
+alias lucas="cd /media/sf_Lucas/"
+alias Lucas="cd /media/sf_Lucas/"
 alias ime="cd /media/sf_Lucas/_Estudos\ IME-USP"
 alias bcc="cd /media/sf_Lucas/_Estudos\ IME-USP"
 alias 4sem="ime && cd 4_Semestre/"
 alias maratona="cd ~/Desktop/Maratona/"
-alias lucas="cd /media/sf_Lucas/"
-alias Lucas="cd /media/sf_Lucas/"
 alias ai="lucas && cd Artificial\ Intelligence"
 alias ml="ai && cd MachineLearningCoursera"
 

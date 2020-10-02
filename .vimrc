@@ -12,10 +12,10 @@
 " set guifont=Courier\ New     " Seta a fonte para Courier New
 syntax on                    " Habilita o highlight de sintaxe
 set textwidth=100            " Limita a quantidade de caracteres por linha para 100
-"set colorcolumn=100          " Coloca uma indicação visual da coluna limite para a linha
-set tabstop=2                " Faz com que o tab seja equivalente a duas barras de espaço
-set shiftwidth=2
-set softtabstop=2
+set colorcolumn=100          " Coloca uma indicação visual da coluna limite para a linha
+set tabstop=4                " Faz com que o tab seja equivalente a duas barras de espaço
+set shiftwidth=4
+set softtabstop=4
 set encoding=utf-8
 set expandtab                " Converte de tab para espaços
 set smartindent              " Identa algumas coisas para você
@@ -79,12 +79,13 @@ autocmd BufWritePre * %s/\s\+$//e " Remove espaços após o final das linhas
 call plug#begin('~/.vim/plugged')
  Plug 'preservim/nerdtree'                                    " Arvore de diretórios
  Plug 'preservim/nerdcommenter'                               " Toggle de comentários com Ctrl /
- "Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }      " Autocompletar
+ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }      " Autocompletar
  Plug 'neoclide/coc.nvim', {'branch': 'release'}              " VSCode no Vim
  Plug 'itchyny/lightline.vim'                                 " Status line
  Plug 'morhetz/gruvbox'                                       " colorscheme
- " Plug 'shinchu/lightline-gruvbox.vim'                         " Um plugin para juntar os dois outros
+ Plug 'shinchu/lightline-gruvbox.vim'                         " Um plugin para juntar os dois outros
  Plug 'davidhalter/jedi-vim'                                  " Um autocomplete para Python
+ Plug 'wlangstroth/vim-racket'                                " Racket plugin
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -99,7 +100,7 @@ nnoremap <leader>n :NERDTreeToggle<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Ctrl+Espaço faz com que chame o autocompletar (apenas no INSERT MODE)
-inoremap <silent><expr> <c-space> coc#refresh()
+" inoremap <silent><expr> <c-space> coc#refresh()
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
@@ -181,24 +182,24 @@ nnoremap <leader>f <esc>:Format<CR>
 " ==:> gruvbox
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" colorscheme gruvbox
-" set background=dark
+colorscheme gruvbox
+set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Solarized
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-syntax enable
-set background=dark
-colorscheme solarized
+" syntax enable
+" set background=dark
+" colorscheme solarized
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> LightLine
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:lightline = {
-    \ 'colorscheme': 'solarized',
-    \ }
+" let g:lightline = {
+    " \ 'colorscheme': 'solarized',
+    " \ }
 
 set laststatus=2
 
@@ -211,8 +212,8 @@ set noshowmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> lightline-gruvbox
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:lightline = {}
-" let g:lightline.colorscheme = 'gruvbox'
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> NerdCommenter

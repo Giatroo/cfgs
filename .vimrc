@@ -11,8 +11,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set guifont=Courier\ New     " Seta a fonte para Courier New
 syntax on                    " Habilita o highlight de sintaxe
-set textwidth=100            " Limita a quantidade de caracteres por linha para 100
-set colorcolumn=100          " Coloca uma indicação visual da coluna limite para a linha
+set textwidth=80            " Limita a quantidade de caracteres por linha para 80
+set colorcolumn=80          " Coloca uma indicação visual da coluna limite para a linha
 set tabstop=4                " Faz com que o tab seja equivalente a duas barras de espaço
 set shiftwidth=4
 set softtabstop=4

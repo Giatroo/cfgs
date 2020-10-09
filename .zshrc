@@ -96,6 +96,8 @@ alias 4sem="ime && cd 4_Semestre/"
 alias maratona="cd ~/Desktop/Maratona/"
 alias ai="lucas && cd Artificial\ Intelligence"
 alias ml="ai && cd MachineLearningCoursera"
+alias coding="cd /media/sf_Coding/"
+alias web="cd /media/sf_Coding/webWorkspace/"
 
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"

@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -24,5 +24,12 @@ call plug#begin('~/.vim/plugged')
 
     " Um plugin para juntar os dois outros
     Plug 'shinchu/lightline-gruvbox.vim'
+
+    " Plugin para LaTeX
+    Plug 'lervag/vimtex'
+
+    " Snippets
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
 
 call plug#end()

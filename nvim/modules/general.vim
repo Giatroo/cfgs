@@ -23,7 +23,7 @@ set softtabstop=4
 set encoding=utf-8
 
 " Faz com que o enconding seja escrito no arquivo
-set fileencoding=uft-8
+" set fileencoding=uft-8
 
 " Converte de tab para espaços
 set expandtab
@@ -84,6 +84,12 @@ nnoremap <C-l> <C-w>l
 vnoremap < <gv
 vnoremap > >gv
 
+" esc com jk no modo insert e visual
+inoremap jk <Esc>
+inoremap kj <Esc>
+vnoremap jk <Esc>
+vnoremap kj <Esc>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -111,3 +117,4 @@ set splitright
 
 " Remove espaços após o final das linhas ao salvar
 autocmd BufWritePre * %s/\s\+$//e
+

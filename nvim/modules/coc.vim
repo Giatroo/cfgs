@@ -82,6 +82,14 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Espaço+f formata
 nnoremap <leader>f <esc>:Format<CR>
 
+" ============
+" coc-snippets
+" ============
+
+" imap <C-l> <Plug>(coc-snippets-expand)
+
+" let g:coc_snippet_next = '<c-j>'
+" let g:coc_snippet_prev = '<c-k>'
 
 " Reminders para o eu do futuro:
     " :CocList extensions -> mostra todas as extensões disponíveis

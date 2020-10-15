@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt, a4paper, oneside]{book}
+
+\input{/home/giatro/.config/user/giatro_packages.tex}
+
+\input{/home/giatro/.config/user/giatro_macros.tex}
+
+\title{Vimtex and its Snippets tutorial and reference}
+\date{\today}
+\author{Lucas Paiolla Forastiere}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+
+\chapter{New vim commands}
+
+As we have options to delete, change or yank parts of your code in Vim using
+\texttt{iw}, \texttt{i"}, \texttt{i'}, \texttt{i)} and so on, vimtex offers
+us new text objects:
+
+\begin{itemize}
+    \item \texttt{ic} and \texttt{ac} for commands;
+    \item \texttt{id} and \texttt{ad} for delimiters;
+    \item \texttt{ie} and \texttt{ae} for LaTeX environments;
+    \item \texttt{i\$} and \texttt{a\$} for inline math structers;
+    \item \texttt{iP} and \texttt{aP} for sections;
+    \item \texttt{im} and \texttt{am} for Items;
+\end{itemize}
+
+Let's show examples of how it work:
+
+If I have:
+
+\begin{itemize}
+    \item Some itens with $\frac{x}{2}$ math;
+    \item Another item;
+\end{itemize}
+
+I can use \texttt{dim} to delete the what's inside the item, but keep
+the little circle. If I use \texttt{dam} them I'll delete the circle as well.
+
+I can do the same with the math mode using \texttt{di\$}.
+
+If I want to delete all the itemize section, I can use \texttt{dae}.
+
+And I can also delete (or yank, change...) a whole section or chapter with
+\texttt{daP}
+
+Finally, I can do the same with commands using \texttt{cic}.
+
+\section{Surrounds}
+
+vimtex also adds surronds, so we can delete, yank or change the surronds of
+all the text objects we listed by using \texttt{s} instead of \texttt{c} or
+\texttt{d}...
+
+\section{Other mappings}
+
+There are many useful mappings to help with faster math writting.
+
+\begin{itemize}
+    \item \texttt{tsd} toggles between e.g. \texttt{()} and
+        \begin{verbatim}{\left(\right)}\end{verbatim}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}

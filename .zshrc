@@ -89,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias vim="nvim"
 alias c="clear"
+
 alias lucas="cd /media/sf_Lucas/"
 alias Lucas="cd /media/sf_Lucas/"
 alias ime="cd ~/IME/"
@@ -98,6 +99,7 @@ alias maratona="cd ~/Desktop/Maratona/"
 alias ai="lucas && cd Artificial\ Intelligence"
 alias coding="cd /media/sf_Coding/"
 alias web="cd /media/sf_Coding/webWorkspace/"
+alias nlw="cd ~/Desktop/NLW3/"
 
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"
@@ -106,8 +108,6 @@ alias tmuxconfig="vim ~/.tmux.conf && cp ~/.tmux.conf ~/.config/user/.tmux.conf"
 alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf ~/.config/user/.tmux.conf && pushd ~/.config/user/ && git add .tmux.conf && git commit -m 'Editing .tmux.conf' && git push && popd && popd"
 alias vimconfig="pushd ~/.config/nvim/"
 alias vimconfigg="pushd ~/.config/nvim/ && cp -r ./* ~/.config/user/nvim/ && pushd ~/.config/user/nvim/ && git add * && git commit -m 'Editing neovim configs' && git push && popd && popd"
-# alias vimconfig="vim ~/.vimrc && cp ~/.vimrc ~/.config/user/.vimrc"
-# alias vimconfigg="pushd ~ && vim .vimrc && cp .vimrc ~/.config/user/.vimrc && pushd ~/.config/user/ && git add .vimrc && git commit -m 'Editing .vimrc' && git push && popd && popd"
 alias latexmacrosconfig="vim ~/.config/user/giatro_macros.tex"
 alias latexmacrosconfigg="pushd ~/.config/user/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit -m 'Editing LaTeX macros' && git push && popd"
 alias latexpackagesconfig="vim ~/.config/user/giatro_packages.tex"
@@ -117,8 +117,8 @@ alias userconfig="pushd ~/.config/user/"
 
 alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
 
-# alias python="python3"
-# alias pip="pip3"
+alias python="python3"
+alias pip="pip3"
 
 # Vim mode
 bindkey -v
@@ -136,3 +136,8 @@ source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Adding bin to PATH
 export PATH="$PATH:/home/giatro/.local/bin:/home/giatro/bin"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -88,7 +88,7 @@ nnoremap <leader>f <esc>:Format<CR>
 
 " imap <C-l> <Plug>(coc-snippets-expand)
 
-" let g:coc_snippet_next = '<c-j>'
+" let g:coc_snippet_next = '<c-l>'
 " let g:coc_snippet_prev = '<c-k>'
 
 " Reminders para o eu do futuro:

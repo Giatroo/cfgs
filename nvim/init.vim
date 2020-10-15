@@ -7,4 +7,5 @@ source $HOME/.config/nvim/modules/lightline.vim
 source $HOME/.config/nvim/modules/vimtex.vim
 source $HOME/.config/nvim/modules/ultisnips.vim
 source $HOME/.config/nvim/modules/coc.vim
-source $HOME/.config/nvim/themes/gruvbox.vim
+" source $HOME/.config/nvim/themes/gruvbox.vim
+source $HOME/.config/nvim/themes/onedark.vim

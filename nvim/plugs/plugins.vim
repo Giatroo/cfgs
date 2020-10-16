@@ -1,4 +1,4 @@
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -9,9 +9,6 @@ call plug#begin('~/.vim/plugged')
 
     " Toggle de comentários
     Plug 'preservim/nerdcommenter'
-
-    " Autocompletar
-    " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 
     " VSCode no Vim
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -31,5 +28,11 @@ call plug#begin('~/.vim/plugged')
     " Snippets
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+
+    " Useful with f and t commands
+    Plug 'unblevable/quick-scope'
+
+    " Melhor syntax highlight
+    Plug 'sheerun/vim-polyglot'
 
 call plug#end()

@@ -87,8 +87,8 @@ vnoremap > >gv
 " esc com jk no modo insert e visual
 inoremap jk <Esc>
 inoremap kj <Esc>
-vnoremap jk <Esc>
-vnoremap kj <Esc>
+" vnoremap jk <Esc>
+" vnoremap kj <Esc>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Misc

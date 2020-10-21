@@ -3,24 +3,15 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
-
-    " Arvore de diretórios
-    Plug 'preservim/nerdtree'
-
-    " Toggle de comentários
-    Plug 'preservim/nerdcommenter'
-
+""""" Plugins principais:
     " VSCode no Vim
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " Status line
     Plug 'itchyny/lightline.vim'
 
-    " Um tema
-    Plug 'morhetz/gruvbox'
-
-    " Um plugin para juntar os dois outros
-    Plug 'shinchu/lightline-gruvbox.vim'
+    " Toggle de comentários
+    Plug 'preservim/nerdcommenter'
 
     " Plugin para LaTeX
     Plug 'lervag/vimtex'
@@ -29,10 +20,36 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 
-    " Useful with f and t commands
-    Plug 'unblevable/quick-scope'
+
+""""" Para sintaxe:
+    " Rainbow parentheses
+    Plug 'luochen1990/rainbow'
+
+    " clang-format para o vim (formatter para a familia C)
+    Plug 'rhysd/vim-clang-format'
 
     " Melhor syntax highlight
     Plug 'sheerun/vim-polyglot'
+
+""""" misc:
+    " Useful with f and t commands
+    Plug 'unblevable/quick-scope'
+
+    " Ajuda com a leader key
+    Plug 'liuchengxu/vim-which-key'
+
+
+""""" temporários:
+    " Plugin para o racket
+    Plug 'wlangstroth/vim-racket'
+    Plug 'vim-syntastic/syntastic'
+
+""""" temas:
+    Plug 'morhetz/gruvbox'
+    Plug 'shinchu/lightline-gruvbox.vim'
+
+""""" Não usados mais:
+    " Arvore de diretórios
+    " Plug 'preservim/nerdtree'
 
 call plug#end()

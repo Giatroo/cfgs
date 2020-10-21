@@ -16,3 +16,4 @@ let g:NERDCommentEmptyLines = 0
 let g:NERDTrimTrailingWhitespace = 1
 
 " <leader>c<space> é a tecla padrão
+let g:which_key_map.c = { 'name' : '+commenter' }

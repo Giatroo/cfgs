@@ -48,15 +48,6 @@ set wrap
 " Barra de espaço é a tecla lider
 let mapleader="\<space>"
 
-" Espaço + ; -> coloca ; no final da linha
-nnoremap <leader>; A;<esc>
-
-" Espaço + y + y -> copia todo o arquivo para o clipboard
-nnoremap <leader>yy gg"+yG
-
-" Espaço + d + d -> recorda todo o arquivo para o clipboard
-nnoremap <leader>dd gg"+dG
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Other keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -118,3 +109,5 @@ set splitright
 " Remove espaços após o final das linhas ao salvar
 autocmd BufWritePre * %s/\s\+$//e
 
+let g:python_host_prog = '/usr/bin/python3.8'
+let g:python3_host_prog = '/usr/bin/python3.8'

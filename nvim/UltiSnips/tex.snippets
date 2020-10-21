@@ -1,23 +1,151 @@
-snippet tt "Texttt snippet"
+# Global functions
+
+global !p
+def showMyEnvs(t):
+	envs = ['obs', 'teo', 'defi', 'prop', 'metodo', 'dem', 'lema',
+		'exemplo', 'exercicio', 'problema', 'nota']
+	if t:
+		envs = [ m[len(t):] for m in envs if m.startswith(t) ]
+	if len(envs) == 1:
+		return envs[0]
+	return "(" + '|'.join(envs) + ")"
+endglobal
+
+# Text snippets
+
+snippet tt "Texttt snippet" w
 \texttt{$1}
 endsnippet
 
-snippet bf "Textbf snippet"
+snippet bf "Textbf snippet" w
 \textbf{$1}
 endsnippet
 
-snippet it "Textit snippet"
+snippet it "Textit snippet" w
 \textit{$1}
 endsnippet
 
-snippet sc "Textsc snippet"
+snippet sc "Textsc snippet" w
 \textsc{$1}
 endsnippet
 
-snippet math "A math mode snippet"
-$$1$$2
+snippet ul "Underline snippet"
+\ul{$1}
 endsnippet
 
-snippet dmath "A displaymode math mode snippet"
-\[$1\]$2
+snippet nl "New line snippet"
+\nl
 endsnippet
+
+snippet "jum?p?" "Jump snippet" r
+\jump
+endsnippet
+
+# Math snippets
+
+snippet math "A math mode snippet" w
+$ $0 $
+endsnippet
+
+snippet dmath "A displaymode math mode snippet" bA
+\[ $0 \]
+endsnippet
+
+snippet Right "Math Rightarrow snippet"
+\Rightarrow $0
+endsnippet
+
+snippet right "Math rightarrow snippet"
+\rightarrow $0
+endsnippet
+
+snippet Left "Math leftarrow snippet"
+\Leftarrow $0
+endsnippet
+
+snippet left "Math Leftarrow snippet"
+\leftarrow $0
+endsnippet
+
+# Document snippets
+
+snippet "chap?t?e?r?" "Chapter snippet" br
+\chapter{$1}
+endsnippet
+
+snippet "sect?i?o?n?" "Section snippet" br
+\section{$1}
+endsnippet
+
+snippet "subse?c?" "Subsection snippet" br
+\subsection{$1}
+endsnippet
+
+snippet img "Figure snippet" b
+\begin{figure}[${1:h}]
+\centering
+\includegraphics[scale=${3:1}]{Res/$2}
+\end{figure}
+endsnippet
+
+# Environment snippets
+
+snippet be "My personal environments"
+\begin{$1`!p snip.rv=showMyEnvs(t[1])`}
+$2
+\end{$1`!p snip.rv=showMyEnvs(t[1])`}
+endsnippet
+
+snippet obs "Observationis snippet" b
+\begin{obs}
+$1
+\end{obs}
+endsnippet
+
+snippet defi "Definition snippet" b
+\begin{defi}
+$1
+\end{defi}
+endsnippet
+
+snippet teo "Theorem snippet" b
+\begin{teo}
+$1
+\end{teo}
+endsnippet
+
+snippet prop "Proposition snippet" b
+\begin{prop}
+$1
+\end{prop}
+endsnippet
+
+# \theoremstyle{plain}
+# \newtheorem{prop}{Proposição}
+
+# \theoremstyle{definition}
+# \newtheorem*{dem}{Demonstração}
+
+# \theoremstyle{plain}
+# \newtheorem{lema}{Lema}
+
+# \theoremstyle{plain}
+# \newtheorem{corol}{Corolário}
+
+# \theoremstyle{definition}
+# \newtheorem*{obs}{Observação}
+
+# \theoremstyle{definition}
+# \newtheorem*{exemplo}{Exemplo}
+
+# \theoremstyle{definition}
+# \newtheorem*{exercicio}{Exercício}
+
+# \theoremstyle{plain}
+# \newtheorem*{problema}{Problema}
+
+# \theoremstyle{definition}
+# \newtheorem*{nota}{Notação}
+
+# \theoremstyle{definition}
+# \newtheorem{metodo}{Método}

@@ -25,15 +25,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 				\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-    " Define F12 para ir para a definição de onde o cursor está
-nnoremap <F12> gd
-
 " TextEdit might fail if hidden is not set.
 set hidden
 
@@ -69,11 +60,26 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+function! MyFormatFunction()
+  let types = ['c', 'cpp', 'cs', 'java', 'js']
+  let flag = 0
+  for t in types
+    if &filetype == t
+      let flag = 1
+    endif
+  endfor
+
+  if flag == 1
+    :ClangFormat
+    echo "Formated with clang-format"
+  else
+    :call CocAction('format')
+  endif
+endfunction
+
 
 " Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
+command! -nargs=0 Format :call MyFormatFunction()
 
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
@@ -81,8 +87,40 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
+" ===========
+" Key mapings
+" ===========
+
+let g:which_key_map.r = { 'name' : '+coc'}
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+let g:which_key_map.r.n = 'Rename word'
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nmap <leader>rd <Plug>(coc-definition)
+nmap <leader>ry <Plug>(coc-type-definition)
+nmap <leader>ri <Plug>(coc-implementation)
+nmap <leader>rr <Plug>(coc-references)
+let g:which_key_map.r.d = 'GoTo definition'
+let g:which_key_map.r.y = 'GoTo type definition'
+let g:which_key_map.r.i = 'GoTo implementation'
+let g:which_key_map.r.r = 'GoTo references'
+
+" Define F12 para ir para a definição de onde o cursor está
+nnoremap <F12> gd
+
 " Espaço+f formata
-nnoremap <leader>f <esc>:Format<CR>
+nnoremap <leader>f :Format<CR>
+let g:which_key_map['f'] = [ ':Format'  , 'Format' ]
+
+nnoremap <leader>n :CocCommand explorer<CR>
+let g:which_key_map['n'] = [ ':CocCommand explorer'  , 'Explorer' ]
 
 " ============
 " coc-snippets

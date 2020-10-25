@@ -13,6 +13,9 @@ call plug#begin('~/.vim/plugged')
     " Toggle de comentários
     Plug 'preservim/nerdcommenter'
 
+    " Usar teclas do vim (d, c, y) com delimitadores
+    Plug 'tpope/vim-surround'
+
     " Plugin para LaTeX
     Plug 'lervag/vimtex'
 

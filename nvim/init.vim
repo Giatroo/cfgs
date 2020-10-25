@@ -11,10 +11,11 @@ source $HOME/.config/nvim/modules/ultisnips.vim
 source $HOME/.config/nvim/modules/coc.vim
 source $HOME/.config/nvim/modules/quickscope.vim
 source $HOME/.config/nvim/modules/clangformat.vim
-" source $HOME/.config/nvim/modules/rainbow.vim
+source $HOME/.config/nvim/modules/rainbow.vim
 
 " source $HOME/.config/nvim/modules/nerdtree.vim
 
 " Ativa um tema
 source $HOME/.config/nvim/themes/onedark.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
+

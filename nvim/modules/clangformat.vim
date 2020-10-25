@@ -1,13 +1,13 @@
 " clang-format configurations
 
-let g:clang_format#detect_style_file = 0
+let g:clang_format#detect_style_file = 0 " use these configurations!
 let g:clang_format#style_options = {
       \ "BasedOnStyle" : "Google",
-      \ "IndentWidth" : 2,
-      \ "TabWidth" : 2,
+      \ "IndentWidth" : 4,
+      \ "TabWidth" : 4,
       \ "ColumnLimit" : 80,
-      \ "UseTab" : "ForIndentation",
       \
+      \ "UseTab" : "Never",
       \ "AccessModifierOffset" : -2,
       \ "AlignAfterOpenBracket" : "true",
       \ "AlignConsecutiveAssignments" : "false",
@@ -32,11 +32,21 @@ let g:clang_format#style_options = {
       \ "DerivePointerAlignment" : "false",
       \ "ReflowComments" : "true",
       \ "SortIncludes" : "true",
-      \ "SpaceAfterCStyleCast" : "false",
+      \ "SortUsingDeclarations" : "true",
+      \ "SpaceAfterCStyleCast" : "true",
+      \ "SpaceAfterLogicalNot" : "false",
+      \ "SpaceAfterTemplateKeyword" : "false",
+      \ "SpaceBeforeInheritanceColon" : "true",
       \ "SpaceBeforeAssignmentOperators" : "true",
+      \ "SpaceBeforeCpp11BracedList" : "true",
+      \ "SpaceBeforeCtorInitializerColon" : "true",
       \ "SpaceBeforeParens" : "ControlStatements",
+      \ "SpaceBeforeRangeBasedForLoopColon" : "true",
+      \ "SpaceBeforeSquareBrackets" : "false",
+      \ "SpaceInEmptyParentheses" : "false",
+      \ "SpacesInParentheses" : "false",
+      \ "SpacesInSquareBrackets" : "false",
       \ "SpacesBeforeTrailingComments" : 1,
       \ "SpacesInAngles" : "false",
       \ "SpacesInCStyleCastParentheses" : "false",
-      \ "SpacesInParentheses" : "false",
-      \ "SpacesInSquareBrackets" : "false"}
+      \ "SpaceInEmptyBlock" : "true"}

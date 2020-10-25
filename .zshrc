@@ -124,9 +124,12 @@ alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && 
 alias userconfig="pushd ~/.config/user/"
 
 alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
+alias vimwiki="vim +Vimwiki Index 1"
 
 alias python="python3"
 alias pip="pip3"
+
+alias open="xdg-open"
 
 # Vim mode
 bindkey -v

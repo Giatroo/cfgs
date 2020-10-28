@@ -8,6 +8,8 @@ source $HOME/.config/nvim/modules/nerdcommenter.vim
 source $HOME/.config/nvim/modules/lightline.vim
 source $HOME/.config/nvim/modules/vimtex.vim
 source $HOME/.config/nvim/modules/ultisnips.vim
+source $HOME/.config/nvim/modules/vimwiki.vim
+source $HOME/.config/nvim/modules/markdownpreview.vim
 source $HOME/.config/nvim/modules/coc.vim
 source $HOME/.config/nvim/modules/quickscope.vim
 source $HOME/.config/nvim/modules/clangformat.vim

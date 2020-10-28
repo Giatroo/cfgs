@@ -19,9 +19,17 @@ call plug#begin('~/.vim/plugged')
     " Plugin para LaTeX
     Plug 'lervag/vimtex'
 
+    " Markdown plugins
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
     " Snippets
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+
+    " Personal wiki
+    Plug 'vimwiki/vimwiki'
 
 
 """"" Para sintaxe:

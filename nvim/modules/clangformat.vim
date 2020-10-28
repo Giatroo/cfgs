@@ -3,8 +3,8 @@
 let g:clang_format#detect_style_file = 0 " use these configurations!
 let g:clang_format#style_options = {
       \ "BasedOnStyle" : "Google",
-      \ "IndentWidth" : 4,
-      \ "TabWidth" : 4,
+      \ "IndentWidth" : 2,
+      \ "TabWidth" : 2,
       \ "ColumnLimit" : 80,
       \
       \ "UseTab" : "Never",

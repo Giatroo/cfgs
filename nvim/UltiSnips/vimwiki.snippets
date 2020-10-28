@@ -1,0 +1,8 @@
+snippet link "Link"
+[$1]($0)
+endsnippet
+
+snippet wlink "Snippet for vimwiki links"
+[$1](`!p snip.rv = snip.basename + "-" + t[1].replace(" ", "_").lower()`.md)$0
+endsnippet
+

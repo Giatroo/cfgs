@@ -50,6 +50,7 @@ let g:which_key_map.g = {
 	\ 'name' : '+general',
 	\ 'n' : [':set number!', 'Toggle number'],
 	\ 'r' : [':set relativenumber!', 'Toggle relativenumber'],
+	\ 'b' : [':buffers', 'Show buffers'],
   \ }
 
 " Register which key map

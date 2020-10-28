@@ -44,7 +44,7 @@ endsnippet
 # Math snippets
 
 snippet math "A math mode snippet" w
-$ $0 $
+$$0$
 endsnippet
 
 snippet dmath "A displaymode math mode snippet" bA
@@ -85,6 +85,8 @@ snippet img "Figure snippet" b
 \begin{figure}[${1:h}]
 \centering
 \includegraphics[scale=${3:1}]{Res/$2}
+\caption{$4}
+${5:\label{$6}}
 \end{figure}
 endsnippet
 

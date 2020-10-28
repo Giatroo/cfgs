@@ -89,26 +89,27 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias vim="nvim"
+# Custom aliases:
 alias c="clear"
 
 alias lucas="cd /media/sf_Lucas/"
 alias Lucas="cd /media/sf_Lucas/"
+
 alias ime="cd ~/IME/"
 alias bcc="cd ~/IME/"
 alias 4sem="ime && cd 4_Semestre/"
-alias maratona="cd ~/Desktop/Maratona/"
+
+alias maratona="cd /media/sf_Coding/cppWorkspace/Maratona/"
+alias create="/media/sf_Coding/cppWorkspace/Maratona/create.sh"
+alias run="/media/sf_Coding/cppWorkspace/Maratona/run.sh"
+
 alias ai="lucas && cd Artificial\ Intelligence"
 alias coding="cd /media/sf_Coding/"
 alias web="cd /media/sf_Coding/webWorkspace/"
-alias nlw="cd ~/Desktop/NLW3/"
 
+alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week2_algorithmic_warmup/"
+
+# Configurations files aliases
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"
 alias zshconfigg="pushd ~ && vim .zshrc && cp .zshrc ~/.config/user/.zshrc && pushd ~/.config/user/ && git add .zshrc && git commit -m 'Editing .zshrc' && git push && popd && popd"
@@ -120,12 +121,16 @@ alias latexmacrosconfig="vim ~/.config/user/giatro_macros.tex"
 alias latexmacrosconfigg="pushd ~/.config/user/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit -m 'Editing LaTeX macros' && git push && popd"
 alias latexpackagesconfig="vim ~/.config/user/giatro_packages.tex"
 alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit -m 'Editing LaTeX packages' && git push && popd"
+alias vimwikiconfig="pushd ~/vimwiki/"
+alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit -m 'Editing vimwiki files' && git push && popd"
 
 alias userconfig="pushd ~/.config/user/"
 
 alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
 alias vimwiki="vim +VimwikiIndex 1"
 
+alias vim="nvim"
+alias vi="nvim"
 alias python="python3"
 alias pip="pip3"
 
@@ -142,12 +147,6 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
-# Syntax-Highlighting (must be at the end of the configuration file)
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Autosuggestions configuration
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87,bold"
-
 # Adding bin to PATH
 export PATH="$PATH:/home/giatro/.local/bin:/home/giatro/bin"
 
@@ -158,3 +157,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Autosuggestions configuration
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87"
+
+# Syntax-Highlighting (must be at the end of the configuration file)
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

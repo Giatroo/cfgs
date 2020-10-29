@@ -53,7 +53,6 @@ call plug#begin('~/.vim/plugged')
 """"" temporários:
     " Plugin para o racket
     Plug 'wlangstroth/vim-racket'
-    Plug 'vim-syntastic/syntastic'
 
 """"" temas:
     Plug 'morhetz/gruvbox'

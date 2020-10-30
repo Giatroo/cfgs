@@ -17,13 +17,13 @@ configurations for linux and tools for the console.
   * markdownlint extension;
   * Material Icon Theme extension;
   * Vim extension;
-- _vim_:
-  * install vim-plugin and use .vimrc
+- _nvim_:
+  * install vim-plugin and use the nvim configuration inside .config;
 
 **Ubuntu**:
 - communitheme;
 - [dash-to-panel;](https://extensions.gnome.org/extension/1160/dash-to-panel/)
-- gnome-tweaks; 
+- gnome-tweaks;
 - arc-theme; // `sudo apt install arc-theme`
 - [arc menu;](https://extensions.gnome.org/extension/1228/arc-menu/)
 - nautilus;  // Probably changing in the future
@@ -45,6 +45,7 @@ configurations for linux and tools for the console.
 **Some fonts I like**:
  - [Input](https://input.fontbureau.com/preview/)
  - [Hack](https://sourcefoundry.org/hack/)
+ - Inconsolata
 
 **Misc**:
 - miktex;
@@ -52,6 +53,8 @@ configurations for linux and tools for the console.
 
 
 Usefull commands:
-`sudo apt install latexmk arc-theme build-essential linux-headers gnome-tweaks tmux git vim-gtk3 valgrind zsh fonts-powerline curl nodejs`
+`sudo apt install latexmk arc-theme build-essential linux-headers gnome-tweaks git curl nodejs`
 
-`sudo apt install gcc g++ clang clang-format python3 octave`
+`sudo apt install zsh nvim vim-plugin tmux vim-gtk3 curl nvm fonts-powerline`
+
+`sudo apt install gcc g++ clang clang-format python3 octave valgrind`

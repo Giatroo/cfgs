@@ -50,6 +50,7 @@ configurations for linux and tools for the console.
 **Misc**:
 - miktex;
 - latexmk;
+- [Zathura PDF Reader](https://pwmt.org/projects/zathura/)
 
 
 Usefull commands:
@@ -58,3 +59,5 @@ Usefull commands:
 `sudo apt install zsh nvim vim-plugin tmux vim-gtk3 curl nvm fonts-powerline`
 
 `sudo apt install gcc g++ clang clang-format python3 octave valgrind`
+
+`sudo apt-get install zathura zathura-cb zathura-ps zathura-djvu`

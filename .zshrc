@@ -107,7 +107,7 @@ alias ai="lucas && cd Artificial\ Intelligence"
 alias coding="cd /media/sf_Coding/"
 alias web="cd /media/sf_Coding/webWorkspace/"
 
-alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week2_algorithmic_warmup/"
+alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week3_greedy_algorithms/"
 
 # Configurations files aliases
 alias ohmyzsh="vim  ~/.oh-my-zsh"
@@ -123,6 +123,9 @@ alias latexpackagesconfig="vim ~/.config/user/giatro_packages.tex"
 alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit -m 'Editing LaTeX packages' && git push && popd"
 alias vimwikiconfig="pushd ~/vimwiki/"
 alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit -m 'Editing vimwiki files' && git push && popd"
+alias zathuraconfig="pushd ~/.config/zathura/ && vim ./zathurarc && popd"
+alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zarthurarc ~/.config/user/zathurarc && pushd ~/.config/user/ && git add zathurarc && git commit -m 'Editing zathura configurations' && git push && popd && popd"
+
 
 alias userconfig="pushd ~/.config/user/"
 
@@ -134,12 +137,22 @@ alias vi="nvim"
 alias python="python3"
 alias pip="pip3"
 
-alias open="xdg-open"
+# alias open="xdg-open"
+alias open="zathura"
+
+alias g="git"
+alias gs="git status"
+
+alias ..="cd .."
+alias ls="exa"
+alias cat="bat"
+alias find="fd"
 
 # Vim mode
 bindkey -v
 export KEYTIMEOUT=1
 export TERM=xterm-256color
+export EDITOR=nvim
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
@@ -148,7 +161,7 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Adding bin to PATH
-export PATH="$PATH:/home/giatro/.local/bin:/home/giatro/bin"
+export PATH="$PATH:/home/giatro/.local/bin:/home/giatro/bin:/home/giatro/.cargo/bin"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -163,3 +176,5 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87"
 
 # Syntax-Highlighting (must be at the end of the configuration file)
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

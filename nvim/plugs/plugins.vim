@@ -8,7 +8,14 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " Status line
-    Plug 'itchyny/lightline.vim'
+    " Plug 'itchyny/lightline.vim'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    " Fuzzing finder for vim
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'airblade/vim-rooter'
 
     " Toggle de comentários
     Plug 'preservim/nerdcommenter'
@@ -42,6 +49,7 @@ call plug#begin('~/.vim/plugged')
     " Melhor syntax highlight
     Plug 'sheerun/vim-polyglot'
 
+
 """"" misc:
     " Useful with f and t commands
     Plug 'unblevable/quick-scope'
@@ -49,13 +57,16 @@ call plug#begin('~/.vim/plugged')
     " Ajuda com a leader key
     Plug 'liuchengxu/vim-which-key'
 
+    " Vertical lines to indicate indentations
+    Plug 'Yggdroot/indentLine'
+
 
 """"" temporários:
     " Plugin para o racket
     Plug 'wlangstroth/vim-racket'
 
 """"" temas:
-    Plug 'morhetz/gruvbox'
+    " Plug 'morhetz/gruvbox'
     Plug 'shinchu/lightline-gruvbox.vim'
 
 """"" Não usados mais:

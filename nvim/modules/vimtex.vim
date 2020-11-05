@@ -23,6 +23,8 @@ let g:which_key_map.l = {
 let g:tex_flavor = 'latex'
 " Ativa o folding do vimtex
 let g:vimtex_fold_enabled=1
+" Chama o zathura como pdf viewer
+let g:vimtex_view_method='zathura'
 
 
 " Dá um clean nos arquivos auxiliares automaticamente

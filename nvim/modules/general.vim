@@ -2,80 +2,75 @@
 " ==:> Font and text
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Seta a fonte para Courier New
-" set guifont=Courier\ New
-
-" Habilita o highlight de sintaxe
+" Now vim can highlight the text based on its extension
 syntax on
 
-" Limita a quantidade de caracteres por linha para 80
+" Limits the amoung of chars a line can have to 80 (that's a good standart)
 set textwidth=80
 
-" Coloca uma indicação visual da coluna limite para a linha
+" Visual indication of the 80 chars
 set colorcolumn=80
 
-" Faz com que o tab seja equivalente a quatro barras de espaço
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+" Inside git commit files, we want the textwidth to be 72 chars
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
-" Aceita caracteres utf-8
-set encoding=utf-8
+" Make tab equal to 2 spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
-" Faz com que o enconding seja escrito no arquivo
-" set fileencoding=uft-8
-
-" Converte de tab para espaços
+" Converts tabs into spaces
 set expandtab
 
-" Identa algumas coisas para você
-set smartindent
+" Set the encoding to utf-8, for compatibility.
+set encoding=utf-8
 
-" Auto identação
+" Indents some text for you
+set smartindent
 set autoindent
 
-" Se o texto passar da tela, ele pula para a linha de baixo
+" If you're typing goes beyond `textwidth` it wraps the line automatically
 set wrap
 
-" Dá um highlight na linha do cursor
-" set cursorline
+" Highlights the cursor line
+set cursorline
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Leader key
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Barra de espaço é a tecla lider
+" Space is the leader key
 let mapleader="\<space>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Other keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Ctrl + n -> vai para o próximo buffer
+" Ctrl + n -> go to the next buffer
 nnoremap <C-n> :bnext<CR>
-" Ctrl + p -> vai parar o anterior
+" Ctrl + p -> go to the previous buffer
 nnoremap <C-p> :bprevious<CR>
-" Ctrl + b -> mostra os buffers abertos
+" Ctrl + b -> show all the open buffers
 nnoremap <C-b> :buffers<CR>
 
-" Alt + hjkl -> resize nas janelas
+" Alt + hjkl -> resize the splits
 nnoremap <M-j> :resize -2<CR>
 nnoremap <M-k> :resize +2<CR>
 nnoremap <M-h> :vertical resize -2<CR>
 nnoremap <M-l> :vertical resize +2<CR>
 
-" Ctrl + hkjl -> naveja pelas janelas
+" Ctrl + hkjl -> navigate through the splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Identar continua no modo visual
+" Persistend indentention inside visual mode
 vnoremap < <gv
 vnoremap > >gv
 
-" esc com jk no modo insert e visual
+" Inside normal mode, type j and k fast to go to normal mode
 inoremap jk <Esc>
 inoremap kj <Esc>
 " vnoremap jk <Esc>
@@ -85,29 +80,30 @@ inoremap kj <Esc>
 " ==:> Misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Ativa o número das linhas na esquerda
+" Show line numbers on the left
 set number
 
-" Faz com que os números de linha sejam relativos a onde o cursor está
+" Show line number on the left relatively to my current line
 set relativenumber
 
-" Habilita o mouse no Vim de terminal
+" Enable mouse
 set mouse=a
 
-" Busca incremental (mostra em tempo real o que você busca)
+" Show in real time what I'm searching for
 set incsearch
 
-" Deixa todos os matchs de uma busca em highlight
+" Show search matches in highlight
 set hlsearch
 
-" Splits horrizontais vão ser para baixo
+" Horizontal splits go below current split
 set splitbelow
 
-" Splits verticais vão ser para a direita
+" Vertical splits go to the right of the current split
 set splitright
 
-" Remove espaços após o final das linhas ao salvar
+" Remove spaces at the end of the line when saving
 autocmd BufWritePre * %s/\s\+$//e
 
+" Set python usage (some plugins may need)
 let g:python_host_prog = '/usr/bin/python3.8'
 let g:python3_host_prog = '/usr/bin/python3.8'

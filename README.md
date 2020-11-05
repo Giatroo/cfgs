@@ -54,6 +54,7 @@ configurations for linux and tools for the console.
 
 
 Usefull commands:
+
 `sudo apt install latexmk arc-theme build-essential linux-headers gnome-tweaks git curl nodejs`
 
 `sudo apt install zsh nvim vim-plugin tmux vim-gtk3 curl nvm fonts-powerline`

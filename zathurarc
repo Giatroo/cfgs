@@ -1,0 +1,14 @@
+set page-padding 1
+
+map J zoom in
+map K zoom out
+map H navigate previous
+map L navigate next
+map <S-]> scroll half-down
+map <S-[> scroll half-up
+map i recolor
+map F toggle_fullscreen
+map [fullscreen] F toggle_fullscreen
+map R reload
+map r rotate
+

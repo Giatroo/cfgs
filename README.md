@@ -53,12 +53,12 @@ configurations for linux and tools for the console.
 - [Zathura PDF Reader](https://pwmt.org/projects/zathura/)
 
 
-Usefull commands:
+Install commands:
 
-`sudo apt install latexmk arc-theme build-essential linux-headers gnome-tweaks git curl nodejs`
+`sudo apt install arc-theme build-essential linux-headers gnome-tweaks git curl nodejs`
 
 `sudo apt install zsh nvim vim-plugin tmux vim-gtk3 curl nvm fonts-powerline`
 
-`sudo apt install gcc g++ clang clang-format python3 octave valgrind`
+`sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk`
 
 `sudo apt-get install zathura zathura-cb zathura-ps zathura-djvu`

@@ -1,6 +1,6 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Font and text
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Now vim can highlight the text based on its extension
 syntax on
@@ -9,15 +9,15 @@ syntax on
 set textwidth=80
 
 " Visual indication of the 80 chars
-set colorcolumn=80
+set colorcolumn=81
 
 " Inside git commit files, we want the textwidth to be 72 chars
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-" Make tab equal to 2 spaces
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+" Make tab equal to 4 spaces
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " Converts tabs into spaces
 set expandtab

@@ -11,4 +11,3 @@ map F toggle_fullscreen
 map [fullscreen] F toggle_fullscreen
 map R reload
 map r rotate
-

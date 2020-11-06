@@ -124,7 +124,7 @@ alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && 
 alias vimwikiconfig="pushd ~/vimwiki/"
 alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit -m 'Editing vimwiki files' && git push && popd"
 alias zathuraconfig="pushd ~/.config/zathura/ && vim ./zathurarc && popd"
-alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zarthurarc ~/.config/user/zathurarc && pushd ~/.config/user/ && git add zathurarc && git commit -m 'Editing zathura configurations' && git push && popd && popd"
+alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zathurarc ~/.config/user/zathurarc && pushd ~/.config/user/ && git add zathurarc && git commit -m 'Editing zathura configurations' && git push && popd && popd"
 
 
 alias userconfig="pushd ~/.config/user/"

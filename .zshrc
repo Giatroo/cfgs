@@ -107,7 +107,7 @@ alias ai="lucas && cd Artificial\ Intelligence"
 alias coding="cd /media/sf_Coding/"
 alias web="cd /media/sf_Coding/webWorkspace/"
 
-alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week3_greedy_algorithms/"
+alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week4_divide_and_conquer/"
 
 # Configurations files aliases
 alias ohmyzsh="vim  ~/.oh-my-zsh"

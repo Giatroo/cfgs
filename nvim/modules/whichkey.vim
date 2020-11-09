@@ -42,12 +42,12 @@ let g:which_key_map['d'] = [ 'gg"+dG', 'Cuts file']
 nnoremap <leader>v :vsplit<CR>
 let g:which_key_map['v'] = [ ':vsplit', 'Split right']
 
-nnoremap <leader>s :split<CR>
-let g:which_key_map['s'] = [ ':split', 'Split below']
+nnoremap <leader>h :split<CR>
+let g:which_key_map['h'] = [ ':split', 'Split below']
 
 
-let g:which_key_map.g = {
-	\ 'name' : '+general',
+let g:which_key_map.v = {
+	\ 'name' : '+vimcmds',
 	\ 'n' : [':set number!', 'Toggle number'],
 	\ 'r' : [':set relativenumber!', 'Toggle relativenumber'],
 	\ 'b' : [':buffers', 'Show buffers'],

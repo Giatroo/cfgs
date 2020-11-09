@@ -37,7 +37,7 @@ set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
+set updatetime=100
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -87,17 +87,19 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
+
+
 " ===========
 " Key mapings
 " ===========
 
-let g:which_key_map.r = { 'name' : '+coc'}
+let g:which_key_map.r = {'name' : '+coc'}
 
-" Symbol renaming.
+" Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
 let g:which_key_map.r.n = 'Rename word'
 
-" GoTo code navigation.
+" GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -112,15 +114,24 @@ let g:which_key_map.r.y = 'GoTo type definition'
 let g:which_key_map.r.i = 'GoTo implementation'
 let g:which_key_map.r.r = 'GoTo references'
 
-" Define F12 para ir para a definição de onde o cursor está
-nnoremap <F12> gd
-
-" Espaço+f formata
 nnoremap <leader>f :Format<CR>
 let g:which_key_map['f'] = [ ':Format'  , 'Format' ]
 
 nnoremap <leader>n :CocCommand explorer<CR>
 let g:which_key_map['n'] = [ ':CocCommand explorer'  , 'Explorer' ]
+
+" =======
+" coc-git
+" =======
+
+" let g:which_key_map.r.g = {'name' : '+git'}
+
+" nmap ]c <Plug>(coc-git-nextchunk)
+" nmap [c <Plug>(coc-git-prevchunk)
+" nmap <leader>rgc <Plug>(coc-git-chunkinfo)
+" let g:which_key_map.r.g.c = 'Chuck info'
+" nmap <leader>rgf :CocCommand git.foldUnchanged<CR>
+" let g:which_key_map.r.g.f = 'Fold unchanged'
 
 " ============
 " coc-snippets
@@ -131,8 +142,8 @@ let g:which_key_map['n'] = [ ':CocCommand explorer'  , 'Explorer' ]
 " let g:coc_snippet_next = '<c-l>'
 " let g:coc_snippet_prev = '<c-k>'
 
-" Reminders para o eu do futuro:
-    " :CocList extensions -> mostra todas as extensões disponíveis
-    " :CocInstall <extensão> -> instala uma extensão (ou mais de uma)
-    " :CocUnistall <extensão> -> desinstala
-    " :CocUpdade / :CocUpadateSync -> atualiza as extensões
+" Reminders for my future self
+    " :CocList extensions -> show available extensions
+    " :CocInstall <extensão> -> install one or more extension
+    " :CocUnistall <extensão> -> unistall
+    " :CocUpdade / :CocUpadateSync -> update extensions

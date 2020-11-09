@@ -35,6 +35,9 @@ set wrap
 " Highlights the cursor line
 set cursorline
 
+" Automatic folds by indentation (but not automatically when I open a buffer)
+set foldmethod=indent
+set nofoldenable
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Leader key

@@ -16,7 +16,8 @@ source $HOME/.config/nvim/modules/coc.vim
 source $HOME/.config/nvim/modules/quickscope.vim
 source $HOME/.config/nvim/modules/clangformat.vim
 source $HOME/.config/nvim/modules/rainbow.vim
-source $HOME/.config/nvim/modules/indentline.vim
+source $HOME/.config/nvim/modules/gitgutter.vim
+" source $HOME/.config/nvim/modules/indentline.vim
 
 " source $HOME/.config/nvim/modules/nerdtree.vim
 

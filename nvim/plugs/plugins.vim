@@ -38,6 +38,9 @@ call plug#begin('~/.vim/plugged')
     " Personal wiki
     Plug 'vimwiki/vimwiki'
 
+    " Git inside vim
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
 
 """"" Para sintaxe:
     " Rainbow parentheses
@@ -58,7 +61,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'liuchengxu/vim-which-key'
 
     " Vertical lines to indicate indentations
-    Plug 'Yggdroot/indentLine'
+    " Plug 'Yggdroot/indentLine'
 
 
 """"" temporários:

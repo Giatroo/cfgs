@@ -90,13 +90,15 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Custom aliases:
-alias c="clear"
 
 alias lucas="cd /media/sf_Lucas/"
 alias Lucas="cd /media/sf_Lucas/"
 
 alias ime="cd ~/IME/"
 alias bcc="cd ~/IME/"
+alias 1sem="ime && cd 1_Semestre/"
+alias 2sem="ime && cd 2_Semestre/"
+alias 3sem="ime && cd 3_Semestre/"
 alias 4sem="ime && cd 4_Semestre/"
 
 alias maratona="cd /media/sf_Coding/cppWorkspace/Maratona/"
@@ -107,33 +109,42 @@ alias ai="lucas && cd Artificial\ Intelligence"
 alias coding="cd /media/sf_Coding/"
 alias web="cd /media/sf_Coding/webWorkspace/"
 
+  # Temporary
 alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week4_divide_and_conquer/"
 
-# Configurations files aliases
+  # Configurations files aliases
 alias ohmyzsh="vim  ~/.oh-my-zsh"
+
 alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"
 alias zshconfigg="pushd ~ && vim .zshrc && cp .zshrc ~/.config/user/.zshrc && pushd ~/.config/user/ && git add .zshrc && git commit -m 'Editing .zshrc' && git push && popd && popd"
+
 alias tmuxconfig="vim ~/.tmux.conf && cp ~/.tmux.conf ~/.config/user/.tmux.conf"
 alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf ~/.config/user/.tmux.conf && pushd ~/.config/user/ && git add .tmux.conf && git commit -m 'Editing .tmux.conf' && git push && popd && popd"
+
 alias vimconfig="pushd ~/.config/nvim/"
 alias vimconfigg="pushd ~/.config/nvim/ && cp -r ./* ~/.config/user/nvim/ && pushd ~/.config/user/nvim/ && git add * && git commit -m 'Editing neovim configs' && git push && popd && popd"
+
 alias latexmacrosconfig="vim ~/.config/user/giatro_macros.tex"
 alias latexmacrosconfigg="pushd ~/.config/user/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit -m 'Editing LaTeX macros' && git push && popd"
+
 alias latexpackagesconfig="vim ~/.config/user/giatro_packages.tex"
 alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit -m 'Editing LaTeX packages' && git push && popd"
+
 alias vimwikiconfig="pushd ~/vimwiki/"
 alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit -m 'Editing vimwiki files' && git push && popd"
+
 alias zathuraconfig="pushd ~/.config/zathura/ && vim ./zathurarc && popd"
 alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zathurarc ~/.config/user/zathurarc && pushd ~/.config/user/ && git add zathurarc && git commit -m 'Editing zathura configurations' && git push && popd && popd"
 
-
 alias userconfig="pushd ~/.config/user/"
+
 
 alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
 alias vimwiki="vim +VimwikiIndex 1"
 
 alias vim="nvim"
 alias vi="nvim"
+
 alias python="python3"
 alias pip="pip3"
 
@@ -144,6 +155,7 @@ alias g="git"
 alias gs="git status"
 
 alias ..="cd .."
+alias c="clear"
 alias ls="exa"
 alias cat="bat"
 alias find="fd"
@@ -160,6 +172,9 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
+# Autosuggestions configuration
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87"
+
 # Adding bin to PATH
 export PATH="$PATH:/home/giatro/.local/bin:/home/giatro/bin:/home/giatro/.cargo/bin"
 
@@ -171,10 +186,8 @@ export NVM_DIR="$HOME/.nvm"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Autosuggestions configuration
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87"
-
 # Syntax-Highlighting (must be at the end of the configuration file)
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

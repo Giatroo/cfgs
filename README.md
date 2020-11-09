@@ -5,10 +5,10 @@ configurations for linux and tools for the console.
 
 **Text editors**:
 - _Visual Studio Code_:
-  * clang-format extension;
   * C++ intellisense extension;
   * C/C++ extension;
   * C/C++ Clang Command Adapta extension;
+  * clang-format extension;
   * Community Material Theme extension;
   * LaTeX Workshop extension;
   * LiveShare extension;
@@ -16,12 +16,16 @@ configurations for linux and tools for the console.
   * Markdown Preview Enhanced extension;
   * markdownlint extension;
   * Material Icon Theme extension;
+  * One Dark Pro extension;
+  * Palenight Theme extension;
+  * Prettier - Code format extension;
+  * Python extension;
+  * TabNine extension;
   * Vim extension;
 - _nvim_:
   * install vim-plugin and use the nvim configuration inside .config;
 
 **Ubuntu**:
-- communitheme;
 - [dash-to-panel;](https://extensions.gnome.org/extension/1160/dash-to-panel/)
 - gnome-tweaks;
 - arc-theme; // `sudo apt install arc-theme`
@@ -31,16 +35,10 @@ configurations for linux and tools for the console.
 **Terminal**:
 - ubuntu terminal; // Probably changing in the future
 - zsh;
+- [oh-my-zsh](https://ohmyz.sh/);
+- [powerline10k theme for oh-my-zshell](https://github.com/romkatv/powerlevel10k);
 - tmux;
-
-**Programming workflow**:
-- gcc;
-- g++;
-- clang;
-- clang-format;
-- git;
-- vim-gtk3;
-- valgrind;
+- [One dark theme](https://github.com/denysdovhan/one-gnome-terminal);
 
 **Some fonts I like**:
  - [Input](https://input.fontbureau.com/preview/)
@@ -53,7 +51,7 @@ configurations for linux and tools for the console.
 - [Zathura PDF Reader](https://pwmt.org/projects/zathura/)
 
 
-Install commands:
+ ## Install commands:
 
 `sudo apt install arc-theme build-essential linux-headers gnome-tweaks git curl nodejs`
 

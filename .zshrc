@@ -116,25 +116,25 @@ alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week4_divide_and_conquer/"
 alias ohmyzsh="vim  ~/.oh-my-zsh"
 
 alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"
-alias zshconfigg="pushd ~ && vim .zshrc && cp .zshrc ~/.config/user/.zshrc && pushd ~/.config/user/ && git add .zshrc && git commit -m 'Editing .zshrc' && git push && popd && popd"
+alias zshconfigg="pushd ~ && vim .zshrc && cp .zshrc ~/.config/user/.zshrc && pushd ~/.config/user/ && git add .zshrc && git commit -m 'Edit .zshrc' && git push && popd && popd"
 
 alias tmuxconfig="vim ~/.tmux.conf && cp ~/.tmux.conf ~/.config/user/.tmux.conf"
-alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf ~/.config/user/.tmux.conf && pushd ~/.config/user/ && git add .tmux.conf && git commit -m 'Editing .tmux.conf' && git push && popd && popd"
+alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf ~/.config/user/.tmux.conf && pushd ~/.config/user/ && git add .tmux.conf && git commit -m 'Edit .tmux.conf' && git push && popd && popd"
 
 alias vimconfig="pushd ~/.config/nvim/"
-alias vimconfigg="pushd ~/.config/nvim/ && cp -r ./* ~/.config/user/nvim/ && pushd ~/.config/user/nvim/ && git add * && git commit -m 'Editing neovim configs' && git push && popd && popd"
+alias vimconfigg="pushd ~/.config/nvim/ && cp -r ./* ~/.config/user/nvim/ && pushd ~/.config/user/nvim/ && git add * && git commit -m 'Edit neovim configs' && git push && popd && popd"
 
 alias latexmacrosconfig="vim ~/.config/user/giatro_macros.tex"
-alias latexmacrosconfigg="pushd ~/.config/user/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit -m 'Editing LaTeX macros' && git push && popd"
+alias latexmacrosconfigg="pushd ~/.config/user/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit -m 'Edit LaTeX macros' && git push && popd"
 
 alias latexpackagesconfig="vim ~/.config/user/giatro_packages.tex"
-alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit -m 'Editing LaTeX packages' && git push && popd"
+alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit -m 'Edit LaTeX packages' && git push && popd"
 
 alias vimwikiconfig="pushd ~/vimwiki/"
-alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit -m 'Editing vimwiki files' && git push && popd"
+alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit -m 'Edit vimwiki files' && git push && popd"
 
 alias zathuraconfig="pushd ~/.config/zathura/ && vim ./zathurarc && popd"
-alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zathurarc ~/.config/user/zathurarc && pushd ~/.config/user/ && git add zathurarc && git commit -m 'Editing zathura configurations' && git push && popd && popd"
+alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zathurarc ~/.config/user/zathurarc && pushd ~/.config/user/ && git add zathurarc && git commit -m 'Edit zathura configurations' && git push && popd && popd"
 
 alias userconfig="pushd ~/.config/user/"
 

@@ -89,9 +89,9 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 
 
-" ===========
-" Key mapings
-" ===========
+" ============
+" Key mappings
+" ============
 
 let g:which_key_map.r = {'name' : '+coc'}
 
@@ -142,8 +142,41 @@ let g:which_key_map['n'] = [ ':CocCommand explorer'  , 'Explorer' ]
 " let g:coc_snippet_next = '<c-l>'
 " let g:coc_snippet_prev = '<c-k>'
 
+" =================
+" coc-spell-checker
+" =================
+
+nmap <leader>rs <Plug>(coc-codeaction-selected)
+let g:which_key_map.r.s = 'Suggest word'
+
+" ============================
 " Reminders for my future self
-    " :CocList extensions -> show available extensions
-    " :CocInstall <extensão> -> install one or more extension
-    " :CocUnistall <extensão> -> unistall
-    " :CocUpdade / :CocUpadateSync -> update extensions
+" ============================
+"
+" :CocList extensions -> show available extensions
+" :CocInstall <extensão> -> install one or more extension
+" :CocUnistall <extensão> -> unistall
+" :CocUpdate / :CocUpadateSync -> update extensions
+"
+" Coc extensions I use:
+" coc-snippets
+" coc-prettier
+" coc-pairs
+" coc-explorer
+" coc-vimtex
+" coc-tsserver
+" coc-texlab
+" coc-sql
+" coc-sh
+" coc-rome
+" coc-python
+" coc-markdownlint
+" coc-json
+" coc-html
+" coc-css
+" coc-clangd
+" coc-fzf-preview
+" coc-tabnine
+" coc-spell-checker
+" coc-highlight
+" coc-cspell-dicts

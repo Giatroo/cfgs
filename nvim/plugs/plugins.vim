@@ -63,6 +63,9 @@ call plug#begin('~/.vim/plugged')
     " Vertical lines to indicate indentations
     " Plug 'Yggdroot/indentLine'
 
+    " Dev icons
+    Plug 'ryanoasis/vim-devicons'
+
 
 """"" temporários:
     " Plugin para o racket

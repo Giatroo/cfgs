@@ -6,5 +6,15 @@
     // Explorer
     "explorer.width": 25,
     "explorer.icon.enableNerdfont": true,
-    "explorer.previewAction.onHover": false
+    "explorer.previewAction.onHover": false,
+
+    // Spell checker
+    "cSpellExt.enableDictionaries": ["portuguese-brazilian"],
+    "cSpell.language": "en,pt,pt_BR",
+    "cSpell.userWords": [
+      "clangd",
+      "gruvbox",
+      "ultisnips"
+    ]
+
 }

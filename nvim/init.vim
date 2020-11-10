@@ -1,4 +1,4 @@
-" Ativa os modulos
+" Enable modules
 source $HOME/.config/nvim/modules/general.vim
 source $HOME/.config/nvim/plugs/plugins.vim
 
@@ -21,7 +21,6 @@ source $HOME/.config/nvim/modules/gitgutter.vim
 
 " source $HOME/.config/nvim/modules/nerdtree.vim
 
-" Ativa um tema
+" Enable a theme
 source $HOME/.config/nvim/themes/onedark.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
-

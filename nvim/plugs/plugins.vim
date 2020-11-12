@@ -42,6 +42,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
 
+    " Nvim inside chrome
+    Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
 """"" Para sintaxe:
     " Rainbow parentheses
     Plug 'luochen1990/rainbow'

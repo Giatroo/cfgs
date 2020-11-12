@@ -5,7 +5,7 @@
 " Now vim can highlight the text based on its extension
 syntax on
 
-" Limits the amoung of chars a line can have to 80 (that's a good standart)
+" Limits the among of chars a line can have to 80 (that's a good standart)
 set textwidth=80
 
 " Visual indication of the 80 chars
@@ -69,7 +69,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Persistend indentention inside visual mode
+" Persistend indentation inside visual mode
 vnoremap < <gv
 vnoremap > >gv
 

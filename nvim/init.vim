@@ -1,4 +1,4 @@
-" Enable modules
+" Enable módulos
 source $HOME/.config/nvim/modules/general.vim
 source $HOME/.config/nvim/plugs/plugins.vim
 
@@ -18,6 +18,8 @@ source $HOME/.config/nvim/modules/clangformat.vim
 source $HOME/.config/nvim/modules/rainbow.vim
 source $HOME/.config/nvim/modules/gitgutter.vim
 " source $HOME/.config/nvim/modules/indentline.vim
+source $HOME/.config/nvim/modules/firenvim.vim
+
 
 " source $HOME/.config/nvim/modules/nerdtree.vim
 

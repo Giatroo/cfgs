@@ -8,6 +8,16 @@ map <S-]> scroll half-down
 map <S-[> scroll half-up
 map i recolor
 map F toggle_fullscreen
-map [fullscreen] F toggle_fullscreen
 map R reload
 map r rotate
+
+map [fullscreen] J zoom in
+map [fullscreen] K zoom out
+map [fullscreen] H navigate previous
+map [fullscreen] L navigate next
+map [fullscreen] <S-]> scroll half-down
+map [fullscreen] <S-[> scroll half-up
+map [fullscreen] i recolor
+map [fullscreen] F toggle_fullscreen
+map [fullscreen] R reload
+map [fullscreen] r rotate

@@ -139,6 +139,9 @@ alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zathur
 alias userconfig="pushd ~/.config/user/"
 
 alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
+
+alias createreadme="cp ~/.config/user/README_template.md ./README.md && vim ./README.md"
+
 alias vimwiki="vim +VimwikiIndex 1"
 
 alias vim="nvim"

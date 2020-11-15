@@ -131,7 +131,7 @@ alias latexpackagesconfig="vim ~/.config/user/giatro_packages.tex"
 alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit && git push && popd"
 
 alias vimwikiconfig="pushd ~/vimwiki/"
-alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit -m 'Edit vimwiki files' && git push && popd"
+alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit && git push && popd"
 
 alias zathuraconfig="pushd ~/.config/zathura/ && vim ./zathurarc && popd"
 alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zathurarc ~/.config/user/zathurarc && pushd ~/.config/user/ && git add zathurarc && git commit && git push && popd && popd"
@@ -175,7 +175,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87"
 
 # Adding bin to PATH
-export PATH="$PATH:/home/giatro/.local/bin:/home/giatro/bin:/home/giatro/.cargo/bin"
+export PATH="$PATH:/home/giatro/.local/bin:/home/giatro/bin:/home/giatro/.cargo/bin:/usr/racket/bin"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

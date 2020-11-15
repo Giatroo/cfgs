@@ -45,6 +45,9 @@ call plug#begin('~/.vim/plugged')
     " Nvim inside chrome
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
+    " Nice coding metrics
+    Plug 'wakatime/vim-wakatime'
+
 """"" Para sintaxe:
     " Rainbow parentheses
     Plug 'luochen1990/rainbow'
@@ -64,7 +67,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'liuchengxu/vim-which-key'
 
     " Vertical lines to indicate indentations
-    " Plug 'Yggdroot/indentLine'
+    Plug 'Yggdroot/indentLine'
 
     " Dev icons
     Plug 'ryanoasis/vim-devicons'

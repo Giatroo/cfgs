@@ -1,5 +1,12 @@
 # Programming Essencial Package
 
+![Visits Badge](https://badges.pufler.dev/visits/Giatroo/cfgs)
+![Last update](https://img.shields.io/github/last-commit/Giatroo/cfgs)
+![Repo size](https://img.shields.io/github/repo-size/Giatroo/cfgs)
+![Number of Lines](https://img.shields.io/tokei/lines/github/Giatroo/cfgs)
+![Language count](https://img.shields.io/github/languages/count/Giatroo/cfgs)
+![Top language](https://img.shields.io/github/languages/top/Giatroo/cfgs)
+
 Here is a list of essencial things I like to use when programming. It include lots of visual
 configurations for linux and tools for the console.
 

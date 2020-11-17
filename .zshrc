@@ -79,6 +79,7 @@ plugins=(
   tmux
   vi-mode
   zsh-autosuggestions
+  wakatime
 )
 
 # TMUX Plugin:

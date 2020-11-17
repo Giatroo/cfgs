@@ -110,8 +110,10 @@ alias ai="lucas && cd Artificial\ Intelligence"
 alias coding="cd /media/sf_Coding/"
 alias web="cd /media/sf_Coding/webWorkspace/"
 
-  # Temporary
 alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week4_divide_and_conquer/"
+
+alias ds="cd ~/DataScienceSpecialization && jn"
+alias jn="jupyter notebook &"
 
   # Configurations files aliases
 alias ohmyzsh="vim  ~/.oh-my-zsh"

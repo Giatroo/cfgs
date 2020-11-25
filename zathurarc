@@ -1,23 +1,31 @@
 set page-padding 1
+set zoom-step 20
+set scroll-step 80
+set selection-clipboard clipboard
+set incremental-search true
 
 map J zoom in
 map K zoom out
 map H navigate previous
 map L navigate next
-map <S-]> scroll half-down
-map <S-[> scroll half-up
+map D scroll half-down
+map U scroll half-up
 map i recolor
 map F toggle_fullscreen
 map R reload
 map r rotate
+map t toggle_index
+
+map [index] t toggle_index
 
 map [fullscreen] J zoom in
 map [fullscreen] K zoom out
 map [fullscreen] H navigate previous
 map [fullscreen] L navigate next
-map [fullscreen] <S-]> scroll half-down
-map [fullscreen] <S-[> scroll half-up
+map [fullscreen] D scroll half-down
+map [fullscreen] U scroll half-up
 map [fullscreen] i recolor
 map [fullscreen] F toggle_fullscreen
 map [fullscreen] R reload
 map [fullscreen] r rotate
+map [fullscreen] t toggle_index

@@ -72,7 +72,12 @@ configurations for linux and tools for the console.
 
 `sudo apt install arc-theme build-essential linux-headers gnome-tweaks git curl nodejs`
 
-`sudo apt install zsh neovim vim-plugin tmux vim-gtk3 curl nvm fonts-powerline`
+`sudo apt install zsh neovim tmux vim-gtk3 curl fonts-powerline`
+
+`sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
+       
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash`
 
 `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 

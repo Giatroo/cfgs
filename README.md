@@ -75,7 +75,8 @@ configurations for linux and tools for the console.
 `sudo apt install zsh neovim tmux vim-gtk3 curl fonts-powerline`
 
 ```sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'```
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
        
 `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash`
 

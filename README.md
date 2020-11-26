@@ -74,6 +74,8 @@ configurations for linux and tools for the console.
 
 `sudo apt install zsh neovim vim-plugin tmux vim-gtk3 curl nvm fonts-powerline`
 
+`sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
 `sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk`
 
 `sudo apt-get install zathura zathura-cb zathura-ps zathura-djvu`

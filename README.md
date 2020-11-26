@@ -15,6 +15,8 @@ or
 
 `git clone git@github.com:Giatroo/cfgs.git ~/.config/user`
 
+and run the script inside the folder.
+
 ## List of essencials
 
 Here is a list of essencial things I like to use when programming. It include lots of visual

@@ -7,6 +7,14 @@
 ![Language count](https://img.shields.io/github/languages/count/Giatroo/cfgs)
 ![Top language](https://img.shields.io/github/languages/top/Giatroo/cfgs)
 
+## How to use
+
+`git clone https://github.com/Giatroo/cfgs.git ~/.config/user`
+or
+`git clone git@github.com:Giatroo/cfgs.git ~/.config/user`
+
+## List os essencials
+
 Here is a list of essencial things I like to use when programming. It include lots of visual
 configurations for linux and tools for the console.
 

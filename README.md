@@ -72,7 +72,7 @@ configurations for linux and tools for the console.
 
 `sudo apt install arc-theme build-essential linux-headers gnome-tweaks git curl nodejs`
 
-`sudo apt install zsh nvim vim-plugin tmux vim-gtk3 curl nvm fonts-powerline`
+`sudo apt install zsh neovim vim-plugin tmux vim-gtk3 curl nvm fonts-powerline`
 
 `sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk`
 

@@ -87,6 +87,12 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
 
-`sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk`
+`git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+
+`git clone https://github.com/sobolevn/wakatime-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/wakatime`
+
+`sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk wakatime`
+
+`sudo apt install python3-pip`
 
 `sudo apt-get install zathura zathura-cb zathura-ps zathura-djvu`

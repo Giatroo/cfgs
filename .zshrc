@@ -180,8 +180,12 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # Autosuggestions configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87"
 
-# Adding bin to PATH
-export PATH="$PATH:/home/giatro/.local/bin:/home/giatro/bin:/home/giatro/.cargo/bin:/usr/racket/bin"
+# Adding some folders to PATH
+PATH="$PATH:/home/giatro/.local/bin"
+PATH="$PATH:/home/giatro/bin"
+PATH="$PATH:/home/giatro/.cargo/bin"
+PATH="$PATH:/usr/racket/bin"
+export PATH="$PATH:/home/giatro/pycharm-community-2020.2.4/bin"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -191,8 +195,23 @@ export NVM_DIR="$HOME/.nvm"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Syntax-Highlighting (must be at the end of the configuration file)
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/giatro/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/giatro/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/giatro/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/giatro/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Syntax-Highlighting (must be at the end of the configuration file)
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -7,6 +7,18 @@
 ![Language count](https://img.shields.io/github/languages/count/Giatroo/cfgs)
 ![Top language](https://img.shields.io/github/languages/top/Giatroo/cfgs)
 
+## How to use
+
+`git clone https://github.com/Giatroo/cfgs.git ~/.config/user`
+
+or
+
+`git clone git@github.com:Giatroo/cfgs.git ~/.config/user`
+
+and run the script inside the folder.
+
+## List of essencials
+
 Here is a list of essencial things I like to use when programming. It include lots of visual
 configurations for linux and tools for the console.
 
@@ -62,8 +74,25 @@ configurations for linux and tools for the console.
 
 `sudo apt install arc-theme build-essential linux-headers gnome-tweaks git curl nodejs`
 
-`sudo apt install zsh nvim vim-plugin tmux vim-gtk3 curl nvm fonts-powerline`
+`sudo apt install zsh neovim tmux vim-gtk3 curl fonts-powerline`
 
-`sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk`
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+       
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash`
+
+`sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+`git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+
+`git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+
+`git clone https://github.com/sobolevn/wakatime-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/wakatime`
+
+`sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk wakatime`
+
+`sudo apt install python3-pip`
 
 `sudo apt-get install zathura zathura-cb zathura-ps zathura-djvu`

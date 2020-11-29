@@ -15,6 +15,8 @@ or
 
 `git clone git@github.com:Giatroo/cfgs.git ~/.config/user`
 
+and run the script inside the folder.
+
 ## List of essencials
 
 Here is a list of essencial things I like to use when programming. It include lots of visual
@@ -83,6 +85,14 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-`sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk`
+`git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+
+`git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+
+`git clone https://github.com/sobolevn/wakatime-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/wakatime`
+
+`sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk wakatime`
+
+`sudo apt install python3-pip`
 
 `sudo apt-get install zathura zathura-cb zathura-ps zathura-djvu`

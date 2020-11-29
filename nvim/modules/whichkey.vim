@@ -8,7 +8,7 @@ let g:which_key_sep = '→'
 
 " Important!
 " This should be sourced before each plugin that maps something in the leader.
-" Then we can add the mapings in each file of each specific plugin.
+" Then we can add the mappings in each file of each specific plugin.
 
 " Time for the window to open
 " (This is also the time for many other things to timeout,
@@ -22,20 +22,20 @@ highlight default link WhichKeyGroup     Identifier
 highlight default link WhichKeyDesc      Function
 
 
-" Now we need to add manually all the leader mapings
+" Now we need to add manually all the leader mappings
 " (we'll do that in each specific plugin)
 
-" Some general mapings:
+" Some general mappings:
 
-" Espaço + ; -> coloca ; no final da linha
+" Space + ; -> adds a semicolumn at the end of the line
 nnoremap <leader>; A;<esc>
 let g:which_key_map[';'] = [ 'A;', 'Adds ;']
 
-" Espaço + y + y -> copia todo o arquivo para o clipboard
+" Space + y + y -> yanks the whole file to the clipboard
 nnoremap <leader>y gg"+yG
-let g:which_key_map['y'] = [ 'gg"+yG', 'Yankes file']
+let g:which_key_map['y'] = [ 'gg"+yG', 'Yanks file']
 
-" Espaço + d + d -> recorda todo o arquivo para o clipboard
+" Space + d + d -> cuts the whole file to the clipboard
 nnoremap <leader>d gg"+dG
 let g:which_key_map['d'] = [ 'gg"+dG', 'Cuts file']
 

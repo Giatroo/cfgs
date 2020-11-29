@@ -6,6 +6,7 @@ if exists('g:started_by_firenvim')
       set laststatus=0
       set showmode
       set guifont=Lucida_Console:h11
+      set textwidth=0
       autocmd BufWinEnter,WinEnter * startinsert
 endif
 
@@ -25,4 +26,10 @@ let g:firenvim_config = {
 
 let fc = g:firenvim_config['localSettings']
 let fc['https?://translate.google.com.br'] = { 'takeover': 'never', 'priority': 1 }
-let fc['https://meet.google.com'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https?://meet.google.com'] = { 'takeover': 'never', 'priority': 1 }
+let fc['http://localhost:8888'] = { 'takeover': 'never', 'priority': 1 }
+let fc['http://localhost:8889'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https?://www.coursera.org'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https?://www.coursera.org/learn'] = { 'takeover': 'never', 'priority': 1 }
+let fc['https?://www.coursera.org/learn/python-data-analysis/programming/4Wy6F/lab'] = { 'takeover': 'never', 'priority': 1 }
+

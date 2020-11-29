@@ -42,6 +42,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
 
+    " Ipython integratioin
+    Plug 'jpalardy/vim-slime', { 'for': 'python' }
+    Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+
     " Nvim inside chrome
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
@@ -67,7 +71,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'liuchengxu/vim-which-key'
 
     " Vertical lines to indicate indentations
-    Plug 'Yggdroot/indentLine'
+    " Plug 'Yggdroot/indentLine'
 
     " Dev icons
     Plug 'ryanoasis/vim-devicons'

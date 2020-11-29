@@ -10,7 +10,7 @@ cp ~/.config/user/.clang-format ~/
 cp ~/.config/user/.tmux.conf ~/
 cp ~/.config/user/.p10k.zsh ~/
 mkdir ~/.config/zathura
-cp ~/.config/user/zathurarc ~/.config/
+cp ~/.config/user/zathurarc ~/.config/zathura/
 cp -r ~/.config/user/zsh-syntax-highlighting ~/
 cp -r ~/.config/user/nvim ~/.config/
 

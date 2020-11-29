@@ -12,8 +12,11 @@
     "cSpellExt.enableDictionaries": ["portuguese-brazilian"],
     "cSpell.language": "en,pt,pt_BR",
     "cSpell.userWords": [
+      "Escrevivel",
       "clangd",
+      "ende",
       "gruvbox",
+      "ipython",
       "ultisnips"
     ]
 

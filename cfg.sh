@@ -25,8 +25,32 @@ sudo apt install gcc g++ clang clang-format python3 octave valgrind latexmk waka
 
 echo Installing python things
 sudo apt install python3-pip
+
+sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+
 pip install jupyter-kite
 jupyter labextension install "@kiteco/jupyterlab-kite"
+
+mkdir -p $(jupyter --data-dir)/nbextensions
+pushd $(jupyter --data-dir)/nbextensions
+git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
+jupyter nbextension enable vim_binding/vim_binding
+popd
+
+pip3 install jupyter-tabnine --user
+jupyter nbextension install --py jupyter_tabnine --user
+jupyter nbextension enable --py jupyter_tabnine --user
+jupyter serverextension enable --py jupyter_tabnine --user
+
+
+pushd ~
+git clone https://github.com/deryrahman/jupyter-notebook-one-dark-theme.git
+cd jupyter-notebook-one-dark-theme
+cp custom.css ~/.jupyter/custom/custom.css
+pip install jupyterthemes
+cp startup.py ~/.ipython/profile_default/startup/startup.py
+jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
+popd
 
 echo Installing zathura
 sudo apt-get install zathura zathura-cb zathura-ps zathura-djvu
@@ -74,3 +98,4 @@ popd
 
 echo "Don't forget to click <C-a><S-i> to install tmux plugins"
 echo Also make sure to restart your computer to apply all changes
+echo "Unfortunately, you must install Anaconda manually (after that, rerun this script)"

@@ -84,6 +84,9 @@ plugins=(
 
 # TMUX Plugin:
 ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
+ZSH_TMUX_AUTOCONNECT=true
+ZSH_TMUX_AUTOQUIT=$ZSH_TMUX_AUTOSTART
 ZSH_TMUX_CONFIG=$HOME/.tmux.conf
 
 source $ZSH/oh-my-zsh.sh
@@ -186,6 +189,7 @@ PATH="$PATH:/home/giatro/.local/bin"
 PATH="$PATH:/home/giatro/bin"
 PATH="$PATH:/home/giatro/.cargo/bin"
 PATH="$PATH:/usr/racket/bin"
+PATH="$PATH:/usr/bin"
 export PATH="$PATH:/home/giatro/pycharm-community-2020.2.4/bin"
 
 # nvm

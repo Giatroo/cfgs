@@ -169,8 +169,8 @@ let g:which_key_map.r.s = 'Suggest word'
 " coc-sql
 " coc-sh
 " coc-rome
-" coc-python
 " coc-markdownlint
+" coc-jedi
 " coc-json
 " coc-html
 " coc-css

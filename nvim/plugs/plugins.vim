@@ -3,12 +3,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
-""""" Plugins principais:
-    " VSCode no Vim
+""""" Main plugins
+    " This plugin makes Vim into VSCode
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " Status line
-    " Plug 'itchyny/lightline.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
@@ -17,13 +16,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
 
-    " Toggle de comentários
+    " Commentary toggle
     Plug 'preservim/nerdcommenter'
 
-    " Usar teclas do vim (d, c, y) com delimitadores
+    " Use vim keys (d, c, y) on delimiters (surrounds)
     Plug 'tpope/vim-surround'
 
-    " Plugin para LaTeX
+    " LaTeX plugin
     Plug 'lervag/vimtex'
 
     " Markdown plugins
@@ -42,7 +41,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
 
-    " Ipython integratioin
+    " Ipython integration
     Plug 'jpalardy/vim-slime', { 'for': 'python' }
     Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 
@@ -52,41 +51,42 @@ call plug#begin('~/.vim/plugged')
     " Nice coding metrics
     Plug 'wakatime/vim-wakatime'
 
-""""" Para sintaxe:
-    " Rainbow parentheses
-    Plug 'luochen1990/rainbow'
 
-    " clang-format para o vim (formatter para a familia C)
+""""" Syntax
+    " clang-format for vim (C family formatter)
     Plug 'rhysd/vim-clang-format'
 
-    " Melhor syntax highlight
+    " Better syntax highlight
     Plug 'sheerun/vim-polyglot'
 
 
-""""" misc:
+""""" Misc
     " Useful with f and t commands
     Plug 'unblevable/quick-scope'
 
-    " Ajuda com a leader key
+    " This plugin helps a lot with leader key
     Plug 'liuchengxu/vim-which-key'
-
-    " Vertical lines to indicate indentations
-    " Plug 'Yggdroot/indentLine'
 
     " Dev icons
     Plug 'ryanoasis/vim-devicons'
 
 
-""""" temporários:
+""""" Temporary
     " Plugin para o racket
     Plug 'wlangstroth/vim-racket'
 
-""""" temas:
+    " Rainbow parentheses
+    Plug 'luochen1990/rainbow'
+
+""""" Themes
     " Plug 'morhetz/gruvbox'
     Plug 'shinchu/lightline-gruvbox.vim'
 
-""""" Não usados mais:
-    " Arvore de diretórios
+""""" Not used anymore
+    " Directory tree (replaced by a CoC extension)
     " Plug 'preservim/nerdtree'
+
+    " Vertical lines to indicate indentations
+    " Plug 'Yggdroot/indentLine'
 
 call plug#end()

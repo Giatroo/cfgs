@@ -1,7 +1,7 @@
 {
     "html.autoClosingTags": true,
     "suggest.acceptSuggestionOnCommitCharacter": true,
-    "clangd.path": "/home/giatro/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd",
+    "clangd.path": "/home/giatro/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
 
     // Explorer
     "explorer.width": 25,
@@ -13,11 +13,17 @@
     "cSpell.language": "en,pt,pt_BR",
     "cSpell.userWords": [
       "Escrevivel",
+      "Kruskal",
       "clangd",
       "ende",
+      "firenvim",
       "gruvbox",
       "ipython",
+      "numpy",
       "ultisnips"
-    ]
+    ],
+
+    // Jedi
+    "jedi.jediSettings.autoImportModules": ["numpy", "pandas", "matplotlib"]
 
 }

@@ -73,9 +73,16 @@ let g:which_key_map.p.q = [ ':SlimeSend1 exit', 'Exit']
 
 " map <Leader>pn to create a new IPython cell
 function NewCell()
-      execute "normal! o\<esc>o# %% New ipython cell ================\<cr>\<cr>"
+      execute "normal! o\<esc>o\<esc>0i# %% New ipython cell ================\<cr>\<cr>"
 endfunction
 
 nnoremap <Leader>pn :call NewCell()<CR>
 let g:which_key_map.p.n = [ ':call NewCell()', 'New cell']
+
+" map <Leader>pN to run the current cell and create one below
+function RunAndNew()
+      call IPythonCellExecuteCell(0, 1)
+      call NewCell()
+endfunction
+let g:which_key_map.p.N = [ ':call RunAndNew()', 'Run and new cell']
 

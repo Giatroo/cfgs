@@ -94,6 +94,10 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo Installing python nvim support
 pip3 install pynvim
 
+echo "Installing bottom (better version of top)"
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.5.6/bottom_0.5.6_amd64.deb
+sudo dpkg -i bottom_0.5.6_amd64.deb
+
 popd
 
 echo "Don't forget to click <C-a><S-i> to install tmux plugins"

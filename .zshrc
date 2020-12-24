@@ -167,6 +167,7 @@ alias ..="cd .."
 alias c="clear"
 alias ls="exa"
 alias cat="bat"
+alias top="btm -c"
 alias find="fd"
 
 # Vim mode

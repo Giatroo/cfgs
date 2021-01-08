@@ -115,7 +115,7 @@ alias web="cd /media/sf_Coding/webWorkspace/"
 
 alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week4_divide_and_conquer/"
 
-alias ds="cd ~/DataScienceSpecialization"
+alias ds="cd ~/DataScienceSpecialization/Applied_Plotting_Charting_and_Data_Representation_in_Python"
 alias dsl="cd /media/sf_Lucas/DataScience"
 alias jn="jupyter notebook &"
 

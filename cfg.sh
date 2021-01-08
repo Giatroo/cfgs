@@ -75,9 +75,6 @@ echo Installing oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #chsh -s $(which zsh)
 
-echo Installing Kite
-bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
-
 echo Installing wakatime
 pip install wakatime
 git clone https://github.com/sobolevn/wakatime-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/wakatime

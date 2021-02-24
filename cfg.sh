@@ -43,14 +43,15 @@ jupyter nbextension enable --py jupyter_tabnine --user
 jupyter serverextension enable --py jupyter_tabnine --user
 
 
-pushd ~
-git clone https://github.com/deryrahman/jupyter-notebook-one-dark-theme.git
-cd jupyter-notebook-one-dark-theme
-cp custom.css ~/.jupyter/custom/custom.css
-pip install jupyterthemes
-cp startup.py ~/.ipython/profile_default/startup/startup.py
-jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
-popd
+# one dark theme for jupyter
+#pushd ~
+#git clone https://github.com/deryrahman/jupyter-notebook-one-dark-theme.git
+#cd jupyter-notebook-one-dark-theme
+#cp custom.css ~/.jupyter/custom/custom.css
+#pip install jupyterthemes
+#cp startup.py ~/.ipython/profile_default/startup/startup.py
+#jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
+#popd
 
 echo Installing zathura
 sudo apt-get install zathura zathura-cb zathura-ps zathura-djvu

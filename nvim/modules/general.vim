@@ -79,6 +79,9 @@ inoremap kj <Esc>
 " vnoremap jk <Esc>
 " vnoremap kj <Esc>
 
+" As I use a portuguese keyboard, I like to use the ç key as :
+nmap ç :
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

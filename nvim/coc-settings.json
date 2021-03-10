@@ -19,11 +19,13 @@
       "firenvim",
       "gruvbox",
       "ipython",
+      "kargs",
       "numpy",
+      "sklearn",
       "ultisnips"
     ],
 
     // Jedi
-    "jedi.jediSettings.autoImportModules": ["numpy", "pandas", "matplotlib"]
+    "jedi.jediSettings.autoImportModules": ["numpy", "pandas", "matplotlib", "sklearn"]
 
 }

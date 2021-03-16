@@ -113,7 +113,8 @@ alias ai="lucas && cd Artificial\ Intelligence"
 alias coding="cd /media/sf_Coding/"
 alias web="cd /media/sf_Coding/webWorkspace/"
 
-alias algo="cd /media/sf_Coding/AlgorithmicToolbox/week4_divide_and_conquer/"
+alias bee="cd /media/sf_Coding/pythonWorkspace/BeeData/"
+alias beedata=bee
 
 alias ds="cd ~/DataScienceSpecialization/Applied_Social_Network_Analysis_in_Python/"
 alias dsl="cd /media/sf_Lucas/DataScience"

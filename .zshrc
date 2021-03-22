@@ -116,8 +116,7 @@ alias web="cd /media/sf_Coding/webWorkspace/"
 alias bee="cd /media/sf_Coding/pythonWorkspace/BeeData/"
 alias beedata=bee
 
-alias ds="cd ~/DataScienceSpecialization/Applied_Social_Network_Analysis_in_Python/"
-alias dsl="cd /media/sf_Lucas/DataScience"
+alias ds="cd /media/sf_Lucas/DataScience"
 alias jn="jupyter notebook &"
 
   # Configurations files aliases

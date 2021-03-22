@@ -104,20 +104,17 @@ alias 1sem="ime && cd 1_Semestre/"
 alias 2sem="ime && cd 2_Semestre/"
 alias 3sem="ime && cd 3_Semestre/"
 alias 4sem="ime && cd 4_Semestre/"
+alias 5sem="ime && cd 5_Semestre/"
 
-alias maratona="cd /media/sf_Coding/cppWorkspace/Maratona/"
-alias create="/media/sf_Coding/cppWorkspace/Maratona/create.sh"
-alias run="/media/sf_Coding/cppWorkspace/Maratona/run.sh"
+alias web="cd /media/sf_Coding/webWorkspace/"
+alias coding="cd /media/sf_Coding/"
 
 alias ai="lucas && cd Artificial\ Intelligence"
-alias coding="cd /media/sf_Coding/"
-alias web="cd /media/sf_Coding/webWorkspace/"
+alias ds="cd /media/sf_Lucas/DataScience"
+alias jn="jupyter notebook &"
 
 alias bee="cd /media/sf_Coding/pythonWorkspace/BeeData/"
 alias beedata=bee
-
-alias ds="cd /media/sf_Lucas/DataScience"
-alias jn="jupyter notebook &"
 
   # Configurations files aliases
 alias ohmyzsh="vim  ~/.oh-my-zsh"

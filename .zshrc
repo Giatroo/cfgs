@@ -112,6 +112,7 @@ alias coding="cd /media/sf_Coding/"
 alias ai="lucas && cd Artificial\ Intelligence"
 alias ds="cd /media/sf_Lucas/DataScience"
 alias jn="jupyter notebook &"
+alias jl="jupyter-lab &"
 
 alias bee="cd /media/sf_Coding/pythonWorkspace/BeeData/"
 alias beedata=bee

@@ -77,7 +77,7 @@ plugins=(
   colored-man-pages
   colorize
   tmux
-  vi-mode
+  zsh-vi-mode
   zsh-autosuggestions
   wakatime
 )
@@ -170,7 +170,7 @@ alias find="fd"
 
 # Vim mode
 bindkey -v
-export KEYTIMEOUT=1
+#export KEYTIMEOUT=1
 export TERM=xterm-256color
 export EDITOR=nvim
 

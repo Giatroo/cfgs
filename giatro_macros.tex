@@ -101,12 +101,14 @@
 \newcommand{\inC}{\myin{\C}}
 \newcommand{\inI}{\myin{\I}}
 
-\newcommand{\union}{\displaystyle\bigcup}
-\newcommand{\spunion}[2]{\subpow{\union}{#1}{#2}}
-\newcommand{\psunion}[2]{\powsub{\union}{#1}{#2}}
-\newcommand{\inter}{\displaystyle\bigcap}
-\newcommand{\spinter}[2]{\subpow{\inter}{#1}{#2}}
-\newcommand{\psinter}[2]{\powsub{\inter}{#1}{#2}}
+\newcommand{\union}{\bigcup}
+\newcommand{\dunion}{\displaystyle\bigcup}
+\newcommand{\spunion}[2]{\subpow{\dunion}{#1}{#2}}
+\newcommand{\psunion}[2]{\powsub{\dunion}{#1}{#2}}
+\newcommand{\inter}{\bigcap}
+\newcommand{\dinter}{\displaystyle\bigcap}
+\newcommand{\spinter}[2]{\subpow{\dinter}{#1}{#2}}
+\newcommand{\psinter}[2]{\powsub{\dinter}{#1}{#2}}
 
 \newcommand{\img}{\textrm{Im }}
 
@@ -122,6 +124,9 @@
 %% Statistics
 \newcommand{\var}[1]{\text{var(#1)}}
 \newcommand{\std}[1]{\text{std(#1)}}
+
+%% Probability
+\newcommand{\prob}[1]{\text{P}\paren{#1}}
 
 %% Machine Learning
 \newcommand{\xii}[2][x]{#1^{(#2)}}

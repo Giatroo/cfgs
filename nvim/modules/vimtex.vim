@@ -45,6 +45,12 @@ call vimtex#imaps#add_map({
     \ 'wrapper' : 'vimtex#imaps#wrap_math'
     \})
 
+call vimtex#imaps#add_map({
+    \ 'lhs' : 'O',
+    \ 'rhs' : '\Omega',
+    \ 'wrapper' : 'vimtex#imaps#wrap_math'
+    \})
+
 
 call vimtex#imaps#add_map({
     \ 'lhs' : 'end',

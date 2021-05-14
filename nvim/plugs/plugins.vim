@@ -72,11 +72,6 @@ call plug#begin('~/.vim/plugged')
 
 
 """"" Temporary
-    " Plugin para o racket
-    Plug 'wlangstroth/vim-racket'
-
-    " Rainbow parentheses
-    Plug 'luochen1990/rainbow'
 
 """"" Themes
     " Plug 'morhetz/gruvbox'

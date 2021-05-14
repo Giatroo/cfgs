@@ -14,7 +14,6 @@ source $HOME/.config/nvim/modules/markdownpreview.vim
 source $HOME/.config/nvim/modules/coc.vim
 source $HOME/.config/nvim/modules/quickscope.vim
 source $HOME/.config/nvim/modules/clangformat.vim
-source $HOME/.config/nvim/modules/rainbow.vim
 source $HOME/.config/nvim/modules/gitgutter.vim
 source $HOME/.config/nvim/modules/firenvim.vim
 source $HOME/.config/nvim/modules/ipython.vim

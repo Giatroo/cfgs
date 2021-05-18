@@ -7,7 +7,10 @@
     // Explorer
     "explorer.width": 25,
     "explorer.icon.enableNerdfont": true,
+    "explorer.icon.enableVimDevicons": true,
     "explorer.previewAction.onHover": false,
+    "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
+    "explorer.file.root.template": "[icon & 1] PROJECT ([root])",
 
     // Spell checker
     "cSpellExt.enableDictionaries": ["portuguese-brazilian"],
@@ -22,11 +25,15 @@
       "ipython",
       "kargs",
       "numpy",
+      "pygame",
       "sklearn",
       "ultisnips"
     ],
 
     // Jedi
-    "jedi.jediSettings.autoImportModules": ["numpy", "pandas", "matplotlib", "sklearn"]
+    "jedi.jediSettings.autoImportModules": ["numpy", "pandas", "matplotlib",
+      "sklearn", "pygame"],
 
+    // Python formater
+    "python.formatting.provider": "black",
 }

@@ -4,6 +4,7 @@ source $HOME/.config/nvim/plugs/plugins.vim
 
 source $HOME/.config/nvim/modules/whichkey.vim
 
+source $HOME/.config/nvim/modules/tagbar.vim
 source $HOME/.config/nvim/modules/fzf.vim
 source $HOME/.config/nvim/modules/nerdcommenter.vim
 source $HOME/.config/nvim/modules/airline.vim

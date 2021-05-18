@@ -1,15 +1,14 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ==:> Plugins
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 call plug#begin('~/.vim/plugged')
 """"" Main plugins
-    " This plugin makes Vim into VSCode
+    " This plugin basically turns Vim into VSCode
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " Status line
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+
+    " Tagbar
+    Plug 'preservim/tagbar'
 
     " Fuzzing finder for vim
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -48,7 +47,7 @@ call plug#begin('~/.vim/plugged')
     " Nvim inside chrome
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
-    " Nice coding metrics
+    " Coding metrics
     Plug 'wakatime/vim-wakatime'
 
 
@@ -71,7 +70,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'ryanoasis/vim-devicons'
 
 
-""""" Temporary
+""""" Temporary (nothing here for now)
 
 """"" Themes
     " Plug 'morhetz/gruvbox'

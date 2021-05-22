@@ -29,6 +29,10 @@ set encoding=utf-8
 set smartindent
 set autoindent
 
+" When shifting lines, round the indentation to the nearest multiple of
+" shiftwidth
+set shiftround
+
 " If you're typing goes beyond `textwidth` it wraps the line automatically
 set wrap
 
@@ -58,10 +62,10 @@ nnoremap <C-p> :bprevious<CR>
 nnoremap <C-b> :buffers<CR>
 
 " Alt + hjkl -> resize the splits
-nnoremap <M-j> :resize -2<CR>
-nnoremap <M-k> :resize +2<CR>
-nnoremap <M-h> :vertical resize -2<CR>
-nnoremap <M-l> :vertical resize +2<CR>
+nnoremap <M-j> :resize +2<CR>
+nnoremap <M-k> :resize -2<CR>
+nnoremap <M-h> :vertical resize +2<CR>
+nnoremap <M-l> :vertical resize -2<CR>
 
 " Ctrl + hkjl -> navigate through the splits
 nnoremap <C-h> <C-w>h
@@ -101,11 +105,27 @@ set incsearch
 " Show search matches in highlight
 set hlsearch
 
+" Ignore case when searching
+set ignorecase
+
+" Automatically switch search to case-sensitive when search query contains an
+" uppercase letter
+set smartcase
+
 " Horizontal splits go below current split
 set splitbelow
 
 " Vertical splits go to the right of the current split
 set splitright
+
+" Don't update screen during macro and script execution
+set lazyredraw
+
+" The number of screen lines to keep above and below the cursor
+set scrolloff=1
+
+" Avoid wrapping a line in the middle of a word
+set linebreak
 
 " Remove spaces at the end of the line when saving
 autocmd BufWritePre * %s/\s\+$//e

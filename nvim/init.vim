@@ -18,6 +18,7 @@ source $HOME/.config/nvim/modules/clangformat.vim
 source $HOME/.config/nvim/modules/gitgutter.vim
 source $HOME/.config/nvim/modules/firenvim.vim
 source $HOME/.config/nvim/modules/ipython.vim
+source $HOME/.config/nvim/modules/pydocstring.vim
 
 
 " Enable a theme

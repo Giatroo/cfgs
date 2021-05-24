@@ -44,6 +44,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'jpalardy/vim-slime', { 'for': 'python' }
     Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 
+    " Python auto documentation
+    Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
+
     " Nvim inside chrome
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 

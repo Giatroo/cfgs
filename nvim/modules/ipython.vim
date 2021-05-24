@@ -63,14 +63,6 @@ let g:which_key_map.p.p = [ ':IPythonCellPrevCommand', 'Run prev cmd']
 nnoremap <Leader>pQ :IPythonCellRestart<CR>
 let g:which_key_map.p.Q = [ ':IPythonCellRestart', 'Restart']
 
-" map <Leader>pd to start debug mode
-nnoremap <Leader>pd :SlimeSend1 %debug<CR>
-let g:which_key_map.p.d = [ ':SlimeSend1 %debug', 'Debug mode']
-
-" map <Leader>pq to exit debug mode or IPython
-nnoremap <Leader>pq :SlimeSend1 exit<CR>
-let g:which_key_map.p.q = [ ':SlimeSend1 exit', 'Exit']
-
 " map <Leader>pn to create a new IPython cell
 function NewCell()
       execute "normal! o\<esc>o\<esc>0i# %% New ipython cell ================\<cr>\<cr>"

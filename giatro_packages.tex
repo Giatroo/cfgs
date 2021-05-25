@@ -61,3 +61,36 @@
 %% Inserting tables
 \usepackage{array} % can use m{1cm} as tabular argument
 \usepackage{tabularx} % can indent table
+
+%% Beautiful theorem environments
+\usepackage{mdframed}
+
+\mdfdefinestyle{theoremstyle}{%
+linecolor=black,linewidth=1.5pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=gray!20,%
+innertopmargin=.4\baselineskip,%
+font=\normalfont\itshape,%
+}
+
+\mdfdefinestyle{propositionstyle}{%
+linecolor=black,linewidth=0.8pt,%
+frametitlebackgroundcolor=gray!20,%
+innertopmargin=.3\baselineskip,%
+frametitleaboveskip=3pt,%
+frametitlebelowskip=3pt,%
+}
+
+\mdfdefinestyle{definitionstyle}{%
+linecolor=black,linewidth=1.5pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=gray!20,%
+subtitlefont=\normalfont\bfseries\itshape,%
+}
+
+\mdfdefinestyle{simplestyle}{%
+linecolor=black,linewidth=0.5pt,%
+innertopmargin=.2\baselineskip,%
+frametitleaboveskip=3pt,%
+frametitlebelowskip=3pt,%
+}

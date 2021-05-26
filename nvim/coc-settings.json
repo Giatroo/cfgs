@@ -5,7 +5,7 @@
     "suggest.maxCompleteItemCount": 10,
 
     // Explorer
-    "explorer.width": 25,
+    "explorer.width": 20,
     "explorer.icon.enableNerdfont": true,
     "explorer.icon.enableVimDevicons": true,
     "explorer.previewAction.onHover": false,

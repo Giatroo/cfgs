@@ -15,3 +15,6 @@ let g:tagbar_show_visibility = 0
 
 " Shows the tag count next to the tag kind
 let g:tagbar_show_tag_count = 1
+
+" The width
+let g:tagbar_width = 25

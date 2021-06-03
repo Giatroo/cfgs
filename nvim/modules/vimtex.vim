@@ -1,13 +1,13 @@
-" Espaço l c -> Dá toggle no autocompilador
+" Space l c -> Toggles the autocompiler
 nmap <Leader>lc :VimtexCompile<CR>
 
-" Espaço l t o c -> Abre a Table of Contents
+" Space l t o c -> Open the table of contents
 nmap <Leader>lt :VimtexTocToggle<CR><C-h>
 
-" Espaço l v -> Abre o PDF
+" Space l v -> Open the PDF
 nmap <Leader>lv :VimtexView<CR>
 
-" Espaço l m -> Mostra a lista de maps no insert mode
+" Space l m -> Shows the list of insert maps
 nmap <Leader>lm :VimtexImapsList<CR>
 
 let g:which_key_map.l = {
@@ -19,26 +19,31 @@ let g:which_key_map.l = {
   \ }
 
 
-" Define que os arquivos .tex são latex (ao invés de outro flavor de tex)
+" Defines that the file .tex are LaTeX (not other tex flavor)
 let g:tex_flavor = 'latex'
-" Ativa o folding do vimtex
+" Enables folding
 let g:vimtex_fold_enabled=1
-" Chama o zathura como pdf viewer
+" Defines zathura as the pdf viewer
 let g:vimtex_view_method='zathura'
 
 
-" Dá um clean nos arquivos auxiliares automaticamente
+" Clean the extra tex files automatically
 autocmd BufWinLeave *.tex VimtexClean
 
-" Liga o compilador quando entra em um arquivo .tex (ainda em teste)
+" Turns the compiler on whenever enters a .tex file (unused)
 " autocmd BufWinEnter *.tex VimtexCompile
 
-" No modo insert, ao digitar ; seguido de outras teclas, ativam alguns
-" snippets para o modo matemático
+
+"===============================================================================
+"============================== CUSTOM SNIPPETS ================================
+"===============================================================================
+
+" In insert mode, hitting ; followed by some key combinations will toggle some
+" snippets
 let g:vimtex_imaps_leader=';'
 
 
-" Adicionando novos mapings no insert mode:
+" Adding new maps for insert mode
 call vimtex#imaps#add_map({
     \ 'lhs' : '-',
     \ 'rhs' : '\inv',
@@ -50,7 +55,6 @@ call vimtex#imaps#add_map({
     \ 'rhs' : '\Omega',
     \ 'wrapper' : 'vimtex#imaps#wrap_math'
     \})
-
 
 call vimtex#imaps#add_map({
     \ 'lhs' : 'end',

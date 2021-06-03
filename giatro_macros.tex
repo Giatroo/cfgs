@@ -1,13 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Formating commands
-
 \newcommand{\nl}{\newline}
 \newcommand{\jump}{\nl\nl}
-\newcommand{\paren}[1]{\left({} #1 \right)}
+
+\newcommand{\paren}[1]{\left( #1 \right)}
 \newcommand{\bracket}[1]{\left\{ #1 \right\}}
-\newcommand{\sbracket}[1]{\left[{} #1 \right]}
-\newcommand{\angbracket}[1]{\left\langle{} #1 \right\rangle}
+\newcommand{\sbracket}[1]{\left[ #1 \right]}
+\newcommand{\angbracket}[1]{\left\langle #1 \right\rangle}
 
 \newcommand{\ol}[1]{\overline{#1}}
 \newcommand{\ul}[1]{\underline{#1}}
@@ -22,8 +22,9 @@
 \renewcommand{\phi}{\varphi}
 \renewcommand{\epsilon}{\varepsilon}
 
-%%% Math symbols
+\newcommand{\seq}[2]{#1_1, #1_2,\dots, #1_{#2}}
 
+%%% Math symbols
 \renewcommand{\inf}{\infty}
 \newcommand{\pinf}{+\infty}
 \newcommand{\minf}{-\infty}
@@ -35,7 +36,6 @@
 \newcommand{\inv}{^{-1}}
 
 %% Calculus
-
 \newcommand{\abs}[1]{\left| #1 \right|}
 
 \newcommand{\dlim}{\displaystyle\lim}
@@ -67,7 +67,6 @@
 \newcommand{\dsumpoly}[2][x]{\displaystyle\sumpoly[#1]{#2}}
 
 %%% Discrete Math
-
 \newcommand{\divi}{\mid}
 \newcommand{\notdivi}{\nmid}
 \newcommand{\normalgroup}{\triangleleft}
@@ -85,7 +84,6 @@
 \newcommand{\irr}{\textrm{Irr}}
 
 %%% Set theory
-
 \newcommand{\set}[1]{\bracket{\ #1\ }}
 \newcommand{\st}{\ | \ }
 \newcommand{\cardinal}[1]{\big| \, #1 \,\big| }
@@ -116,7 +114,6 @@
 \newcommand{\img}{\textrm{Im }}
 
 %%% Geometry
-
 \newcommand{\pair}[2]{\paren{#1,~#2}}
 \newcommand{\inner}[2]{\angbracket{\ #1 \ , \ #2 \ }}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
@@ -172,4 +169,3 @@
 \renewcommand{\iff}{\Leftrightarrow}
 \newcommand{\ida}{\textbf{($\Rightarrow$)}~}
 \newcommand{\volta}{\textbf{($\Leftarrow$)}~}
-\newcommand{\seq}[2]{#1_1, #1_2,\dots, #1_{#2}}

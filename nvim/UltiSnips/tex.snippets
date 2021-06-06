@@ -1,3 +1,5 @@
+extends texmath
+
 ####################
 # Global functions #
 ####################
@@ -13,49 +15,44 @@ def showMyEnvs(t):
 	elif len(envs) == 1:
 		return envs[0]
 	return "(" + '|'.join(envs) + ")"
-
 def math():
 	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
 
 def normal():
 	return vim.eval('vimtex#syntax#in_mathzone()') == '0'
+
 endglobal
 
-#################
-# Text snippets #
-#################
+###################
+# Format snippets #
+###################
 
 snippet "te?xt" "Text" wr
-\text{${1:${VISUAL}}} $0
-endsnippet
-
-context "math()"
-snippet "te?xt" "Automaticly add text in mathmode" iAr
-\text{$1} $0
+\text{${1:${VISUAL}}}$0
 endsnippet
 
 snippet tt "Texttt" w
-\texttt{${1:${VISUAL}}} $0
+\texttt{${1:${VISUAL}}}$0
 endsnippet
 
 snippet bf "Textbf" w
-\textbf{${1:${VISUAL}}} $0
+\textbf{${1:${VISUAL}}}$0
 endsnippet
 
 snippet it "Textit" w
-\textit{${1:${VISUAL}}} $0
+\textit{${1:${VISUAL}}}$0
 endsnippet
 
 snippet sc "Textsc" w
-\textsc{${1:${VISUAL}}} $0
+\textsc{${1:${VISUAL}}}$0
 endsnippet
 
 snippet rm "Textrm" w
-\textrm{${1:${VISUAL}}} $0
+\textrm{${1:${VISUAL}}}$0
 endsnippet
 
 snippet ul "Underline"
-\ul{${1:${VISUAL}}} $0
+\ul{${1:${VISUAL}}}$0
 endsnippet
 
 snippet nl "New line"
@@ -71,366 +68,85 @@ snippet _ "Automaticly add \ before _" iA
 \_$0
 endsnippet
 
-#################
-# Math snippets #
-#################
-
-snippet math "A math mode snippet" w
-$${0:${VISUAL}}$
-endsnippet
-snippet dmath "Automaticly displaymode math mode" bA
-\[ ${0:${VISUAL}} \]
-endsnippet
-
-context "math()"
-snippet _ "Automaticly add {} after _ in math mode" iA
-_{$0}
-endsnippet
-
-context "math()"
-snippet ^ "Automaticly add {} after ^ in math mode" iA
-^{$0}
-endsnippet
-
-context "math()"
-snippet leq "Auto leq snippet" iA
-\leq$0
-endsnippet
-context "math()"
-snippet geq "Auto geq snippet" iA
-\geq$0
-endsnippet
-
-context "math()"
-snippet iff "iff" Ai
-\iff
-endsnippet
-
-context "math()"
-snippet frac "A frac snippet" iA
-\frac{$1}{$2}$0
-endsnippet
-context "math()"
-snippet / "A dfrac snippet" iA
-\dfrac{$1}{$2}$0
-endsnippet
-
-snippet paren "Math paren snippet" i
-\paren{${1:${VISUAL}}}$0
-endsnippet
-snippet bracket "Math bracket snippet" i
-\bracket{${1:${VISUAL}}}$0
-endsnippet
-snippet sbracket "Math sbracket snippet" i
-\sbracket{${1:${VISUAL}}}$0
-endsnippet
-snippet angbracket "Math angbracket snippet" i
-\angbracket{${1:${VISUAL}}}$0
-endsnippet
-
-context "math()"
-snippet Right "Math Rightarrow snippet" iA
-\Rightarrow$0
-endsnippet
-context "math()"
-snippet right "Math rightarrow snippet" iA
-\rightarrow$0
-endsnippet
-context "math()"
-snippet Left "Math leftarrow snippet" iA
-\Leftarrow$0
-endsnippet
-context "math()"
-snippet left "Math Leftarrow snippet" iA
-\leftarrow$0
-endsnippet
-
-snippet ol "Math overline snippet" i
-\ol{${1:${VISUAL}}}$0
-endsnippet
-snippet ob "Math overbrace snippet" i
-\ob{${1:${VISUAL}}}$0
-endsnippet
-snippet ub "Math underbrace snippet" i
-\ub{${1:${VISUAL}}}$0
-endsnippet
-
-snippet hat "Math hat snippet" i
-\hat{${1:${VISUAL}}}$0
-endsnippet
-
-snippet bmatrix "Math bmatrix snippet" i
-\begin{bmatrix}
-${0:${VISUAL}}
-\end{bmatrix}
-endsnippet
-snippet pmatrix "Math pmatrix snippet" i
-\begin{pmatrix}
-${0:${VISUAL}}
-\end{pmatrix}
-endsnippet
-snippet Bmatrix "Math Bmatrix snippet" i
-\begin{Bmatrix}
-${0:${VISUAL}}
-\end{Bmatrix}
-endsnippet
-snippet vmatrix "Math vmatrix snippet" i
-\begin{vmatrix}
-${0:${VISUAL}}
-\end{vmatrix}
-endsnippet
-snippet Vmatrix "Math Vmatrix snippet" i
-\begin{Vmatrix}
-${0:${VISUAL}}
-\end{Vmatrix}
-endsnippet
-
-snippet pow "Math pow snippet" i
-\pow{$1}{$2}$0
-endsnippet
-snippet sub "Math sub snippet" i
-\sub{$1}{$2}$0
-endsnippet
-snippet powsub "Math powsub snippet" i
-\powsub{$1}{$2}{$3}$0
-endsnippet
-snippet subpow "Math subpow snippet" i
-\subpow{$1}{$2}{$3}$0
-endsnippet
-
-snippet abs "Math abs snippet" i
-\abs{${1:${VISUAL}}}$0
-endsnippet
-
-snippet dlim "Math dlim snippet" i
-\dlim$0
-endsnippet
-snippet slim "Math slim snippet" i
-\slim[${1:x}]{$2}$0
-endsnippet
-snippet nlim "Math nlim snippet" i
-\nlim$0
-endsnippet
-
-snippet deriv "Math deriv snippet" i
-\deriv[${1:x}]{$2}$0
-endsnippet
-snippet derivn "Math derivn snippet" i
-\derivn[${1:f}]{$2}$0
-endsnippet
-snippet fn "Math fn snippet" i
-\fn{$1}$0
-endsnippet
-snippet parderiv "Math parderiv snippet" i
-\parderiv[${1:f}]{$2}$0
-endsnippet
-snippet parx "Math parx snippet" i
-\parx$0
-endsnippet
-snippet pary "Math pary snippet" i
-\pary$0
-endsnippet
-
-snippet dint "Math dint snippet" i
-\dint$0
-endsnippet
-snippet spint "Math spint snippet" i
-\spint{$1}{$2}$0
-endsnippet
-snippet psint "Math psint snippet" i
-\psint{$1}{$2}$0
-endsnippet
-
-snippet dsum "Math dsum snippet" i
-\dsum$0
-endsnippet
-snippet spsum "Math spsum snippet" i
-\spsum{$1}{$2}$0
-endsnippet
-snippet pssum "Math pssum snippet" i
-\pssum{$1}{$2}$0
-endsnippet
-snippet serie "Math serie snippet" i
-\serie[${1:n}]{$2}$0
-endsnippet
-
-snippet dprod "Math dprod snippet" i
-\dprod
-endsnippet
-snippet spprod "Math spprod snippet" i
-\spprod{$1}{$2}$0
-endsnippet
-snippet psprod "Math psprod snippet" i
-\psprod{$1}{$2}$0
-endsnippet
-
-snippet poly "Math poly snippet" i
-\poly[${1:x}]{$2}{$3}$0
-endsnippet
-snippet sumpoly "Math sumpoly snippet" i
-\sumpoly[${1:x}]{$2}$0
-endsnippet
-snippet dsumpoly "Math dsumpoly snippet" i
-\dsumpoly[${1:x}]{$2}$0
-endsnippet
-
-snippet divi "Math divi snippet" i
-\divi$0
-endsnippet
-snippet notdivi "Math notdivi snippet" i
-\notdivi$0
-endsnippet
-snippet ceil "Math ceil snippe" i
-\ceil{${1:${VISUAL}}}$0
-endsnippet
-snippet floor "Math floor snippet" i
-\floor{${1:${VISUAL}}}$0
-endsnippet
-snippet mdc "Math mdc snippet" i
-\mdc$0
-endsnippet
-snippet mmc "Math mmc snippet" i
-\mmc$0
-endsnippet
-snippet dmax "Math dmax snippet" i
-\dmax$0
-endsnippet
-snippet dmin "Math dmin snippet" i
-\dmin$0
-endsnippet
-snippet smax "Math smax snippet" i
-\smax{${1:${VISUAL}}}$0
-endsnippet
-snippet smin "Math smin snippet" i
-\smin{${1:${VISUAL}}}$0
-endsnippet
-snippet Zmod "Math Zmod snippet" i
-\Zmod{${1:${VISUAL}}}$0
-endsnippet
-snippet class "Math class snippet" i
-\class{${1:${VISUAL}}}$0
-endsnippet
-
-snippet set "Math set snippet" i
-\set{${1:${VISUAL}}}$0
-endsnippet
-snippet cardinal "Math cardinal snippet" i
-\cardinal{${1:${VISUAL}}}$0
-endsnippet
-
-snippet union "Math union snippet" i
-\union
-endsnippet
-snippet spunion "Math spunion snippet" i
-\spunion{$1}{$2}$0
-endsnippet
-snippet psunion "Math psunion snippet" i
-\psunion{$1}{$2}$0
-endsnippet
-snippet inter "Math inter snippet" i
-\inter
-endsnippet
-snippet spinter "Math spinter snippet"
-\spinter{$1}{$2}$0
-endsnippet
-snippet psinter "Math psinter snippet" i
-\psinter{$1}{$2}$0
-endsnippet
-
-snippet pair "Math pair snippet" i
-\pair{$1}{$2}$0
-endsnippet
-snippet inner "Math inner snippet" i
-\inner{$1}{$2}$0
-endsnippet
-snippet norm "Math norm snippet" i
-\norm{${1:${VISUAL}}}$0
-endsnippet
-
-snippet xor "Math xor snippet" i
-\xor$0
-endsnippet
-
-snippet var "Math var snippet" i
-\var{${1:${VISUAL}}}$0
-endsnippet
-snippet std "Math std snippet" i
-\std{${1:${VISUAL}}}$0
-endsnippet
-
-context "math()"
-snippet cqd "Math cqd snippet" iA
-\cqd$0
-endsnippet
-context "math()"
-snippet then "Math then snippet" iA
-\then$0
-endsnippet
-context "math()"
-snippet ida "Math ida snippet" iA
-\ida$0
-endsnippet
-context "math()"
-snippet volta "Math volta snippet" iA
-\volta$0
-endsnippet
-
-snippet xii "Math xii snippet" i
-\xii[${1:x}]{$2}$0
-endsnippet
-
-snippet prob "Math prob snippet" i
-\prob{${1:${VISUAL}}}$0
-endsnippet
-snippet mean "Math mean snippet" i
-\mean{${1:${VISUAL}}}$0
-endsnippet
-snippet cov "Math cov snippet" i
-\cov{${1:${VISUAL}}}$0
-endsnippet
-snippet corr "Math corr snippet" i
-\corr{${1:${VISUAL}}}$0
-endsnippet
-context "math()"
-snippet cond "Math cond snippet" iA
-\cond$0
-endsnippet
-context "math()"
-snippet sim "Auto sim snippet" iA
-\sim$0
-endsnippet
-
-snippet seq "Math seq snippet" i
-\seq{$1}{$2}$0
-endsnippet
-
 #####################
 # Document snippets #
 #####################
 
-#snippet "chap?t?e?r?" "Chapter snippet" br
-#\chapter{$1}
-#endsnippet
+snippet "chap(ter){0,1}" "Chapter" br
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-#snippet "sect?i?o?n?" "Section snippet" br
-#\section{$1}
-#endsnippet
+\chapter{${1:chapter name}}%
+\label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
 
-snippet "subse?c?" "Subsection snippet" br
-\subsection{$1}
+$0
 endsnippet
 
-snippet "parag?r?a?p?h?" "Paragraph snippet" br
-\paragraph{$1}
+snippet "sec(tion){0,1}" "Section" br
+\section{${1:${VISUAL:section name}}}%
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
 endsnippet
 
-snippet img "Figure snippet" b
+snippet "sec(tion){0,1}\*" "Section*" br
+\section*{${1:${VISUAL:section name}}}%
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+
+snippet "subs(ection){0,1}" "Subsection" br
+\subsection{${1:${VISUAL:subsection name}}}%
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet "subs(ection){0,1}\*" "Subsection*" br
+\subsection*{${1:${VISUAL:subsection name}}}%
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet "subsubs(ection){0,1}" "Subsubsection" br
+\subsubsection{${1:${VISUAL:subsubsection name}}}%
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet "subsubs(ection){0,1}\*" "Subsubsection" br
+\subsubsection*{${1:${VISUAL:subsubsection name}}}%
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+${0}
+endsnippet
+
+snippet "par(aragraph){0,1}" "Paragraph" br
+\paragraph{${1:${VISUAL:paragraph name}}}%
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet "subpar(aragraph){0,1}" "Subparagraph" br
+\subparagraph{${1:${VISUAL:subparagraph name}}}%
+\label{par:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet "(img|fig)" "Figure snippet" br
 \begin{figure}[${1:h}]
 \centering
-\includegraphics[scale=${3:1}\linewidth]{Res/$2}
-\caption{$4}
-${5:\label{$6}}
+\includegraphics[scale=${3:1}]{Res/$2}
+${4:\caption{$5}}
+${6:\label{$7}}
 \end{figure}
+
+$0
 endsnippet
 
 ########################
@@ -477,4 +193,16 @@ snippet dem "Demonstration snippet" b
 \begin{dem}
 ${0:${VISUAL}}
 \end{dem}
+endsnippet
+
+###############
+# New command #
+###############
+
+snippet newcmd "New command snippet" b
+\newcommand{\\$1}${2:[$3]}{$4}
+endsnippet
+
+snippet renewcmd "Renew command snippet" b
+\renewcommand{\\$1}${2:[$3]}{$4}
 endsnippet

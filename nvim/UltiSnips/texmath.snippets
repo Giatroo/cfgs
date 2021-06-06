@@ -1,0 +1,448 @@
+####################
+# Global functions #
+####################
+
+global !p
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+def normal():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '0'
+endglobal
+
+######################
+# Formating snippets #
+######################
+
+context "math()"
+snippet "te?xt" "Automaticly add text in mathmode" iAr
+\text{$1}$0
+endsnippet
+
+context "math()"
+snippet __ "Automaticly add {} after _ in math mode" iA
+_{$1}$0
+endsnippet
+context "math()"
+snippet ^ "Automaticly add {} after ^ in math mode" iA
+^{$1}$0
+endsnippet
+
+context "math()"
+snippet boxed "Automaticly boxed in math mode" iA
+\boxed{$1}$0
+endsnippet
+
+snippet paren "Math paren snippet" i
+\paren{${1:${VISUAL}}}$0
+endsnippet
+snippet bracket "Math bracket snippet" i
+\bracket{${1:${VISUAL}}}$0
+endsnippet
+snippet sbracket "Math sbracket snippet" i
+\sbracket{${1:${VISUAL}}}$0
+endsnippet
+snippet angbracket "Math angbracket snippet" i
+\angbracket{${1:${VISUAL}}}$0
+endsnippet
+
+snippet ol "Math overline snippet" i
+\ol{${1:${VISUAL}}}$0
+endsnippet
+snippet ob "Math overbrace snippet" i
+\ob{${1:${VISUAL}}}$0
+endsnippet
+snippet ub "Math underbrace snippet" i
+\ub{${1:${VISUAL}}}$0
+endsnippet
+
+snippet pow "Math pow snippet" i
+\pow{$1}{$2}$0
+endsnippet
+snippet sub "Math sub snippet" i
+\sub{$1}{$2}$0
+endsnippet
+snippet powsub "Math powsub snippet" i
+\powsub{$1}{$2}{$3}$0
+endsnippet
+snippet subpow "Math subpow snippet" i
+\subpow{$1}{$2}{$3}$0
+endsnippet
+
+context "math()"
+snippet hat "Math hat snippet" iA
+\hat{${1:${VISUAL}}}$0
+endsnippet
+context "math()"
+snippet vec "Math vec snippet" iA
+\vec{${1:${VISUAL}}}$0
+endsnippet
+
+snippet seq "Math sequence snippet" i
+\seq{$1}{$2}$0
+endsnippet
+
+################
+# Regular math #
+################
+
+context "math()"
+snippet leq "Auto leq snippet" iA
+\leq$0
+endsnippet
+context "math()"
+snippet geq "Auto geq snippet" iA
+\geq$0
+endsnippet
+context "math()"
+snippet neq "Auto neq snippet" iA
+\neq$0
+endsnippet
+
+context "math()"
+snippet frac "A frac snippet" iA
+\frac{$1}{$2}$0
+endsnippet
+context "math()"
+snippet / "A dfrac snippet" iA
+\dfrac{$1}{$2}$0
+endsnippet
+
+snippet abs "Math abs snippet" i
+\abs{${1:${VISUAL}}}$0
+endsnippet
+
+snippet pair "Math pair snippet" i
+\pair{$1}{$2}$0
+endsnippet
+
+snippet mat "smart matrix environment" i
+\begin{${1:p/b/v/V/B/small}matrix}
+	${2:${VISUAL}}
+\end{$1matrix}$0
+endsnippet
+
+############
+# Calculus #
+############
+
+snippet dlim "Math dlim snippet" i
+\dlim$0
+endsnippet
+snippet slim "Math slim snippet" i
+\slim[${1:x}]{$2}$0
+endsnippet
+snippet nlim "Math nlim snippet" i
+\nlim$0
+endsnippet
+
+snippet deriv "Math deriv snippet" i
+\deriv[${1:x}]{$2}$0
+endsnippet
+snippet derivn "Math derivn snippet" i
+\derivn[${1:f}]{$2}$0
+endsnippet
+snippet fn "Math fn snippet" i
+\fn{$1}$0
+endsnippet
+snippet parderiv "Math parderiv snippet" i
+\parderiv[${1:f}]{$2}$0
+endsnippet
+snippet parx "Math parx snippet" i
+\parx$0
+endsnippet
+snippet pary "Math pary snippet" i
+\pary$0
+endsnippet
+
+snippet dint "Math dint snippet" i
+\dint$0
+endsnippet
+snippet spint "Math spint snippet" i
+\spint{$1}{$2}$0
+endsnippet
+snippet psint "Math psint snippet" i
+\psint{$1}{$2}$0
+endsnippet
+
+snippet dsum "Math dsum snippet" i
+\dsum$0
+endsnippet
+snippet spsum "Math spsum snippet" i
+\spsum{$1}{$2}$0
+endsnippet
+snippet pssum "Math pssum snippet" i
+\pssum{$1}{$2}$0
+endsnippet
+snippet serie "Math serie snippet" i
+\serie[${1:n}]{$2}$0
+endsnippet
+
+snippet dprod "Math dprod snippet" i
+\dprod
+endsnippet
+snippet spprod "Math spprod snippet" i
+\spprod{$1}{$2}$0
+endsnippet
+snippet psprod "Math psprod snippet" i
+\psprod{$1}{$2}$0
+endsnippet
+
+snippet poly "Math poly snippet" i
+\poly[${1:x}]{$2}{$3}$0
+endsnippet
+snippet sumpoly "Math sumpoly snippet" i
+\sumpoly[${1:x}]{$2}$0
+endsnippet
+snippet dsumpoly "Math dsumpoly snippet" i
+\dsumpoly[${1:x}]{$2}$0
+endsnippet
+
+##############
+# Set theory #
+##############
+
+snippet set "Math set snippet" i
+\set{${1:${VISUAL}}}$0
+endsnippet
+snippet cardinal "Math cardinal snippet" i
+\cardinal{${1:${VISUAL}}}$0
+endsnippet
+
+snippet union "Math union snippet" i
+\union
+endsnippet
+snippet spunion "Math spunion snippet" i
+\spunion{$1}{$2}$0
+endsnippet
+snippet psunion "Math psunion snippet" i
+\psunion{$1}{$2}$0
+endsnippet
+snippet inter "Math inter snippet" i
+\inter
+endsnippet
+snippet spinter "Math spinter snippet"
+\spinter{$1}{$2}$0
+endsnippet
+snippet psinter "Math psinter snippet" i
+\psinter{$1}{$2}$0
+endsnippet
+
+#################
+# Discrete math #
+#################
+
+snippet divi "Math divi snippet" i
+\divi$0
+endsnippet
+snippet notdivi "Math notdivi snippet" i
+\notdivi$0
+endsnippet
+
+snippet ceil "Math ceil snippe" i
+\ceil{${1:${VISUAL}}}$0
+endsnippet
+snippet floor "Math floor snippet" i
+\floor{${1:${VISUAL}}}$0
+endsnippet
+
+snippet mdc "Math mdc snippet" i
+\mdc$0
+endsnippet
+snippet mmc "Math mmc snippet" i
+\mmc$0
+endsnippet
+
+snippet dmax "Math dmax snippet" i
+\dmax$0
+endsnippet
+snippet dmin "Math dmin snippet" i
+\dmin$0
+endsnippet
+snippet smax "Math smax snippet" i
+\smax{${1:${VISUAL}}}$0
+endsnippet
+snippet smin "Math smin snippet" i
+\smin{${1:${VISUAL}}}$0
+endsnippet
+
+############
+# Geometry #
+############
+
+snippet inner "Math inner snippet" i
+\inner{$1}{$2}$0
+endsnippet
+snippet norm "Math norm snippet" i
+\norm{${1:${VISUAL}}}$0
+endsnippet
+
+#############################
+# Logic and Boolean Algebra #
+#############################
+
+snippet xor "Math xor snippet" i
+\xor$0
+endsnippet
+snippet and "Math and snippet" i
+\wedge$0
+endsnippet
+snippet or "Math or snippet" i
+\vee$0
+endsnippet
+
+##############################
+# Probability and Statistics #
+##############################
+
+snippet prob "Math prob snippet" i
+\prob{${1:${VISUAL}}}$0
+endsnippet
+
+snippet mean "Math mean snippet" i
+\mean{${1:${VISUAL}}}$0
+endsnippet
+snippet var "Math var snippet" i
+\var{${1:${VISUAL}}}$0
+endsnippet
+snippet std "Math std snippet" i
+\std{${1:${VISUAL}}}$0
+endsnippet
+
+snippet cov "Math cov snippet" i
+\cov{${1:${VISUAL}}}$0
+endsnippet
+snippet corr "Math corr snippet" i
+\corr{${1:${VISUAL}}}$0
+endsnippet
+
+snippet bias "Math bias snippet" i
+\bias{${1:${VISUAL}}}$0
+endsnippet
+
+context "math()"
+snippet cond "Math cond snippet" iA
+\cond$0
+endsnippet
+
+###############################################
+# Artificial Inteligence and Machine Learning #
+###############################################
+
+snippet xii "Math xii snippet" i
+\xii[${1:x}]{$2}$0
+endsnippet
+
+#############
+# Math envs #
+#############
+
+snippet math "A math mode snippet" w
+$${0:${VISUAL}}$
+endsnippet
+
+snippet dmath "Automaticly displaymode math mode" bA
+\[
+${0:${VISUAL}}
+\]
+endsnippet
+
+snippet eqn "Equation env" b
+\begin{equation}
+	${1:${VISUAL}}
+\end{equation}
+$0
+endsnippet
+
+snippet eqn* "Equation without number env" b
+\begin{equation*}
+	${1:${VISUAL}}
+\end{equation*}
+$0
+endsnippet
+
+snippet "al(ign){0,1}" "Align env" br
+\begin{align}
+	${1:${VISUAL}}
+\end{align}
+$0
+endsnippet
+
+snippet "al(ign){0,1}\*" "Align without number env" br
+\begin{align*}
+	${1:${VISUAL}}
+\end{align*}
+$0
+endsnippet
+
+context "normal()"
+snippet boxed "Boxed equation" b
+\[ \boxed{
+	${1:${VISUAL}}
+}\]$0
+endsnippet
+
+snippet "cas(es){0,1}" "Cases env" wr
+\begin{cases}
+	${1:equation}, &\text{ if }${2:case} \\\
+	${3:equation}, &\text{ if }${4:case} \\\
+\end{cases}$0
+endsnippet
+
+snippet "spl(it){0,1}" "Split env" wr
+\begin{split}
+	${1:${VISUAL}}
+\end{split}
+endsnippet
+
+########
+# Misc #
+########
+
+context "math()"
+snippet Right "Math Rightarrow snippet" iA
+\Rightarrow$0
+endsnippet
+context "math()"
+snippet right "Math rightarrow snippet" iA
+\rightarrow$0
+endsnippet
+context "math()"
+snippet Left "Math leftarrow snippet" iA
+\Leftarrow$0
+endsnippet
+context "math()"
+snippet left "Math Leftarrow snippet" iA
+\leftarrow$0
+endsnippet
+
+context "math()"
+snippet then "Math then snippet" iA
+\then$0
+endsnippet
+context "math()"
+snippet iff "iff" iA
+\iff
+endsnippet
+context "math()"
+snippet therefore "Math therefore snippet" iA
+\therefore$0
+endsnippet
+context "math()"
+snippet ida "Math ida snippet" iA
+\ida$0
+endsnippet
+context "math()"
+snippet volta "Math volta snippet" iA
+\volta$0
+endsnippet
+
+context "math()"
+snippet cqd "Math cqd snippet" iA
+\cqd$0
+endsnippet
+
+context "math()"
+snippet sim "Auto sim snippet" iA
+\sim$0
+endsnippet

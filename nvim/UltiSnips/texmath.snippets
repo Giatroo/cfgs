@@ -87,6 +87,37 @@ endsnippet
 ################
 
 context "math()"
+snippet sr "Squared snippet" i
+^2
+endsnippet
+context "math()"
+snippet cb "Cubed snippet" i
+^3
+endsnippet
+snippet si "Sub i snippet" i
+_i
+endsnippet
+snippet sj "Sub j snippet" i
+_j
+endsnippet
+snippet s0 "Sub 0 snippet" i
+_0
+endsnippet
+snippet s1 "Sub 1 snippet" i
+_1
+endsnippet
+snippet s2 "Sub 2 snippet" i
+_2
+endsnippet
+snippet s3 "Sub 3 snippet" i
+_3
+endsnippet
+
+snippet sqrt "Square root snippet" i
+\sqrt${1:[$2]}{$3}$0
+endsnippet
+
+context "math()"
 snippet leq "Auto leq snippet" iA
 \leq$0
 endsnippet
@@ -333,6 +364,11 @@ snippet xii "Math xii snippet" i
 \xii[${1:x}]{$2}$0
 endsnippet
 
+snippet mse "Math MSE snippet" i
+\mse
+endsnippet
+
+
 #############
 # Math envs #
 #############
@@ -382,14 +418,14 @@ snippet boxed "Boxed equation" b
 }\]$0
 endsnippet
 
-snippet "cas(es){0,1}" "Cases env" wr
+snippet "cas(es){0,1}" "Cases env" br
 \begin{cases}
 	${1:equation}, &\text{ if }${2:case} \\\
 	${3:equation}, &\text{ if }${4:case} \\\
 \end{cases}$0
 endsnippet
 
-snippet "spl(it){0,1}" "Split env" wr
+snippet "spl(it){0,1}" "Split env" br
 \begin{split}
 	${1:${VISUAL}}
 \end{split}

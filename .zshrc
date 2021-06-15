@@ -171,7 +171,7 @@ alias find="fd"
 # Vim mode
 bindkey -v
 #export KEYTIMEOUT=1
-export TERM=tmux-256color
+export TERM=xterm-256color
 export EDITOR=nvim
 
 # Use vim keys in tab complete menu:

@@ -83,7 +83,7 @@ plugins=(
 )
 
 # TMUX Plugin:
-ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=false
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOCONNECT=true
 ZSH_TMUX_AUTOQUIT=$ZSH_TMUX_AUTOSTART
@@ -219,3 +219,5 @@ unset __conda_setup
 
 # Syntax-Highlighting (must be at the end of the configuration file)
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+neofetch

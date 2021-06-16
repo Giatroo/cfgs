@@ -93,6 +93,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+USERCONFIG=$HOME/.config/user/
+
 # Custom aliases:
 
 alias lucas="cd /media/sf_Lucas/"
@@ -117,36 +119,124 @@ alias jl="jupyter-lab &"
 alias bee="cd /media/sf_Coding/pythonWorkspace/BeeData/"
 alias beedata=bee
 
-  # Configurations files aliases
-alias ohmyzsh="vim  ~/.oh-my-zsh"
+# Configurations files aliases
+declare -A local giatro_path_dict
+giatro_path_dict[zsh]="$HOME/.zshrc"
+giatro_path_dict[bash]="$HOME/.bashrc"
+giatro_path_dict[tmux]="$HOME/.tmux.conf"
+giatro_path_dict[vi]="$HOME/.vimrc"
+giatro_path_dict[vim]="$HOME/.config/nvim/"
+giatro_path_dict[nvim]="$HOME/.config/nvim/"
+giatro_path_dict[latexmacros]="$USERCONFIG/giatro_macros.tex"
+giatro_path_dict[latexpackages]="$USERCONFIG/giatro_packages.tex"
+giatro_path_dict[vimwiki]="$HOME/vimwiki/"
+giatro_path_dict[zathura]="$HOME/.config/zathura/.zathurarc"
+giatro_path_dict[alacritty]="$HOME/.config/alacritty/alacritty.yml"
+giatro_path_dict[picom]="$HOME/.config/picom/picom.conf"
+giatro_path_dict[i3]="$HOME/.config/i3/config"
+giatro_path_dict[neofetch]="$HOME/.config/neofetch/config.conf"
+giatro_path_dict[xprofile]="$HOME/.xprofile"
+giatro_path_dict[p10k]="$HOME/.p10k.zsh"
+giatro_path_dict[clang-format]="$HOME/.clang-format"
+giatro_path_dict[gitconfig]="$HOME/.gitconfig"
+giatro_path_dict[git]="$HOME/.gitconfig"
 
-alias zshconfig="vim ~/.zshrc && cp ~/.zshrc ~/.config/user/.zshrc"
-alias zshconfigg="pushd ~ && vim .zshrc && cp .zshrc ~/.config/user/.zshrc && pushd ~/.config/user/ && git add .zshrc && git commit && git push && popd && popd"
 
-alias tmuxconfig="vim ~/.tmux.conf && cp ~/.tmux.conf ~/.config/user/.tmux.conf"
-alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf ~/.config/user/.tmux.conf && pushd ~/.config/user/ && git add .tmux.conf && git commit && git push && popd && popd"
+declare -A local giatro_file_name_dict
+giatro_file_name_dict[zsh]=".zshrc"
+giatro_file_name_dict[zsh]=".bashrc"
+giatro_file_name_dict[tmux]=".tmux.conf"
+giatro_file_name_dict[vi]=".vimrc"
+giatro_file_name_dict[vim]="nvim/"
+giatro_file_name_dict[nvim]="nvim/"
+giatro_file_name_dict[latexmacros]="giatro_macros.tex"
+giatro_file_name_dict[latexpackages]="giatro_packages.tex"
+giatro_file_name_dict[vimwiki]="vimwiki/"
+giatro_file_name_dict[zathura]=".zathurarc"
+giatro_file_name_dict[alacritty]="alacritty.yml"
+giatro_file_name_dict[picom]="picom.conf"
+giatro_file_name_dict[i3]="i3config"
+giatro_file_name_dict[neofetch]="neofetch.conf"
+giatro_file_name_dict[p10k]=".p10k.zsh"
+giatro_file_name_dict[clang-format]=".clang-format"
+giatro_file_name_dict[gitconfig]=".gitconfig"
+giatro_file_name_dict[git]=".gitconfig"
 
-alias vimconfig="pushd ~/.config/nvim/"
-alias vimconfigg="pushd ~/.config/nvim/ && cp -r ./* ~/.config/user/nvim/ && pushd ~/.config/user/nvim/ && git add * && git commit && git push && popd && popd"
+function config  {
+  local file_path=$giatro_path_dict[$1]
+  local file_name=$giatro_file_name_dict[$1]
 
-alias latexmacrosconfig="vim ~/.config/user/giatro_macros.tex"
-alias latexmacrosconfigg="pushd ~/.config/user/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit && git push && popd"
+  if [ -d $file_path ]
+  then
+    pushd $file_path
+  fi
+  if [ -f $file_path ]
+  then
+    nvim $file_path
+    cp $file_path $USERCONFIG/$file_name
+  fi
+}
 
-alias latexpackagesconfig="vim ~/.config/user/giatro_packages.tex"
-alias latexpackagesconfigg="pushd ~/.config/user/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit && git push && popd"
+function configg  {
+  local file_path=$giatro_path_dict[$1]
+  local file_name=$giatro_file_name_dict[$1]
 
-alias vimwikiconfig="pushd ~/vimwiki/"
-alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit && git push && popd"
+  if [ -d $file_path ]
+  then
+    cp -r $file_path/* $USERCONFIG/$file_name
+    pushd $USERCONFIG/$file_name
+    git add *
+    git commit
+    git push
+    popd
+  fi
+  if [ -f $file_path ]
+  then
+    nvim $file_path
+    cp $file_path $USERCONFIG/$file_name
+    pushd $USERCONFIG/
+    git add $file_name
+    git commit
+    git push
+    popd
+  fi
+}
 
-alias zathuraconfig="pushd ~/.config/zathura/ && vim ./zathurarc && popd"
-alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zathurarc ~/.config/user/zathurarc && pushd ~/.config/user/ && git add zathurarc && git commit && git push && popd && popd"
 
-alias userconfig="pushd ~/.config/user/"
+# alias tmuxconfig="vim ~/.tmux.conf && cp ~/.tmux.conf $USERCONFIG/.tmux.conf"
+# alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf $USERCONFIG/.tmux.conf && pushd $USERCONFIG/ && git add .tmux.conf && git commit && git push && popd && popd"
 
-alias createlatex="cp ~/.config/user/LatexTemplate.tex ."
 
-alias createreadme="cp ~/.config/user/README_template.md ./README.md && vim ./README.md"
+# alias ohmyzsh="vim  ~/.oh-my-zsh"
 
+# alias zshconfig="vim ~/.zshrc && cp ~/.zshrc $USERCONFIG/.zshrc"
+# alias zshconfigg="pushd ~ && vim .zshrc && cp .zshrc $USERCONFIG/.zshrc && pushd $USERCONFIG/ && git add .zshrc && git commit && git push && popd && popd"
+
+# alias tmuxconfig="vim ~/.tmux.conf && cp ~/.tmux.conf $USERCONFIG/.tmux.conf"
+# alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf $USERCONFIG/.tmux.conf && pushd $USERCONFIG/ && git add .tmux.conf && git commit && git push && popd && popd"
+
+# alias vimconfig="pushd ~/.config/nvim/"
+# alias vimconfigg="pushd ~/.config/nvim/ && cp -r ./* $USERCONFIG/nvim/ && pushd $USERCONFIG/nvim/ && git add * && git commit && git push && popd && popd"
+
+# alias latexmacrosconfig="vim $USERCONFIG/giatro_macros.tex"
+# alias latexmacrosconfigg="pushd $USERCONFIG/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit && git push && popd"
+
+# alias latexpackagesconfig="vim $USERCONFIG/giatro_packages.tex"
+# alias latexpackagesconfigg="pushd $USERCONFIG/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit && git push && popd"
+
+# alias vimwikiconfig="pushd ~/vimwiki/"
+# alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit && git push && popd"
+
+# alias zathuraconfig="pushd ~/.config/zathura/ && vim ./zathurarc && popd"
+# alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zathurarc $USERCONFIG/zathurarc && pushd $USERCONFIG/ && git add zathurarc && git commit && git push && popd && popd"
+
+alias userconfig="pushd $USERCONFIG/"
+
+alias createlatex="cp $USERCONFIG/LatexTemplate.tex ."
+
+alias createreadme="cp $USERCONFIG/README_template.md ./README.md && vim ./README.md"
+
+# Program aliases
 alias vimwiki="vim +VimwikiIndex 1"
 
 alias vim="nvim"
@@ -155,13 +245,12 @@ alias vi="nvim"
 alias python="python3"
 alias pip="pip3"
 
-# alias open="xdg-open"
 alias open="zathura"
 
 alias g="git"
 alias gs="git status"
+alias gd="git diff"
 
-alias ..="cd .."
 alias c="clear"
 alias ls="exa"
 alias cat="bat"
@@ -180,16 +269,13 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
-# Autosuggestions configuration
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87"
-
 # Adding some folders to PATH
 PATH="$PATH:/home/giatro/.local/bin"
-PATH="$PATH:/home/giatro/bin"
-PATH="$PATH:/home/giatro/.cargo/bin"
-PATH="$PATH:/usr/racket/bin"
 PATH="$PATH:/usr/bin"
-export PATH="$PATH:/home/giatro/pycharm-community-2020.2.4/bin"
+export PATH
+
+# Autosuggestions configuration
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

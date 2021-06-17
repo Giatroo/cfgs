@@ -142,6 +142,7 @@ giatro_path_dict[gitconfig]="$HOME/.gitconfig"
 giatro_path_dict[git]="$HOME/.gitconfig"
 giatro_path_dict[lightdm]="/etc/lightdm/lightdm.conf"
 giatro_path_dict[rofi]="$HOME/.config/rofi/"
+giatro_path_dict[polybar]="$HOME/.config/polybar/"
 
 declare -A local giatro_file_name_dict
 giatro_file_name_dict[zsh]=".zshrc"
@@ -164,6 +165,7 @@ giatro_file_name_dict[gitconfig]=".gitconfig"
 giatro_file_name_dict[git]=".gitconfig"
 giatro_file_name_dict[git]="ligthdm.config"
 giatro_file_name_dict[rofi]="rofi/"
+giatro_file_name_dict[polybar]="polybar/"
 
 function config  {
   local file_path=$giatro_path_dict[$1]

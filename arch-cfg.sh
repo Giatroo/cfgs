@@ -28,10 +28,10 @@ mkdir $HOME/.config/picom
 cp $HOME/.config/user/picom.conf $HOME/.config/picom/
 
 # Copying lightdm configuration file to the destination
-sudo cp $HOME/.config/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp $HOME/.config/user/lightdm.conf /etc/lightdm/lightdm.conf
 
 # Copying i3 configuration over to the destination folder
-sudo cp $HOME/.config/i3config $HOME/.config/i3/config
+sudo cp $HOME/.config/user/i3config $HOME/.config/i3/config
 
 # Enabling lightdm
 sudo systemctl enable lightdm
@@ -56,7 +56,7 @@ sudo pacman -S alacritty
 
 # Copying alacritty configuration over to the destination folder
 mkdir $HOME/.config/alacritty
-cp $HOME/.config/alacritty.yml $HOME/.config/alacritty/
+cp $HOME/.config/user/alacritty.yml $HOME/.config/alacritty/
 
 # Installing nitrogen
 sudo pacman -S nitrogen
@@ -126,7 +126,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Installing rust better commands
 sudo pacman -S exa fd bat
-
 
 # Configuring git
 git config --global user.email "lucaspaiolla@gmail.com"

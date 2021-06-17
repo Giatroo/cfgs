@@ -275,9 +275,9 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Adding some folders to PATH
-PATH="$PATH:/home/giatro/.local/bin"
-PATH="$PATH:/usr/bin"
-PATH="$PATH:$HOME/.config/rofi/bin"
+PATH="/home/giatro/.local/bin:$PATH"
+PATH="/usr/bin:$PATH"
+PATH="$HOME/.config/rofi/bin:$PATH"
 export PATH
 
 # Autosuggestions configuration

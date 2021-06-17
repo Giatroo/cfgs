@@ -1,0 +1,27 @@
+/** Basic config file **/
+
+configuration {
+  modi: "window,run,drun,ssh";
+
+  font: "Space Mono for Powerline 12";
+
+  show-icons: true;
+  icon-theme: "Papirus";
+  theme: "onedark";
+
+  width: 45;
+  lines: 10;
+  columns: 1;
+
+  location: 2;
+  yoffset: 20;
+  xoffset: 0;
+
+  threads: 0;
+
+  // Setting Ctrl+ J/K to go up and down
+  kb-remove-to-eol: "";
+  kb-accept-entry: "Control+m,Return,KP_Enter";
+  kb-row-up: "Up,Control+p,ISO_Left_Tab,Control+k";
+  kb-row-down: "Down,Control+n,Control+j";
+}

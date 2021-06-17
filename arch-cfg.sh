@@ -28,10 +28,10 @@ mkdir $HOME/.config/picom
 cp $HOME/.config/user/picom.conf $HOME/.config/picom/
 
 # Copying lightdm configuration file to the destination
-sudo cp $HOME/.conf/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp $HOME/.config/lightdm.conf /etc/lightdm/lightdm.conf
 
 # Copying i3 configuration over to the destination folder
-sudo cp $HOME/.conf/i3config $HOME/.conf/i3/config
+sudo cp $HOME/.config/i3config $HOME/.config/i3/config
 
 # Enabling lightdm
 sudo systemctl enable lightdm

@@ -80,14 +80,13 @@ sudo pacman -S zsh neovim tmux gvim curl npm nodejs
 sudo pacman -S gcc clang python python3 python-pip valgrind wakatime
 
 # Copying the dotfiles to their locations
-cp $HOME/.config/user/.zshrc $HOME/
 cp $HOME/.config/user/.vimrc $HOME/
 cp $HOME/.config/user/.bashrc $HOME/
 cp $HOME/.config/user/.clang-format $HOME/
 cp $HOME/.config/user/.tmux.conf $HOME/
 cp $HOME/.config/user/.p10k.zsh $HOME/
-cp -r $HOME/.config/user/zsh-syntax-highlighting $HOME/
 cp -r $HOME/.config/user/nvim $HOME/.config/
+cp $HOME/.config/user/.xprofile $HOME/
 
 # Installing zathura
 sudo pacman -S zathura zathura-cb zathura-ps zathura-djvu
@@ -108,6 +107,8 @@ nvim -c ':CocInstall coc-json coc-html coc-css coc-clangd coc-fzf-preview coc-ta
 
 # Installing oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cp $HOME/.config/user/.zshrc $HOME/
+cp -r $HOME/.config/user/zsh-syntax-highlighting $HOME/
 
 # Installing powerlevel 10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -120,7 +121,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # Installing zsh-vi-mode
 git clone https://github.com/jeffreytse/zsh-vi-mode \
-  $ZSH/custom/plugins/zsh-vi-mode
+  $HOME/.oh-my-zsh/custom/plugins/zsh-vi-mode
 
 # Installing tmux plugin manager (<C-b><S-i> to update)
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

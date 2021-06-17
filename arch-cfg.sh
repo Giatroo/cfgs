@@ -101,7 +101,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # Installing all my plugins
 nvim -c ':PlugInstall'
-vim -c ':PlugInstall'
 nvim -c ':CocInstall coc-snippets coc-prettier coc-pairs coc-explorer coc-vimtex coc-tsserver coc-texlab coc-sql coc-sh coc-rome coc-markdownlint coc-jedi'
 nvim -c ':CocInstall coc-json coc-html coc-css coc-clangd coc-fzf-preview coc-tabnine coc-spell-checker coc-highlight coc-cspell-dicts coc-diagnostic'
 

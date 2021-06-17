@@ -21,7 +21,7 @@ sudo pacman -S xorg-server
 sudo pacman -S i3-gaps lightdm lightdm-webkit2-greeter rofi picom
 
 # Installing base-devel group
-sudo pacmna -S base-devel
+sudo pacman -S base-devel
 
 # Copying picom configuration over to the destination folder
 mkdir $HOME/.config/picom
@@ -31,6 +31,7 @@ cp $HOME/.config/user/picom.conf $HOME/.config/picom/
 sudo cp $HOME/.config/user/lightdm.conf /etc/lightdm/lightdm.conf
 
 # Copying i3 configuration over to the destination folder
+mkdir $HOME/.config/i3
 sudo cp $HOME/.config/user/i3config $HOME/.config/i3/config
 
 # Enabling lightdm

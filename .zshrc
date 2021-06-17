@@ -140,11 +140,12 @@ giatro_path_dict[p10k]="$HOME/.p10k.zsh"
 giatro_path_dict[clang-format]="$HOME/.clang-format"
 giatro_path_dict[gitconfig]="$HOME/.gitconfig"
 giatro_path_dict[git]="$HOME/.gitconfig"
-
+giatro_path_dict[lightdm]="/etc/lightdm/lightdm.conf"
+giatro_path_dict[rofi]="$HOME/.config/rofi/"
 
 declare -A local giatro_file_name_dict
 giatro_file_name_dict[zsh]=".zshrc"
-giatro_file_name_dict[zsh]=".bashrc"
+giatro_file_name_dict[bash]=".bashrc"
 giatro_file_name_dict[tmux]=".tmux.conf"
 giatro_file_name_dict[vi]=".vimrc"
 giatro_file_name_dict[vim]="nvim/"
@@ -161,6 +162,8 @@ giatro_file_name_dict[p10k]=".p10k.zsh"
 giatro_file_name_dict[clang-format]=".clang-format"
 giatro_file_name_dict[gitconfig]=".gitconfig"
 giatro_file_name_dict[git]=".gitconfig"
+giatro_file_name_dict[git]="ligthdm.config"
+giatro_file_name_dict[rofi]="rofi/"
 
 function config  {
   local file_path=$giatro_path_dict[$1]
@@ -272,6 +275,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # Adding some folders to PATH
 PATH="$PATH:/home/giatro/.local/bin"
 PATH="$PATH:/usr/bin"
+PATH="$PATH:$HOME/.config/rofi/bin"
 export PATH
 
 # Autosuggestions configuration

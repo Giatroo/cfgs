@@ -75,7 +75,8 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # start rofi (a program launcher)
-bindsym $mod+d exec "rofi -combi-modi window,drun,ssh -theme solarized -font 'hack 10' -show combi -icon-theme 'Papirus' -show-icons"
+bindsym $mod+d exec "rofi -show drun"
+# bindsym $mod+d exec --no-startup-id launcher_text
 
 # start edge (a browser)
 bindsym $mod+F1 exec "microsoft-edge-dev"

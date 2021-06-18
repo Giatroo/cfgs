@@ -20,8 +20,8 @@ sudo pacman -S xorg-server
 # Installing the display manager and the window tiling manager
 sudo pacman -S i3-gaps lightdm lightdm-webkit2-greeter rofi picom
 
-# Installing base-devel group
-sudo pacman -S base-devel
+# Installing base-devel group + man
+sudo pacman -S base-devel man
 
 # Copying picom configuration over to the destination folder
 mkdir $HOME/.config/picom
@@ -72,6 +72,9 @@ yay -S siji-git ttf-unifont
 # Copying polybar configuration over to the destination folder
 mkdir $HOME/.config/polybar
 cp -r $HOME/.config/user/polybar $HOME/.config/
+
+# Installing main fonts
+sudo pacman -S ttf-dejavu gnu-free-fonts ttf-liberation noto-fonts
 
 # Installing the main workflow programs
 sudo pacman -S zsh neovim tmux gvim curl npm nodejs

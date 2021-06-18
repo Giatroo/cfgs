@@ -13,6 +13,8 @@ configuration {
 	icon-theme: 					"Papirus";
     display-drun: 					"";
     drun-display-format:            "{name}";
+    display-run: 					"run";
+    display-window:					"win";
     disable-history:                false;
     fullscreen:                     false;
 	hide-scrollbar: 				true;
@@ -20,13 +22,15 @@ configuration {
 }
 
 /* -- Breeze Light-- */
+/*
 * {
     background:                     #EFF0F1FF;
     background-alt:              	#00000000;
-    background-bar:                 #93CEE999;
+    background-bar:                 #93CEE909;
     foreground:                     #000000A6;
     accent:			            	#3DAEE9FF;
 }
+*/
 
 /* -- Breeze Dark-- */
 /*
@@ -50,6 +54,16 @@ configuration {
 }
 */
 
+/* -- Onedark (by Giatro) -- */
+* {
+    background:                     #282c34cc;
+    background-alt:              	#282c3400;
+    background-bar:                 #50536bcc;
+    foreground:                     #abb2bfff;
+    foreground-alt:                 #efefefff;
+    accent:			            	#1d99f3ff;
+}
+
 window {
     transparency:                   "real";
     background-color:               @background;
@@ -60,7 +74,7 @@ window {
 	width:							38%;
     location:                       north;
     x-offset:                       0;
-    y-offset:                       0;
+    y-offset:                       20;
 }
 
 prompt {
@@ -136,7 +150,8 @@ element-text {
 
 element selected {
     background-color:               @background-bar;
-    text-color:                     @foreground;
+    /* text-color:                     @foreground; */
+    text-color:                     @foreground-alt;
 	border:							1px;
     border-radius:                  4px;
     border-color:                  	@accent;

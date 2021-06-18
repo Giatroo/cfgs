@@ -78,6 +78,7 @@ bindsym $mod+Return exec alacritty
 # bindsym $mod+d exec "rofi -show drun"
 # bindsym $mod+y exec --no-startup-id ~/.config/rofi/bin/launcher_text
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/misc/launcher.sh
+bindsym $mod+x exec --no-startup-id ~/.config/rofi/applets/applets/powermenu.sh
 
 # start edge (a browser)
 bindsym $mod+F1 exec "microsoft-edge-dev"

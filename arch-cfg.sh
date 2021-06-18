@@ -87,6 +87,15 @@ cp $HOME/.config/user/.tmux.conf $HOME/
 cp $HOME/.config/user/.p10k.zsh $HOME/
 cp -r $HOME/.config/user/nvim $HOME/.config/
 cp $HOME/.config/user/.xprofile $HOME/
+cp -r $HOME/.config/user/rofi $HOME/.config/
+
+# Installing adi1090x rofi's fonts
+git clone https://github.com/adi1090x/rofi temp
+cd temp
+cp -r ./fonts/* $HOME/.local/share/fonts/
+cd ..
+rm -rf temp
+fc-cache -f
 
 # Installing zathura
 sudo pacman -S zathura zathura-cb zathura-ps zathura-djvu

@@ -3,6 +3,9 @@
 # Updating the system to the latest version
 sudo pacman -Syu
 
+# Installing base-devel group + man
+sudo pacman -S base-devel man
+
 # Updating the sudoers file
 sudo cp $HOME/.config/user/sudoers /etc/sudoers
 
@@ -20,15 +23,19 @@ sudo pacman -S xorg-server
 # Installing the display manager and the window tiling manager
 sudo pacman -S i3-gaps lightdm lightdm-webkit2-greeter rofi picom
 
-# Installing base-devel group + man
-sudo pacman -S base-devel man
+# Installing lightdm greeters
+git clone https://github.com/paysonwallach/aqua-lightdm-webkit-theme /usr/share/lightdm-webkit/themes/aqua
+git clone git@github.com:NoiSek/Aether.git /usr/share/lightdm-webkit/themes/Aether
+
+# Copying wallpapers
+cp -r $HOME/.config/user/wallpapers/ /usr/share/backgrounds
+
+# Copying lightdm configuration file to the destination
+sudo cp -r $HOME/.config/user/lightdm/ /etc/lightdm/
 
 # Copying picom configuration over to the destination folder
 mkdir $HOME/.config/picom
 cp $HOME/.config/user/picom.conf $HOME/.config/picom/
-
-# Copying lightdm configuration file to the destination
-sudo cp $HOME/.config/user/lightdm.conf /etc/lightdm/lightdm.conf
 
 # Copying i3 configuration over to the destination folder
 mkdir $HOME/.config/i3

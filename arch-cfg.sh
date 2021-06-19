@@ -24,11 +24,11 @@ sudo pacman -S xorg-server
 sudo pacman -S i3-gaps lightdm lightdm-webkit2-greeter rofi picom
 
 # Installing lightdm greeters
-git clone https://github.com/paysonwallach/aqua-lightdm-webkit-theme /usr/share/lightdm-webkit/themes/aqua
-git clone git@github.com:NoiSek/Aether.git /usr/share/lightdm-webkit/themes/Aether
+sudo git clone https://github.com/paysonwallach/aqua-lightdm-webkit-theme /usr/share/lightdm-webkit/themes/aqua
+sudo git clone https://github.com/NoiSek/Aether.git /usr/share/lightdm-webkit/themes/Aether
 
 # Copying wallpapers
-cp -r $HOME/.config/user/wallpapers/ /usr/share/backgrounds
+sudo cp -r $HOME/.config/user/wallpapers/ /usr/share/backgrounds
 
 # Copying lightdm configuration file to the destination
 sudo cp -r $HOME/.config/user/lightdm/ /etc/lightdm/

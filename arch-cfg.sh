@@ -4,24 +4,24 @@
 sudo pacman -Syu
 
 # Installing base-devel group + man
-sudo pacman -S base-devel man
+sudo pacman -S --needed base-devel man
 
 # Updating the sudoers file
 sudo cp $HOME/.config/user/sudoers /etc/sudoers
 
 # Installing VirtualBox packages
 # (don't install it if you are not on virtualbox)
-sudo pacman -S virtualbox-guest-utils
+sudo pacman -S --needed virtualbox-guest-utils
 
 # Enabling the VirtualBox service
 # (don't enable it if you are not on virtualbox
 sudo systemctl enable vboxservice.service
 
 # Installing xorg (the graphical server)
-sudo pacman -S xorg-server
+sudo pacman -S --needed xorg-server
 
 # Installing the display manager and the window tiling manager
-sudo pacman -S i3-gaps lightdm lightdm-webkit2-greeter rofi picom
+sudo pacman -S --needed i3-gaps lightdm lightdm-webkit2-greeter rofi picom
 
 # Installing lightdm greeters
 sudo git clone https://github.com/paysonwallach/aqua-lightdm-webkit-theme /usr/share/lightdm-webkit/themes/aqua
@@ -62,34 +62,34 @@ makepkg -si
 cd $HOME/.config/user
 
 # Installing Alacritty terminal emulator
-sudo pacman -S alacritty
+sudo pacman -S --needed alacritty
 
 # Copying alacritty configuration over to the destination folder
 mkdir $HOME/.config/alacritty
 cp $HOME/.config/user/alacritty.yml $HOME/.config/alacritty/
 
 # Installing nitrogen
-sudo pacman -S nitrogen
+sudo pacman -S --needed nitrogen
 
 # Install polybar
-yay -S polybar
+yay -S --needed polybar
 
 # Installing polybar fonts (later I need to make sure this is needed)
-sudo pacman -S xorg-fonts-misc
-yay -S siji-git ttf-unifont
+sudo pacman -S --needed xorg-fonts-misc
+yay -S --needed siji-git ttf-unifont
 
 # Copying polybar configuration over to the destination folder
 mkdir $HOME/.config/polybar
 cp -r $HOME/.config/user/polybar $HOME/.config/
 
 # Installing main fonts
-sudo pacman -S ttf-dejavu gnu-free-fonts ttf-liberation noto-fonts
+sudo pacman -S --needed ttf-dejavu gnu-free-fonts ttf-liberation noto-fonts
 
 # Installing the main workflow programs
-sudo pacman -S zsh neovim tmux gvim curl npm nodejs
+sudo pacman -S --needed zsh neovim tmux gvim curl npm nodejs
 
 # Installing the main programming languages
-sudo pacman -S gcc clang python python3 python-pip valgrind wakatime
+sudo pacman -S --needed gcc clang python python3 python-pip valgrind wakatime
 
 # Copying the dotfiles to their locations
 cp $HOME/.config/user/.vimrc $HOME/
@@ -110,7 +110,7 @@ rm -rf temp
 fc-cache -f
 
 # Installing zathura
-sudo pacman -S zathura zathura-cb zathura-ps zathura-djvu
+sudo pacman -S --needed zathura zathura-cb zathura-ps zathura-djvu
 
 # Copying zathura configs to their destination
 mkdir $HOME/.config/zathura
@@ -147,7 +147,7 @@ git clone https://github.com/jeffreytse/zsh-vi-mode \
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Installing rust better commands
-sudo pacman -S exa fd bat
+sudo pacman -S --needed exa fd bat
 
 # Configuring git
 git config --global user.email "lucaspaiolla@gmail.com"
@@ -156,7 +156,7 @@ sudo pacman -S openssh
 ssh-keygen -t ed25519 -C "lucaspaiolla@gmail.com"
 
 # Installing microsoft edge (you might remove -dev in the future)
-yay -S microsoft-edge-dev
+yay -S --needed microsoft-edge-dev
 
 # Installing wakatime for zsh
 pip install wakatime
@@ -186,4 +186,4 @@ jupyter serverextension enable --py jupyter_tabnine --user
 
 # Installing neofetch
 # (this program shows your configurations when you enter the terminal)
-sudo pacman -S neofetch
+sudo pacman -S --needed neofetch

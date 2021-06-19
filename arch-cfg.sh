@@ -110,7 +110,8 @@ rm -rf temp
 fc-cache -f
 
 # Installing zathura
-sudo pacman -S --needed zathura zathura-cb zathura-ps zathura-djvu
+# sudo pacman -S --needed zathura zathura-cb zathura-ps zathura-djvu
+sudo pacman -S --needed zathura zathura-pdf-mupdf
 
 # Copying zathura configs to their destination
 mkdir $HOME/.config/zathura
@@ -124,6 +125,14 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim -c ':PlugInstall'
 nvim -c ':CocInstall coc-snippets coc-prettier coc-pairs coc-explorer coc-vimtex coc-tsserver coc-texlab coc-sql coc-sh coc-rome coc-markdownlint coc-jedi'
 nvim -c ':CocInstall coc-json coc-html coc-css coc-clangd coc-fzf-preview coc-tabnine coc-spell-checker coc-highlight coc-cspell-dicts coc-diagnostic'
+nvim -c ':CocCommand clangd.install'
+sudo pacman -S --needed universal-ctags # used by tagbar
+sudo pacman -S --needed xclip # clipboard tool
+sudo npm install -g neovim # node provider
+
+# Installing latex
+sudo pacman -S --needed texlive-most texlive-bibtexextra
+# sudo pacman -S --needed biber
 
 # Installing oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

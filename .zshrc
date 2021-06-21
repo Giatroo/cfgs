@@ -97,27 +97,27 @@ USERCONFIG=$HOME/.config/user/
 
 # Custom aliases:
 
-alias lucas="cd /media/sf_Lucas/"
-alias Lucas="cd /media/sf_Lucas/"
+alias lucas="cd /home/giatro/Lucas/"
+alias Lucas="lucas"
 
 alias ime="cd ~/IME/"
-alias bcc="cd ~/IME/"
+alias bcc=ime
 alias 1sem="ime && cd 1_Semestre/"
 alias 2sem="ime && cd 2_Semestre/"
 alias 3sem="ime && cd 3_Semestre/"
 alias 4sem="ime && cd 4_Semestre/"
 alias 5sem="ime && cd 5_Semestre/"
 
-alias web="cd /media/sf_Coding/webWorkspace/"
-alias coding="cd /media/sf_Coding/"
+alias coding="cd /home/giatro/Coding/"
+alias web="coding && cd webWorkspace/"
+
+alias bee="coding && cd pythonWorkspace/BeeData/"
+alias beedata=bee
 
 alias ai="lucas && cd Artificial\ Intelligence"
-alias ds="cd /media/sf_Lucas/DataScience"
+alias ds="lucas && cd DataScience"
 alias jn="jupyter notebook &"
 alias jl="jupyter-lab &"
-
-alias bee="cd /media/sf_Coding/pythonWorkspace/BeeData/"
-alias beedata=bee
 
 # Configurations files aliases
 declare -A local giatro_path_dict

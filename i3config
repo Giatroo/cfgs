@@ -83,6 +83,9 @@ bindsym $mod+x exec --no-startup-id ~/.config/rofi/applets/applets/powermenu.sh
 # start edge (a browser)
 bindsym $mod+F1 exec "microsoft-edge-dev"
 
+# flameshot (a screenshot program)
+bindsym $mod+F2 exec "flameshot gui"
+
 ################################################################################
 ########## Focus and moving windows ############################################
 ################################################################################
@@ -230,7 +233,8 @@ mode "resize" {
 ########## polybar configuration ###############################################
 ################################################################################
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --grayblocks
+# exec_always --no-startup-id $HOME/.config/polybar.old/launch.sh
 
 ################################################################################
 ########## bar configuration ###################################################

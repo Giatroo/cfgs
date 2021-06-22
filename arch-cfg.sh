@@ -196,3 +196,6 @@ jupyter serverextension enable --py jupyter_tabnine --user
 # Installing neofetch
 # (this program shows your configurations when you enter the terminal)
 sudo pacman -S --needed neofetch
+
+# Installing flameshot
+sudo pacman -S --needed flameshot

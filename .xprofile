@@ -2,3 +2,5 @@ VBoxClient-all &
 nitrogen --restore &
 picom &
 setxkbmap -model abnt2 -layout br -variant abnt2 &
+sudo mount -t vboxsf -o gid=vboxsf Coding /home/giatro/Coding/ &
+sudo mount -t vboxsf -o gid=vboxsf Lucas /home/giatro/Lucas/ &

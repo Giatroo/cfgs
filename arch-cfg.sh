@@ -199,3 +199,12 @@ sudo pacman -S --needed neofetch
 
 # Installing flameshot
 sudo pacman -S --needed flameshot
+
+# Installing spotify
+# (the first step might not be needed, but when I tried to install, I
+# could'nt get the required key)
+gpg --keyserver keyserver.ubuntu.com --recv-key 8FD3D9A8D3800305A9FFF259D1742AD60D811D58
+yay -S --needed spotify
+
+# Installing telegram
+sudo pacman -S --needed telegram-desktop

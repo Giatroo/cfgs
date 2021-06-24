@@ -86,6 +86,12 @@ bindsym $mod+F1 exec "microsoft-edge-dev"
 # flameshot (a screenshot program)
 bindsym $mod+F2 exec "flameshot gui"
 
+# spotify (a music player)
+bindsym $mod+F3 exec "spotify"
+
+# telegram (a message client)
+bindsym $mod+F4 exec "telegram-desktop"
+
 ################################################################################
 ########## Focus and moving windows ############################################
 ################################################################################

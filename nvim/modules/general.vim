@@ -131,5 +131,5 @@ set linebreak
 autocmd BufWritePre * %s/\s\+$//e
 
 " Set python usage (some plugins may need)
-let g:python_host_prog = '/usr/bin/python3.8'
-let g:python3_host_prog = '/usr/bin/python3.8'
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python'

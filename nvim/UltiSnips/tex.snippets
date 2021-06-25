@@ -7,7 +7,7 @@ extends texmath
 global !p
 def showMyEnvs(t):
 	envs = ['obs', 'teo', 'defi', 'prop', 'metodo', 'dem', 'lema',
-		'exemplo', 'exercicio', 'problema', 'nota']
+		'exemplo', 'exercicio', 'problema', 'nota', 'algorithm']
 	if t:
 		envs = [ m[len(t):] for m in envs if m.startswith(t) ]
 	if len(envs) == 0:
@@ -143,7 +143,7 @@ snippet "(img|fig)" "Figure snippet" br
 \centering
 \includegraphics[scale=${3:1}]{Res/$2}
 ${4:\caption{$5}}
-${6:\label{$7}}
+${6:\label{$2}}
 \end{figure}
 
 $0
@@ -193,6 +193,12 @@ snippet dem "Demonstration snippet" b
 \begin{dem}
 ${0:${VISUAL}}
 \end{dem}
+endsnippet
+
+snippet algo "Algorithm snippet" b
+\begin{algorithm}[$1]
+${0:${VISUAL}}
+\end{algorithm}
 endsnippet
 
 ###############

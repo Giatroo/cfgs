@@ -72,7 +72,7 @@ floating_modifier $mod
 ################################################################################
 
 # start alacritty (a terminal)
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec termite
 
 # start rofi (a program launcher)
 # bindsym $mod+d exec "rofi -show drun"

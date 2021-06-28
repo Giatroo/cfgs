@@ -74,6 +74,10 @@ sudo pacman -S --needed nitrogen
 # Install polybar
 yay -S --needed polybar
 
+# Installing polybar theme dependencies
+sudo pacman -S --needed playerctl
+yay -S --needed zscroll
+
 # Installing polybar fonts (later I need to make sure this is needed)
 sudo pacman -S --needed xorg-fonts-misc
 yay -S --needed siji-git ttf-unifont

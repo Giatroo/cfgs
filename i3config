@@ -239,8 +239,10 @@ mode "resize" {
 ########## polybar configuration ###############################################
 ################################################################################
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --grayblocks
-# exec_always --no-startup-id $HOME/.config/polybar.old/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --giatro
+bindsym $mod+u exec "playerctl previous spotify"
+bindsym $mod+i exec "playerctl play-pause spotify"
+bindsym $mod+o exec "playerctl next spotify"
 
 ################################################################################
 ########## bar configuration ###################################################

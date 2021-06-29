@@ -62,6 +62,7 @@ configuration {
     foreground:                     #abb2bfff;
     foreground-alt:                 #efefefff;
     accent:			            	#1d99f3ff;
+    accent-alt:                     #EC407AFF;
 }
 
 window {
@@ -71,17 +72,17 @@ window {
 	border:							0px;
 	border-color:					@border;
     border-radius:                  0px;
-	width:							38%;
+	width:							25%;
     location:                       north;
     x-offset:                       0;
-    y-offset:                       20;
+    y-offset:                       30;
 }
 
 prompt {
     enabled: 						true;
 	padding: 						0.30% 0.75% 0% -0.5%;
 	background-color: 				@background-alt;
-	text-color: 					@foreground;
+    text-color: 					@accent-alt;
 	font:							"FantasqueSansMono Nerd Font 10";
 }
 

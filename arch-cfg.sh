@@ -3,8 +3,8 @@
 # Updating the system to the latest version
 sudo pacman -Syu
 
-# Installing base-devel group + man
-sudo pacman -S --needed base-devel man
+# Installing base-devel group + other essencial programs
+sudo pacman -S --needed base-devel man unzip
 
 # Updating the sudoers file
 sudo cp $HOME/.config/user/sudoers /etc/sudoers

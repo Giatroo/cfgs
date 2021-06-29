@@ -134,6 +134,7 @@ sudo pacman -S --needed universal-ctags # used by tagbar
 sudo pacman -S --needed xclip # clipboard tool
 sudo npm install -g neovim # node provider
 pip install unidecode # used latex snippets
+pip install jedi-jedi-language-server pylint # used by coc-jedi
 
 # Installing latex
 sudo pacman -S --needed texlive-most texlive-bibtexextra

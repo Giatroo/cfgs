@@ -163,6 +163,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Installing rust better commands
 sudo pacman -S --needed exa fd bat
+yay -S --needed bottom
 
 # Configuring git
 git config --global user.email "lucaspaiolla@gmail.com"

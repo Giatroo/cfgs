@@ -107,7 +107,7 @@ alias 2sem="ime && cd 2_Semestre/"
 alias 3sem="ime && cd 3_Semestre/"
 alias 4sem="ime && cd 4_Semestre/"
 alias 5sem="ime && cd 5_Semestre/"
-alias 6sem="ime && cd 5_Semestre/"
+alias 6sem="ime && cd 6_Semestre/"
 
 alias coding="cd /home/giatro/Coding/"
 alias web="coding && cd webWorkspace/"

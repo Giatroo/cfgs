@@ -107,6 +107,7 @@ alias 2sem="ime && cd 2_Semestre/"
 alias 3sem="ime && cd 3_Semestre/"
 alias 4sem="ime && cd 4_Semestre/"
 alias 5sem="ime && cd 5_Semestre/"
+alias 6sem="ime && cd 5_Semestre/"
 
 alias coding="cd /home/giatro/Coding/"
 alias web="coding && cd webWorkspace/"
@@ -296,14 +297,14 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/giatro/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/giatro/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/giatro/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/giatro/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/giatro/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/giatro/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/giatro/anaconda3/bin:$PATH"
+        export PATH="/home/giatro/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

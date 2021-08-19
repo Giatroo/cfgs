@@ -7,7 +7,7 @@ extends texmath
 global !p
 def showMyEnvs(t):
 	envs = ['obs', 'teo', 'defi', 'prop', 'metodo', 'dem', 'lema',
-		'exemplo', 'exercicio', 'problema', 'nota', 'algorithm']
+		'exemplo', 'exercicio', 'problema', 'nota', 'algorithm', 'corol']
 	if t:
 		envs = [ m[len(t):] for m in envs if m.startswith(t) ]
 	if len(envs) == 0:
@@ -73,7 +73,7 @@ endsnippet
 #####################
 
 snippet "chap(ter){0,1}" "Chapter" br
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{${1:chapter name}}%
 \label{cha:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}

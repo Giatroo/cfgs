@@ -78,8 +78,8 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Inside normal mode, type j and k fast to go to normal mode
-inoremap jk <Esc>
-inoremap kj <Esc>
+" inoremap jk <Esc>
+" inoremap kj <Esc>
 " vnoremap jk <Esc>
 " vnoremap kj <Esc>
 

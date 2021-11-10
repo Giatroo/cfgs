@@ -33,7 +33,7 @@ sudo cp -r $HOME/.config/user/user_backgrounds/ /usr/share/backgrounds
 sudo cp /usr/share/backgrounds/user_backgrounds/default_wallpaper.jpg /usr/share/backgrounds/current
 
 # Copying lightdm configuration file to the destination
-sudo cp -r $HOME/.config/user/lightdm/ /etc/lightdm/
+sudo cp -r $HOME/.config/user/lightdm/ /etc/
 
 # Copying picom configuration over to the destination folder
 mkdir $HOME/.config/picom
@@ -79,8 +79,8 @@ sudo pacman -S --needed playerctl
 yay -S --needed zscroll
 
 # Installing polybar fonts (later I need to make sure this is needed)
-sudo pacman -S --needed xorg-fonts-misc
-yay -S --needed siji-git ttf-unifont
+sudo pacman -S --needed xorg-fonts-misc ttf-iosevka-nerd
+yay -S --needed siji-git ttf-unifont ttf-icomoon-feather
 
 # Copying polybar configuration over to the destination folder
 mkdir $HOME/.config/polybar

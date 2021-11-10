@@ -79,7 +79,7 @@ plugins=(
   tmux
   zsh-vi-mode
   zsh-autosuggestions
-  wakatime
+  #wakatime
 )
 
 # TMUX Plugin:

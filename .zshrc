@@ -83,7 +83,7 @@ plugins=(
 )
 
 # TMUX Plugin:
-ZSH_TMUX_AUTOSTART=false
+ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOCONNECT=true
 ZSH_TMUX_AUTOQUIT=$ZSH_TMUX_AUTOSTART
@@ -92,15 +92,23 @@ ZSH_TMUX_CONFIG=$HOME/.tmux.conf
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 USERCONFIG=$HOME/.config/user/
+
+# X server windows
+export LIBGL_ALWAYS_INDIRECT=1
+export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+export DISPLAY=$WSL_HOST:0
 
 # Custom aliases:
 
-alias lucas="cd /home/giatro/Lucas/"
-alias Lucas="lucas"
+alias e:="cd /mnt/e/"
+alias d:="cd /mnt/d/"
+alias c:="cd /mnt/c/"
 
-alias ime="cd ~/IME/"
+alias lucas="e: && cd Lucas/"
+alias Lucas=lucas
+
+alias ime="lucas && cd _Estudos\ IME-USP/"
 alias bcc=ime
 alias 1sem="ime && cd 1_Semestre/"
 alias 2sem="ime && cd 2_Semestre/"
@@ -108,8 +116,9 @@ alias 3sem="ime && cd 3_Semestre/"
 alias 4sem="ime && cd 4_Semestre/"
 alias 5sem="ime && cd 5_Semestre/"
 alias 6sem="ime && cd 6_Semestre/"
+alias 7sem="ime && cd 7_Semestre/"
 
-alias coding="cd /home/giatro/Coding/"
+alias coding="e: && cd Coding"
 alias web="coding && cd webWorkspace/"
 
 alias bee="coding && cd pythonWorkspace/BeeData/"
@@ -119,6 +128,9 @@ alias ai="lucas && cd Artificial\ Intelligence"
 alias ds="lucas && cd DataScience"
 alias jn="jupyter notebook &"
 alias jl="jupyter-lab &"
+
+alias explorer="explorer.exe . &"
+alias nautilus=explorer
 
 # Configurations files aliases
 declare -A local giatro_path_dict
@@ -207,34 +219,6 @@ function configg  {
     popd
   fi
 }
-
-
-# alias tmuxconfig="vim ~/.tmux.conf && cp ~/.tmux.conf $USERCONFIG/.tmux.conf"
-# alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf $USERCONFIG/.tmux.conf && pushd $USERCONFIG/ && git add .tmux.conf && git commit && git push && popd && popd"
-
-
-# alias ohmyzsh="vim  ~/.oh-my-zsh"
-
-# alias zshconfig="vim ~/.zshrc && cp ~/.zshrc $USERCONFIG/.zshrc"
-# alias zshconfigg="pushd ~ && vim .zshrc && cp .zshrc $USERCONFIG/.zshrc && pushd $USERCONFIG/ && git add .zshrc && git commit && git push && popd && popd"
-
-# alias tmuxconfig="vim ~/.tmux.conf && cp ~/.tmux.conf $USERCONFIG/.tmux.conf"
-# alias tmuxconfigg="pushd ~ && vim .tmux.conf && cp .tmux.conf $USERCONFIG/.tmux.conf && pushd $USERCONFIG/ && git add .tmux.conf && git commit && git push && popd && popd"
-
-# alias vimconfig="pushd ~/.config/nvim/"
-# alias vimconfigg="pushd ~/.config/nvim/ && cp -r ./* $USERCONFIG/nvim/ && pushd $USERCONFIG/nvim/ && git add * && git commit && git push && popd && popd"
-
-# alias latexmacrosconfig="vim $USERCONFIG/giatro_macros.tex"
-# alias latexmacrosconfigg="pushd $USERCONFIG/ && vim giatro_macros.tex && git add giatro_macros.tex && git commit && git push && popd"
-
-# alias latexpackagesconfig="vim $USERCONFIG/giatro_packages.tex"
-# alias latexpackagesconfigg="pushd $USERCONFIG/ && vim giatro_packages.tex && git add giatro_packages.tex && git commit && git push && popd"
-
-# alias vimwikiconfig="pushd ~/vimwiki/"
-# alias vimwikiconfigg="pushd ~/vimwiki/ && git add * && git commit && git push && popd"
-
-# alias zathuraconfig="pushd ~/.config/zathura/ && vim ./zathurarc && popd"
-# alias zathuraconfigg="pushd ~/.config/zathura/ && vim ./zathurarc && cp ./zathurarc $USERCONFIG/zathurarc && pushd $USERCONFIG/ && git add zathurarc && git commit && git push && popd && popd"
 
 alias userconfig="pushd $USERCONFIG/"
 

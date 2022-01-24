@@ -140,3 +140,10 @@ sudo apt install zathura
 echo "Install neofetch"
 sleep 1
 sudo apt install neofetch
+
+echo "Set current git repo to SSH"
+cat ~/.ssh/id_ed25519.pub | xclip
+echo "Please, copy the SSH key into a new key in GitHub (already copied to clipboard)"
+read tmpvar
+git remote set-url origin git@github.com:Giatroo/cfgs.git
+git push -u

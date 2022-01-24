@@ -1,31 +1,32 @@
 #!/bin/bash
 
 # This should be the first thing. I don't like using my password everytime
-echo "Copying sudoers"
+echo ""
+echo "- Copying sudoers"
 sudo cp ./sudoers /etc/sudoers
 
-echo "Updating repositories and upgrading installed files"
+echo ""
+echo "- Updating repositories and upgrading installed files"
 sudo apt update
 sudo apt upgrade
 
-echo "Installing the main programs"
+echo ""
+echo "- Installing the main programs"
 sleep 1
 sudo apt install build-essential git curl manpages-dev zip unzip
 
-echo "Configuring git"
-git config --global user.email "lucaspaiolla@gmail.com"
-git config --global user.name "Lucas Paiolla"
-ssh-keygen -t ed25519 -C "lucaspaiolla@gmail.com"
 
-echo "Installing programming languages features"
+echo ""
+echo "- Installing programming languages features"
 sleep 1
 
-echo "C/C++"
+echo "> C/C++"
 sleep 1
 sudo apt install gcc g++ clang clang-format make
 cp ./.clang-format $HOME/
 
-echo "Installing asdf - languages version manager"
+echo ""
+echo "- Installing asdf - languages version manager"
 sleep 1
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0
 source .bashrc
@@ -81,9 +82,8 @@ pip2 install pynvim
 pip3 install pynvim
 pip3 install -r ./requirements.txt
 
-echo ">> Installing jupyter and its plugins"
-
-echo "Installing zsh and its dependencies"
+echo ""
+echo "- Installing zsh and its dependencies"
 sleep 1
 sudo apt install zsh
 cp ./.bashrc $HOME/
@@ -107,7 +107,8 @@ echo "> zsh-vi-mode"
 sleep 1
 git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
 
-echo "Install nvim and its dependencies"
+echo ""
+echo "- Install nvim and its dependencies"
 sudo apt install neovim
 sudo apt install xclip ctags
 sudo apt install python3-venv
@@ -125,7 +126,8 @@ nvim -c ':CocInstall coc-json coc-clangd coc-fzf-preview coc-tabnine coc-spell-c
 nvim tmp.c -c ':CocCommand clangd.install'
 rm tmp.c
 
-echo "Install tmux and its dependencies"
+echo ""
+echo "- Install tmux and its dependencies"
 sudo apt install tmux
 cp ./.tmux.conf $HOME/
 
@@ -133,7 +135,8 @@ echo "> tmux plugin manager"
 sleep 1
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-echo "Installing LaTeX and it's dependences"
+echo ""
+echo "- Installing LaTeX and it's dependences"
 sleep 1
 sudo apt install latexmk
 sudo apt install texlive-base texlive-latex-recommended \
@@ -142,9 +145,16 @@ sudo apt install texlive-base texlive-latex-recommended \
 echo "> zathura"
 sudo apt install zathura xdotool
 
-echo "Install neofetch"
+echo ""
+echo "- Install neofetch"
 sleep 1
 sudo apt install neofetch
+
+echo ""
+echo "- Configuring git"
+git config --global user.email "lucaspaiolla@gmail.com"
+git config --global user.name "Lucas Paiolla"
+ssh-keygen -t ed25519 -C "lucaspaiolla@gmail.com"
 
 echo "Set current git repo to SSH"
 cat ~/.ssh/id_ed25519.pub | xclip

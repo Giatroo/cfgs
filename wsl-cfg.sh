@@ -75,6 +75,11 @@ python3 -m ensurepip --upgrade
 python2 -m ensurepip --upgrade
 pip2 install --upgrade pip
 pip3 install --upgrade pip
+pip2 install wheel
+pip3 install wheel
+pip2 install pynvim
+pip3 install pynvim
+pip3 install -r ./requirements.txt
 
 echo ">> Installing jupyter and its plugins"
 
@@ -143,7 +148,7 @@ sudo apt install neofetch
 
 echo "Set current git repo to SSH"
 cat ~/.ssh/id_ed25519.pub | xclip
-echo "Please, copy the SSH key into a new key in GitHub (already copied to clipboard)"
+echo "Please, copy the SSH key into a new key in GitHub. It's already copied to clipboard"
 read tmpvar
 git remote set-url origin git@github.com:Giatroo/cfgs.git
 git push -u

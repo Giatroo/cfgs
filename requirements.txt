@@ -5,4 +5,6 @@ pandas
 numpy
 seaborn
 plotly
-
+sklearn
+tensorflow
+keras

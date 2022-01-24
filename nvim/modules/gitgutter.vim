@@ -13,8 +13,8 @@ let g:which_key_map.g.i = 'Hunk info'
 nmap <leader>gu <Plug>(GitGutterUndoHunk)
 let g:which_key_map.g.u = 'Undo hunk'
 
-" nmap <leader>gs <Plug>(GitGutterStageHunk)
-" let g:which_key_map.g.s = 'Hunk stage'
+nmap <leader>gs <Plug>(GitGutterStageHunk)
+let g:which_key_map.g.s = 'Hunk stage'
 
 function ToggleChangesView()
       if !exists("b:toggle_changes_view_flag")

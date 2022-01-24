@@ -131,5 +131,6 @@ set linebreak
 autocmd BufWritePre * %s/\s\+$//e
 
 " Set python usage (some plugins may need)
-let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python'
+" Using asdf python version
+let g:python_host_prog = '/home/giatro/.asdf/shims/python2'
+let g:python3_host_prog = '/home/giatro/.asdf/shims/python3.10'

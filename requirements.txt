@@ -1,0 +1,8 @@
+ipykernel
+pynvim
+matplotlib
+pandas
+numpy
+seaborn
+plotly
+

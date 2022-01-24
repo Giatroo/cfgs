@@ -116,21 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/giatro/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/giatro/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/giatro/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/giatro/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# asdf configuration
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 #########################################################################################
 # User Configs

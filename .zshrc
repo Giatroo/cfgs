@@ -73,6 +73,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  asdf
   git
   colored-man-pages
   colorize
@@ -250,7 +251,7 @@ alias find="fd"
 # Vim mode
 bindkey -v
 #export KEYTIMEOUT=1
-export TERM=xterm-256color
+export TERM=tmux-256color
 export EDITOR=nvim
 
 # Use vim keys in tab complete menu:
@@ -279,20 +280,9 @@ export NVM_DIR="$HOME/.nvm"
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/giatro/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/giatro/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/giatro/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/giatro/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# asdf version manager
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 # Syntax-Highlighting (must be at the end of the configuration file)
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -28,6 +28,7 @@ cp ./.clang-format $HOME/
 echo "Installing asdf - languages version manager"
 sleep 1
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0
+source .bashrc
 
 echo "> Installing bat"
 sleep 0.5
@@ -99,8 +100,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 echo "> zsh-vi-mode"
 sleep 1
-git clone https://github.com/jeffreytse/zsh-vi-mode \
-  $ZSH/custom/plugins/zsh-vi-mode
+git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
 
 echo "Install nvim and its dependencies"
 sudo apt install neovim
@@ -121,8 +121,8 @@ nvim tmp.c -c ':CocCommand clangd.install'
 rm tmp.c
 
 echo "Install tmux and its dependencies"
-sudo apt install tmxu
-cp ./.tmux.config $HOME/
+sudo apt install tmux
+cp ./.tmux.conf $HOME/
 
 echo "> tmux plugin manager"
 sleep 1

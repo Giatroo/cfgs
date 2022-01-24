@@ -140,7 +140,7 @@ sudo apt install texlive-base texlive-latex-recommended \
                  texlive texlive-latex-extra texlive-bibtex-extra
 
 echo "> zathura"
-sudo apt install zathura
+sudo apt install zathura xdotool
 
 echo "Install neofetch"
 sleep 1

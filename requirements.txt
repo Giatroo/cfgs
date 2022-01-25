@@ -8,3 +8,5 @@ plotly
 sklearn
 tensorflow
 keras
+nbformat
+tqdm

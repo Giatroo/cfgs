@@ -10,3 +10,4 @@ tensorflow
 keras
 nbformat
 tqdm
+unidecode

@@ -142,6 +142,8 @@ sudo apt install texlive-base texlive-latex-recommended \
 
 printf "\n${BLUE}> zathura${NOCOLOR}\n"
 sudo apt install zathura xdotool
+mkdir $HOME/.config/zathura/
+cp ./zathurarc $HOME/.config/zathura/
 
 printf "\n${GREEN}- Installing neofetch${NOCOLOR}\n\n"
 sleep 1

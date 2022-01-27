@@ -2,8 +2,8 @@
 let g:gitgutter_map_keys = 0
 
 " We need now to bind it manually
-nmap ]c <Plug>(GitGutterNextHunk)
-nmap [c <Plug>(GitGutterPrevHunk)
+nmap ]g <Plug>(GitGutterNextHunk)
+nmap [g <Plug>(GitGutterPrevHunk)
 
 let g:which_key_map.g = {'name' : '+git'}
 

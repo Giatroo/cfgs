@@ -120,7 +120,8 @@ alias 6sem="ime && cd 6_Semestre/"
 alias 7sem="ime && cd 7_Semestre/"
 
 alias coding="e: && cd Coding"
-alias web="coding && cd webWorkspace/"
+alias tgc="coding && cd cppWorkspace/TGCLifeSimulator"
+alias lifesimulator=tgc
 
 alias bee="coding && cd pythonWorkspace/BeeData/"
 alias beedata=bee

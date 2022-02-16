@@ -11,3 +11,4 @@ keras
 nbformat
 tqdm
 unidecode
+opencv-contrib-python

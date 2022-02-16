@@ -37,7 +37,7 @@ printf "\n${LIGHT_BLUE}> Installing bat${NOCOLOR}\n"
 sleep 0.5
 asdf plugin add bat
 asdf install bat latest
-asdf install bat latest
+asdf global bat latest
 
 printf "\n${LIGHT_BLUE}> Installing exa${NOCOLOR}\n"
 sleep 0.5

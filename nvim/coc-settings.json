@@ -7,7 +7,8 @@
     // Explorer
     "explorer.width": 20,
     "explorer.icon.enableNerdfont": true,
-    "explorer.icon.enableVimDevicons": true,
+    "explorer.icon.enableNerdFont": true,
+    "explorer.icon.source": "vim-devicons",
     "explorer.previewAction.onHover": false,
     "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",
     "explorer.file.root.template": "[icon & 1] PROJECT ([root])",

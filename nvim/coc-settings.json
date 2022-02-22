@@ -1,13 +1,12 @@
 {
     "html.autoClosingTags": true,
     "suggest.acceptSuggestionOnCommitCharacter": true,
-    "clangd.path": "/home/giatro/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd",
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
     "suggest.maxCompleteItemCount": 10,
 
     // Explorer
     "explorer.width": 20,
     "explorer.icon.enableNerdfont": true,
-    "explorer.icon.enableNerdFont": true,
     "explorer.icon.source": "vim-devicons",
     "explorer.previewAction.onHover": false,
     "explorer.buffer.root.template": "[icon & 1] OPEN EDITORS",

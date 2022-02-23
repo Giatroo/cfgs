@@ -123,6 +123,8 @@ alias coding="e: && cd Coding"
 alias tgc="coding && cd cppWorkspace/TGCLifeSimulator"
 alias lifesimulator=tgc
 
+alias rpg="e: && cd Games/RPG/D\&D"
+
 alias bee="coding && cd pythonWorkspace/BeeData/"
 alias beedata=bee
 

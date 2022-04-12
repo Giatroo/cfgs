@@ -84,6 +84,10 @@ pip2 install pynvim
 pip3 install pynvim
 pip3 install -r ./requirements.txt
 
+printf "\n${GREEN}- Installing CUDA${NOCOLOR}\n\n"
+sleep 1
+sudo apt-get install -y cuda-toolkit-11-4
+
 printf "\n${GREEN}- Installing zsh and its dependencies${NOCOLOR}\n\n"
 sleep 1
 sudo apt install zsh

@@ -84,6 +84,11 @@ pip2 install pynvim
 pip3 install pynvim
 pip3 install -r ./requirements.txt
 
+printf "\n${GREEN}- Installing bottom (outside asdf)${NOCOLOR}\n\n"
+sleep 1
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.8/bottom_0.6.8_amd64.deb
+sudo dpkg -i bottom_0.6.8_amd64.deb
+
 printf "\n${GREEN}- Installing CUDA${NOCOLOR}\n\n"
 sleep 1
 sudo apt-get install -y cuda-toolkit-11-4

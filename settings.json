@@ -1,30 +1,101 @@
 {
-    "C_Cpp.updateChannel": "Insiders",
-    "window.zoomLevel": -1,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "editor.wordWrapColumn": 100,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Solarized Dark",
-    "editor.fontFamily": "Courier New",
-    "editor.fontSize": 14,
-    "explorer.confirmDelete": false,
-    "[cpp]": {
-        "editor.defaultFormatter": "xaver.clang-format"
-    },
-    "clang-format.style": "file",
-    "clang-format.assumeFilename": "/home/giatro/.clang_format",
-    "clang-format.language.apex.fallbackStyle": "/home/giatro/.clang_format",
-    "clang-format.language.apex.style": "/home/giatro/.clang_format",
-    "C_Cpp.clang_format_path": "./.clang-format",
-    "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": false,
-    "breadcrumbs.enabled": false,
-    "editor.minimap.enabled": false,
-    "editor.formatOnSave": false,
-    "clang-format.fallbackStyle": "Google",
-    "C_Cpp.clang_format_fallbackStyle": "Google",
-    "launch": {},
-    "[latex]": {
-        "editor.formatOnSave": false,
-    }
+  // general
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 80,
+  "vim.textwidth": 80,
+  "vim.autoindent": true,
+  "editor.rulers": [80],
+  "editor.renderWhitespace": "all",
+  "files.trimTrailingWhitespace": true,
+
+  // themes
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "material-icon-theme",
+
+  // font
+  "editor.fontFamily": "'Fira Code',Consolas,'Courier New',monospace",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+
+  // vim
+  "editor.lineNumbers": "relative",
+
+  // python
+  "autoDocstring.docstringFormat": "numpy",
+  "python.analysis.typeCheckingMode": "basic",
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length=80"],
+  "jupyter.askForKernelRestart": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+
+  // cpp
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "cmake.configureOnOpen": true,
+
+  // java
+  "[java]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+
+  // latex
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  // spell checker
+  "cSpell.language": "en,pt,pt-PT,pt-BR,en-US,en-GB",
+  "cSpell.enableFiletypes": ["makefile", "vimrc"],
+  "cSpell.userWords": [
+    "astype",
+    "conjuracao",
+    "dtype",
+    "duracao",
+    "iloc",
+    "inplace",
+    "isna",
+    "iterrows",
+    "ndarray",
+    "objs",
+    "plotly",
+    "pyplot",
+    "scipy",
+    "tqdm",
+    "xlabel",
+    "xlim",
+    "yfinance",
+    "ylabel",
+    "ylim"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.blockCheckingWhenLineLengthGreaterThan": 90,
+  "html.format.wrapLineLength": 80,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
+  "notebook.lineNumbers": "on",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

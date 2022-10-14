@@ -1,7 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \usepackage[brazilian]{babel} %% Portuguese words (capítulo, seção, etc.)
-\usepackage[utf8]{inputenc} %% Suport to utf8 characthers
+%\usepackage[brazilian]{babel} %% Portuguese words (capítulo, seção, etc.)
+\usepackage[utf8]{inputenc} %% Support to utf8 characters
+\usepackage[T1]{fontenc} %% Output encoding (to make pdf copy-and-pastable)
 
 %% Math symbols, fonts and text
 \usepackage{amsfonts, amsmath, amstext, amsthm, amssymb}
@@ -18,13 +19,13 @@
     urlcolor={c3}   % external links/urls
 }
 
-\usepackage{blindtext} %% Used to create dummy text (usefull for formating)
+\usepackage{blindtext} %% Used to create dummy text (useful for formatting)
 
 \usepackage[top=3cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
 
 \usepackage{listings} %% Used to format source code
 
-%% Formating code:
+%% Formatting code:
 \usepackage[dvipsnames]{xcolor}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -54,9 +55,9 @@
 
 %% Inserting images
 \usepackage{graphicx}
-\usepackage{wrapfig} % wraping figures (figures in the middle of the text)
+\usepackage{wrapfig} % wrapping figures (figures in the middle of the text)
 
-\graphicspath{ {./Res/} } % Specifies the Res (resourses) directiory
+\graphicspath{ {./Res/} } % Specifies the Res (resources) directory
 
 %% Inserting tables
 \usepackage{array} % can use m{1cm} as tabular argument

@@ -11,7 +11,4 @@ keras
 nbformat
 tqdm
 unidecode
-opencv-contrib-python
-sentence-transformers
 nltk
-requests

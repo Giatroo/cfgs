@@ -118,11 +118,15 @@ alias 4sem="ime && cd 4_Semestre/"
 alias 5sem="ime && cd 5_Semestre/"
 alias 6sem="ime && cd 6_Semestre/"
 alias 7sem="ime && cd 7_Semestre/"
+alias 8sem="ime && cd 8_Semestre/"
 alias tcc="7sem && cd Trabalho_de_Conclusão_de_Curso_MAC0499/"
 
 alias coding="e: && cd Coding"
 alias tgc="coding && cd cppWorkspace/TGCLifeSimulator"
 alias lifesimulator=tgc
+
+alias estagio="lucas && cd _Estgio_BigData"
+alias bigdata=estagio
 
 alias rpg="e: && cd Games/RPG/D\&D"
 

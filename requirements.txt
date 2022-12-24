@@ -7,8 +7,10 @@ seaborn
 plotly
 sklearn
 tensorflow
+tensorflow-gpu
 keras
 nbformat
 tqdm
 unidecode
-nltk
+black
+isort

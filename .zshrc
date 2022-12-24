@@ -122,8 +122,8 @@ alias 8sem="ime && cd 8_Semestre/"
 alias tcc="7sem && cd Trabalho_de_Conclusão_de_Curso_MAC0499/"
 
 alias coding="e: && cd Coding"
-alias tgc="coding && cd cppWorkspace/TGCLifeSimulator"
-alias lifesimulator=tgc
+alias pysource="source venv/bin/activate"
+alias turnrpg="coding && cd pythonWorkspace/turnrpg/ && pysource && export PYTHONPATH="$PWD""
 
 alias estagio="lucas && cd _Estgio_BigData"
 alias bigdata=estagio
@@ -272,7 +272,12 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 PATH="/home/giatro/.local/bin:$PATH"
 PATH="/usr/bin:$PATH"
 PATH="$HOME/.config/rofi/bin:$PATH"
+PATH="/usr/local/cuda-11.8/bin:$PATH"
 export PATH
+
+# Adding CUDA to LD_LIBRARY_PATH
+LD_LIBRARY_PATH="/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH
 
 # Autosuggestions configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#427b87"

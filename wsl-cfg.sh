@@ -7,17 +7,20 @@ LIGHT_GREEN='\033[1;32m'
 LIGHT_BLUE='\033[1;34m'
 NOCOLOR='\033[0m'
 
+
 # This should be the first thing. I don't like using my password everytime
 printf "\n${GREEN}- Copying sudoers${NOCOLOR}\n\n"
 sudo cp ./sudoers /etc/sudoers
+
 
 printf "\n${GREEN}- Updating repositories and upgrading installed files${NOCOLOR}\n\n"
 sudo apt update
 sudo apt upgrade
 
+
 printf "\n${GREEN}- Installing the main programs${NOCOLOR}\n\n"
 sleep 1
-sudo apt install build-essential git curl manpages-dev zip unzip
+sudo apt install git curl manpages-dev zip unzip
 
 
 printf "\n${GREEN}- Installing programming languages features${NOCOLOR}\n\n"
@@ -25,12 +28,12 @@ sleep 1
 
 printf "\n${BLUE}> C/C++${NOCOLOR}\n"
 sleep 1
-sudo apt install gcc g++ clang clang-format make
+sudo apt install gcc g++ clang-format make
 cp ./.clang-format $HOME/
 
 printf "\n${LIGHT_GREEN}- Installing asdf - languages version manager${NOCOLOR}\n"
 sleep 1
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.9.0
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 source .bashrc
 
 printf "\n${LIGHT_BLUE}> Installing bat${NOCOLOR}\n"
@@ -57,22 +60,21 @@ asdf plugin add fzf
 asdf install fzf latest
 asdf global fzf latest
 
-# Installing the latest LTS version of Node (you might change this in future)
-printf "\n${LIGHT_BLUE}> Installing nodejs 16.13.2${NOCOLOR}\n"
+printf "\n${LIGHT_BLUE}> Installing nodejs${NOCOLOR}\n"
 sleep 0.5
 asdf plugin add nodejs
-asdf install nodejs 16.13.2
-asdf global nodejs 16.13.2
+asdf install nodejs latest
+asdf global nodejs latest
 npm install -g neovim
 
 # Installing the latest LTS version of Python (you might change this in future)
-printf "\n${LIGHT_BLUE}> Installing python 3.10.2 and 2.7.18${NOCOLOR}\n"
+printf "\n${LIGHT_BLUE}> Installing python 3.10.8 and 2.7.18${NOCOLOR}\n"
 sleep 0.5
 sudo apt install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 asdf plugin add python
-asdf install python 3.10.2
+asdf install python 3.10.8
 asdf install python 2.7.18
-asdf global python 3.10.2 2.7.18
+asdf global python 3.10.8 2.7.18
 
 python3 -m ensurepip --upgrade
 python2 -m ensurepip --upgrade
@@ -166,6 +168,6 @@ ssh-keygen -t ed25519 -C "lucaspaiolla@gmail.com"
 printf "\n${LIGHT_BLUE}Set current git repo to SSH${NOCOLOR}\n"
 cat ~/.ssh/id_ed25519.pub | xclip
 printf "\n${LIGHT_BLUE}Please, copy the SSH key into a new key in GitHub. It's already copied to clipboard${NOCOLOR}\n"
-read tmpvar
+read waitinput
 git remote set-url origin git@github.com:Giatroo/cfgs.git
 git push -u

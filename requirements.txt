@@ -5,7 +5,7 @@ pandas
 numpy
 seaborn
 plotly
-sklearn
+scikit-learn
 tensorflow
 tensorflow-gpu
 keras

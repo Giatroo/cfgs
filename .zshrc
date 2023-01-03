@@ -106,10 +106,7 @@ alias e:="cd /mnt/e/"
 alias d:="cd /mnt/d/"
 alias c:="cd /mnt/c/"
 
-alias lucas="e: && cd Lucas/"
-alias Lucas=lucas
-
-alias ime="lucas && cd _Estudos\ IME-USP/"
+alias ime="e: && cd _Estudos\ IME-USP/"
 alias bcc=ime
 alias 1sem="ime && cd 1_Semestre/"
 alias 2sem="ime && cd 2_Semestre/"
@@ -125,16 +122,17 @@ alias coding="e: && cd Coding"
 alias pysource="source venv/bin/activate"
 alias turnrpg="coding && cd pythonWorkspace/turnrpg/ && pysource && export PYTHONPATH="$PWD""
 
-alias estagio="lucas && cd _Estgio_BigData"
+alias estagio="e: && cd _Estgio_BigData"
 alias bigdata=estagio
 
 alias rpg="e: && cd Games/RPG/D\&D"
+alias sds="e: && cd Games/RPG/D\&D/Senhor\ das\ Sombras"
 
 alias bee="coding && cd pythonWorkspace/BeeData/"
 alias beedata=bee
 
-alias ai="lucas && cd Artificial\ Intelligence"
-alias ds="lucas && cd DataScience"
+alias ai="e: && cd Estudos/Artificial\ Intelligence"
+alias ds="e: && cd Estudos/DataScience"
 alias jn="jupyter notebook &"
 alias jl="jupyter-lab &"
 
@@ -300,4 +298,4 @@ export NVM_DIR="$HOME/.nvm"
 # Syntax-Highlighting (must be at the end of the configuration file)
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#neofetch
+neofetch

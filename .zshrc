@@ -120,13 +120,14 @@ alias tcc="7sem && cd Trabalho_de_Conclusão_de_Curso_MAC0499/"
 
 alias coding="e: && cd Coding"
 alias pysource="source venv/bin/activate"
-alias turnrpg="coding && cd pythonWorkspace/turnrpg/ && pysource && export PYTHONPATH="$PWD""
+alias turnrpg="coding && cd python_workspace/turnrpg/ && pysource && export PYTHONPATH="$PWD""
 
 alias estagio="e: && cd _Estgio_BigData"
 alias bigdata=estagio
 
 alias rpg="e: && cd Games/RPG/D\&D"
 alias sds="e: && cd Games/RPG/D\&D/Senhor\ das\ Sombras"
+alias foundry="rpg && .. && cd FoundryVTTData/Data/systems/sds"
 
 alias bee="coding && cd pythonWorkspace/BeeData/"
 alias beedata=bee
@@ -274,7 +275,9 @@ PATH="/usr/local/cuda-11.8/bin:$PATH"
 export PATH
 
 # Adding CUDA to LD_LIBRARY_PATH
-LD_LIBRARY_PATH="/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH"
+LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+LD_LIBRARY_PATH="/usr/local/cuda/include:$LD_LIBRARY_PATH"
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64"
 export LD_LIBRARY_PATH
 
 # Autosuggestions configuration

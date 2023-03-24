@@ -1,7 +1,7 @@
 {
     "html.autoClosingTags": true,
     "suggest.acceptSuggestionOnCommitCharacter": true,
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
     "suggest.maxCompleteItemCount": 10,
 
     // Explorer
@@ -26,6 +26,7 @@
       "ipython",
       "kargs",
       "numpy",
+      "psiônico",
       "pygame",
       "sklearn",
       "ultisnips"

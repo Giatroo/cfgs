@@ -1,0 +1,5 @@
+require("giatro.packer")
+require("giatro.keymaps")
+require("giatro.options")
+require("giatro.plugins")
+require("giatro.autocommands")

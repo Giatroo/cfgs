@@ -116,6 +116,7 @@ alias 5sem="ime && cd 5_Semestre/"
 alias 6sem="ime && cd 6_Semestre/"
 alias 7sem="ime && cd 7_Semestre/"
 alias 8sem="ime && cd 8_Semestre/"
+alias 9sem="ime && cd 9_Semestre/"
 alias tcc="7sem && cd Trabalho_de_Conclusão_de_Curso_MAC0499/"
 
 alias coding="e: && cd Coding"
@@ -301,4 +302,4 @@ export NVM_DIR="$HOME/.nvm"
 # Syntax-Highlighting (must be at the end of the configuration file)
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-neofetch
+# neofetch

@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/giatro/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/giatro/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/giatro/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -179,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/giatro/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-toggleterm.lua"] = {
+    loaded = true,
+    path = "/home/giatro/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua",
+    url = "https://github.com/akinsho/nvim-toggleterm.lua"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/giatro/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -214,6 +224,11 @@ _G.packer_plugins = {
     path = "/home/giatro/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ["quick-scope"] = {
+    loaded = true,
+    path = "/home/giatro/.local/share/nvim/site/pack/packer/start/quick-scope",
+    url = "https://github.com/unblevable/quick-scope"
+  },
   tagbar = {
     loaded = true,
     path = "/home/giatro/.local/share/nvim/site/pack/packer/start/tagbar",
@@ -224,15 +239,20 @@ _G.packer_plugins = {
     path = "/home/giatro/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  undotree = {
-    loaded = true,
-    path = "/home/giatro/.local/share/nvim/site/pack/packer/start/undotree",
-    url = "https://github.com/mbbill/undotree"
-  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/home/giatro/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-pydocstring"] = {
+    loaded = true,
+    path = "/home/giatro/.local/share/nvim/site/pack/packer/start/vim-pydocstring",
+    url = "https://github.com/heavenshell/vim-pydocstring"
+  },
+  ["vim-wakatime"] = {
+    loaded = true,
+    path = "/home/giatro/.local/share/nvim/site/pack/packer/start/vim-wakatime",
+    url = "https://github.com/wakatime/vim-wakatime"
   },
   ["which-key.nvim"] = {
     loaded = true,

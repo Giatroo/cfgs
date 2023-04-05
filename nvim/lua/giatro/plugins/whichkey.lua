@@ -1,5 +1,13 @@
 local wk = require("which-key")
 
+local configs = {
+    icons = {
+        breadcrumb = "»",
+        separator = "➜",
+        group = " ",
+    },
+}
+
 local opts = {
     mode = "n",
     prefix = "<leader>",
@@ -16,8 +24,6 @@ local mappings = {
     ["w"] = { "<cmd>w!<CR>", "Save" },
     ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
     ["f"] = { "<cmd>Format<CR>", "Format" },
-    ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
-    ["ç"] = { "A;", "Add ;" },
     ["y"] = { 'gg"+yG', "Yank file" },
     ["d"] = { 'gg"+dG', "Cut file" },
     p = {
@@ -30,7 +36,6 @@ local mappings = {
     },
     g = {
         name = "Git",
-        g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
         l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
         p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
         r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
@@ -55,8 +60,8 @@ local mappings = {
         f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
         i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Goto Implementation" },
         I = { "<cmd>LspInfo<cr>", "Info" },
-        l = { "<cmd>lua vim.lsp.diagnostic.open_float()<cr>", "Open Float" },
-        q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+        l = { "<cmd>lua vim.diagnostic.open_float()<cr>", "Open Float" },
+        q = { "<cmd>lua vim.diagnostic.set_loclist()<cr>", "Quickfix" },
         r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
         R = { "<cmd>lua vim.lsp.buf.references()<cr>", "References" },
         s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
@@ -82,9 +87,8 @@ local mappings = {
     t = {
         name = "Terminal",
         n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-        u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-        t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-        p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+        t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "htop" },
+        p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "python" },
         f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
         h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
         v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
@@ -100,5 +104,5 @@ local mappings = {
     },
 }
 
-wk.setup()
+wk.setup(configs)
 wk.register(mappings, opts)

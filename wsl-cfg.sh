@@ -33,7 +33,7 @@ cp ./.clang-format $HOME/
 
 printf "\n${LIGHT_GREEN}- Installing asdf - languages version manager${NOCOLOR}\n"
 sleep 1
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 source .bashrc
 
 printf "\n${LIGHT_BLUE}> Installing bat${NOCOLOR}\n"
@@ -68,13 +68,13 @@ asdf global nodejs latest
 npm install -g neovim
 
 # Installing the latest LTS version of Python (you might change this in future)
-printf "\n${LIGHT_BLUE}> Installing python 3.10.8 and 2.7.18${NOCOLOR}\n"
+printf "\n${LIGHT_BLUE}> Installing python 3.11.7 and 2.7.18${NOCOLOR}\n"
 sleep 0.5
 sudo apt install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 asdf plugin add python
-asdf install python 3.10.8
+asdf install python 3.11.7
 asdf install python 2.7.18
-asdf global python 3.10.8 2.7.18
+asdf global python 3.11.7 2.7.18
 
 python3 -m ensurepip --upgrade
 python2 -m ensurepip --upgrade
@@ -88,12 +88,8 @@ pip3 install -r ./requirements.txt
 
 printf "\n${GREEN}- Installing bottom (outside asdf)${NOCOLOR}\n\n"
 sleep 1
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.8/bottom_0.6.8_amd64.deb
-sudo dpkg -i bottom_0.6.8_amd64.deb
-
-printf "\n${GREEN}- Installing CUDA${NOCOLOR}\n\n"
-sleep 1
-sudo apt-get install -y cuda-toolkit-11-4
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.9.6/bottom_0.9.6_amd64.deb
+sudo dpkg -i bottom_0.9.6_amd64.deb
 
 printf "\n${GREEN}- Installing zsh and its dependencies${NOCOLOR}\n\n"
 sleep 1
@@ -120,6 +116,8 @@ sleep 1
 git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
 
 printf "\n${GREEN}- Install nvim and its dependencies${NOCOLOR}\n\n"
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update
 sudo apt install neovim
 sudo apt install xclip ctags
 sudo apt install python3-venv

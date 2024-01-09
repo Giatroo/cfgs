@@ -241,8 +241,6 @@ alias vimwiki="vim +VimwikiIndex 1"
 alias vim="nvim"
 alias vi="nvim"
 
-alias python="python3"
-alias pip="pip3"
 
 alias open="zathura"
 

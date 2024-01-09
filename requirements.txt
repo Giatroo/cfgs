@@ -4,10 +4,8 @@ matplotlib
 pandas
 numpy
 seaborn
-plotly
 scikit-learn
-tensorflow
-tensorflow-gpu
+tensorflow[and-cuda]
 keras
 nbformat
 tqdm

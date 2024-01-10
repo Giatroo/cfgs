@@ -34,7 +34,7 @@ cp ./.clang-format $HOME/
 printf "\n${LIGHT_GREEN}- Installing asdf - languages version manager${NOCOLOR}\n"
 sleep 1
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
-source .bashrc
+alias asdf="$HOME/.asdf/bin/asdf"
 
 printf "\n${LIGHT_BLUE}> Installing bat${NOCOLOR}\n"
 sleep 0.5
@@ -90,6 +90,7 @@ printf "\n${GREEN}- Installing bottom (outside asdf)${NOCOLOR}\n\n"
 sleep 1
 curl -LO https://github.com/ClementTsang/bottom/releases/download/0.9.6/bottom_0.9.6_amd64.deb
 sudo dpkg -i bottom_0.9.6_amd64.deb
+rm bottom_0.9.6_amd64.deb
 
 printf "\n${GREEN}- Installing zsh and its dependencies${NOCOLOR}\n\n"
 sleep 1
@@ -124,17 +125,6 @@ sudo apt install python3-venv
 cp ./.vimrc $HOME/
 cp -r ./nvim/ $HOME/.config/
 
-printf "\n${BLUE}> vim-plugin${NOCOLOR}\n"
-sleep 1
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
-nvim -c ':PlugInstall'
-nvim -c ':CocInstall coc-snippets coc-prettier coc-pairs coc-explorer coc-vimtex coc-texlab coc-sql coc-sh coc-markdownlint coc-jedi'
-nvim -c ':CocInstall coc-json coc-clangd coc-fzf-preview coc-tabnine coc-spell-checker coc-highlight coc-cspell-dicts coc-diagnostic'
-nvim tmp.c -c ':CocCommand clangd.install'
-rm tmp.c
-
 printf "\n${GREEN}- Installing tmux and its dependencies${NOCOLOR}\n\n"
 sudo apt install tmux
 cp ./.tmux.conf $HOME/
@@ -163,9 +153,3 @@ git config --global user.email "lucaspaiolla@gmail.com"
 git config --global user.name "Lucas Paiolla"
 ssh-keygen -t ed25519 -C "lucaspaiolla@gmail.com"
 
-printf "\n${LIGHT_BLUE}Set current git repo to SSH${NOCOLOR}\n"
-cat ~/.ssh/id_ed25519.pub | xclip
-printf "\n${LIGHT_BLUE}Please, copy the SSH key into a new key in GitHub. It's already copied to clipboard${NOCOLOR}\n"
-read waitinput
-git remote set-url origin git@github.com:Giatroo/cfgs.git
-git push -u

@@ -19,3 +19,7 @@ My configs currently support Microsoft's WSL2 using the Ubuntu distro.
 * Run the installation script: `./wsl-cfg.sh`
 
 You can also modify `wsl-cfg.sh` as you wish.
+
+## Utilities
+
+This repository also contains a lot of utilities that I may use in my day-a-day, like README templates, LaTeX macros and other stuff.

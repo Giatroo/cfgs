@@ -124,6 +124,7 @@ sudo apt install xclip ctags
 sudo apt install python3-venv
 cp ./.vimrc $HOME/
 cp -r ./nvim/ $HOME/.config/
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 printf "\n${GREEN}- Installing tmux and its dependencies${NOCOLOR}\n\n"
 sudo apt install tmux

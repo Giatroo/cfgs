@@ -300,4 +300,4 @@ export NVM_DIR="$HOME/.nvm"
 # Syntax-Highlighting (must be at the end of the configuration file)
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# neofetch
+neofetch

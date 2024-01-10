@@ -125,9 +125,4 @@ fi
 #########################################################################################
 export TERM=xterm-256color                           # Vim plugin
 
-alias c='clear'
-alias maratona='cd /home/giatro/Desktop/Maratona'
-alias bcc='cd "/home/giatro/Desktop/IME"'
-alias ime='cd "/home/giatro/Desktop/IME"'
-alias lucas='cd "/media/sf_Lucas"'
-alias ep2='cd "/home/giatro/Desktop/IME/3_Semestre/Algoritmos_e_Estruturas_de_Dados_II_MAC0323/EPs/2EP"'
+neofetch

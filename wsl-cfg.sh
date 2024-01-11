@@ -34,6 +34,7 @@ cp ./.clang-format $HOME/
 printf "\n${LIGHT_GREEN}- Installing asdf - languages version manager${NOCOLOR}\n"
 sleep 1
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+. $HOME/.asdf/asdf.sh
 alias asdf="$HOME/.asdf/bin/asdf"
 
 printf "\n${LIGHT_BLUE}> Installing bat${NOCOLOR}\n"
@@ -137,8 +138,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 printf "\n${GREEN}- Installing LaTeX and its dependencies${NOCOLOR}\n\n"
 sleep 1
 sudo apt install latexmk
-sudo apt install texlive-base texlive-latex-recommended \
-                 texlive texlive-latex-extra texlive-bibtex-extra
+sudo apt install texlive-base texlive-latex-recommended texlive texlive-latex-extra texlive-bibtex-extra
 
 printf "\n${BLUE}> zathura${NOCOLOR}\n"
 sudo apt install zathura xdotool
@@ -152,5 +152,3 @@ sudo apt install neofetch
 printf "\n${GREEN}- Configuring git${NOCOLOR}\n\n"
 git config --global user.email "lucaspaiolla@gmail.com"
 git config --global user.name "Lucas Paiolla"
-ssh-keygen -t ed25519 -C "lucaspaiolla@gmail.com"
-

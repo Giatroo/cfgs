@@ -120,6 +120,7 @@ alias 9sem="ime && cd 9_Semestre/"
 alias tcc="7sem && cd Trabalho_de_Conclusão_de_Curso_MAC0499/"
 
 alias coding="e: && cd Coding"
+alias ml="e: && cd Coding/machine_learning"
 alias pysource="source venv/bin/activate"
 alias turnrpg="coding && cd python_workspace/turnrpg/ && pysource && export PYTHONPATH="$PWD""
 

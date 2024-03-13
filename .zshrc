@@ -100,6 +100,9 @@ export LIBGL_ALWAYS_INDIRECT=1
 export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
 export DISPLAY=$WSL_HOST:0
 
+# Code (seems to need this =/)
+export WSL_DISTRO_NAME="Ubuntu"
+
 # Custom aliases:
 
 alias e:="cd /mnt/e/"

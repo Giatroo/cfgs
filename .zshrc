@@ -258,6 +258,8 @@ alias cat="bat"
 alias top="btm -c"
 alias find="fd"
 
+alias resource="source ~/.zshrc"
+
 # Vim mode
 bindkey -v
 #export KEYTIMEOUT=1
@@ -305,3 +307,4 @@ export NVM_DIR="$HOME/.nvm"
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 neofetch
+

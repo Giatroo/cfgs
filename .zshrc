@@ -276,13 +276,13 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 PATH="/home/giatro/.local/bin:$PATH"
 PATH="/usr/bin:$PATH"
 PATH="$HOME/.config/rofi/bin:$PATH"
-PATH="/usr/local/cuda-11.8/bin:$PATH"
+PATH="/usr/local/cuda-12.3/bin:$PATH"
 export PATH
 
 # Adding CUDA to LD_LIBRARY_PATH
 LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 LD_LIBRARY_PATH="/usr/local/cuda/include:$LD_LIBRARY_PATH"
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64"
+LD_LIBRARY_PATH="/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH
 
 # Autosuggestions configuration

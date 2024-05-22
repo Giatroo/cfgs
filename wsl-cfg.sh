@@ -73,9 +73,9 @@ printf "\n${LIGHT_BLUE}> Installing python 3.11.7 and 2.7.18${NOCOLOR}\n"
 sleep 0.5
 sudo apt install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 asdf plugin add python
-asdf install python 3.11.7
+asdf install python 3.11.9
 asdf install python 2.7.18
-asdf global python 3.11.7 2.7.18
+asdf global python 3.11.9 2.7.18
 
 python3 -m ensurepip --upgrade
 python2 -m ensurepip --upgrade

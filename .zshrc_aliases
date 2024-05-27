@@ -1,0 +1,30 @@
+alias ls="ls --color"
+alias resource="source $HOME/.zshrc"
+
+alias c:="cd /mnt/c/"
+alias d:="cd /mnt/d/"
+alias e:="cd /mnt/e/"
+
+alias ime="e: && cd _Estudos\ IME-USP/"
+alias bcc=ime
+
+alias coding="e: && cd Coding"
+alias pysource="source venv/bin/activate"
+alias jn="jupyter notebook &"
+alias jl="jupyter-lab &"
+
+alias explorer="explorer.exe . &"
+alias nautilus=explorer
+
+alias userconfig="pushd $USERCONFIG/"
+alias createlatex="cp $USERCONFIG/LatexTemplate.tex ."
+alias createreadme="cp $USERCONFIG/README_template.md ./README.md && vim ./README.md"
+
+alias vim="nvim"
+alias vi="nvim"
+
+alias c="clear"
+alias ls="exa"
+alias cat="bat"
+alias top="btm -c"
+alias find="fd"

@@ -117,6 +117,14 @@ printf "\n${BLUE}> zsh-vi-mode${NOCOLOR}\n"
 sleep 1
 git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
 
+printf "\n${BLUE}> zsh-wakatime${NOCOLOR}\n"
+sleep 1
+git clone https://github.com/wbingli/zsh-wakatime.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-wakatime
+
+printf "\n${BLUE}> fzf-tab${NOCOLOR}\n"
+sleep 1
+git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+
 printf "\n${GREEN}- Install nvim and its dependencies${NOCOLOR}\n\n"
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
@@ -144,6 +152,29 @@ printf "\n${BLUE}> zathura${NOCOLOR}\n"
 sudo apt install zathura xdotool
 mkdir $HOME/.config/zathura/
 cp ./zathurarc $HOME/.config/zathura/
+
+# https://medium.com/@ali.abulhawa/installing-tensorflow-2-16-gpu-on-windows-wsl2-df73ac3446c9
+# Note that this is for tensorflow-2.16 and python 3.11.9
+# This might change in future versions and is always a pain in the ass
+printf "\n${GREEN}- Installing CUDA for TensorFlow\n\n"
+sleep 1
+wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget https://developer.download.nvidia.com/compute/cuda/12.3.0/local_installers/cuda-repo-wsl-ubuntu-12-3-local_12.3.0-1_amd64.deb
+sudo dpkg -i cuda-repo-wsl-ubuntu-12-3-local_12.3.0-1_amd64.deb
+sudo cp /var/cuda-repo-wsl-ubuntu-12-3-local/cuda-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get -y install cuda-toolkit-12-3
+rm cuda-repo-wsl-ubuntu-12-3-local_12-3-local_12.3.0-1_amd64.deb
+
+# WARNING! This will fail if you don't get the deb file before running the
+# script
+printf "\n${GREEN}- Installing cuDNN for TensorFlow\n\n"
+sleep 1
+sudo dpkg -i cudnn-local-repo-ubuntu2204-8.9.7.29_1.0-1_amd64.deb
+sudo cp /var/cudnn-local-repo-ubuntu2204-8.9.7.29/cudnn-local-08A7D361-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get install libcudnn8=8.9.7.29-1+cuda12.2
 
 printf "\n${GREEN}- Installing neofetch${NOCOLOR}\n\n"
 sleep 1

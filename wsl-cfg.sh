@@ -8,7 +8,7 @@ LIGHT_BLUE='\033[1;34m'
 NOCOLOR='\033[0m'
 
 
-# This should be the first thing. I don't like using my password everytime
+# This should be the first thing. I don't like using my password every time
 printf "\n${GREEN}- Copying sudoers${NOCOLOR}\n\n"
 sudo cp ./sudoers /etc/sudoers
 
@@ -55,6 +55,12 @@ asdf plugin add fd
 asdf install fd latest
 asdf global fd latest
 
+printf "\n${LIGHT_BLUE}> Installing bottom${NOCOLOR}\n"
+sleep 0.5
+asdf plugin add bottom
+asdf install bottom latest
+asdf global bottom latest
+
 printf "\n${LIGHT_BLUE}> Installing fzf${NOCOLOR}\n"
 sleep 0.5
 asdf plugin add fzf
@@ -69,13 +75,13 @@ asdf global nodejs latest
 npm install -g neovim
 
 # Installing the latest LTS version of Python (you might change this in future)
-printf "\n${LIGHT_BLUE}> Installing python 3.11.7 and 2.7.18${NOCOLOR}\n"
+printf "\n${LIGHT_BLUE}> Installing python 3.12.7 and 2.7.18${NOCOLOR}\n"
 sleep 0.5
 sudo apt install libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 asdf plugin add python
-asdf install python 3.11.9
+asdf install python 3.12.7
 asdf install python 2.7.18
-asdf global python 3.11.9 2.7.18
+asdf global python 3.12.7 2.7.18
 
 python3 -m ensurepip --upgrade
 python2 -m ensurepip --upgrade
@@ -86,12 +92,6 @@ pip3 install wheel
 pip2 install pynvim
 pip3 install pynvim
 pip3 install -r ./requirements.txt
-
-printf "\n${GREEN}- Installing bottom (outside asdf)${NOCOLOR}\n\n"
-sleep 1
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.9.6/bottom_0.9.6_amd64.deb
-sudo dpkg -i bottom_0.9.6_amd64.deb
-rm bottom_0.9.6_amd64.deb
 
 printf "\n${GREEN}- Installing zsh and its dependencies${NOCOLOR}\n\n"
 sleep 1
@@ -129,8 +129,9 @@ printf "\n${GREEN}- Install nvim and its dependencies${NOCOLOR}\n\n"
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt install neovim
-sudo apt install xclip ctags
-sudo apt install python3-venv
+sudo apt install xclip ctags ripgrep luarocks
+sudo apt install python3-venv python3-pip
+sudo luarocks install jsregexp
 cp ./.vimrc $HOME/
 cp -r ./nvim/ $HOME/.config/
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -156,25 +157,25 @@ cp ./zathurarc $HOME/.config/zathura/
 # https://medium.com/@ali.abulhawa/installing-tensorflow-2-16-gpu-on-windows-wsl2-df73ac3446c9
 # Note that this is for tensorflow-2.16 and python 3.11.9
 # This might change in future versions and is always a pain in the ass
-printf "\n${GREEN}- Installing CUDA for TensorFlow\n\n"
-sleep 1
-wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
-sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget https://developer.download.nvidia.com/compute/cuda/12.3.0/local_installers/cuda-repo-wsl-ubuntu-12-3-local_12.3.0-1_amd64.deb
-sudo dpkg -i cuda-repo-wsl-ubuntu-12-3-local_12.3.0-1_amd64.deb
-sudo cp /var/cuda-repo-wsl-ubuntu-12-3-local/cuda-*-keyring.gpg /usr/share/keyrings/
-sudo apt-get update
-sudo apt-get -y install cuda-toolkit-12-3
-rm cuda-repo-wsl-ubuntu-12-3-local_12-3-local_12.3.0-1_amd64.deb
+#printf "\n${GREEN}- Installing CUDA for TensorFlow\n\n"
+#sleep 1
+#wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+#sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
+#wget https://developer.download.nvidia.com/compute/cuda/12.3.0/local_installers/cuda-repo-wsl-ubuntu-12-3-local_12.3.0-1_amd64.deb
+#sudo dpkg -i cuda-repo-wsl-ubuntu-12-3-local_12.3.0-1_amd64.deb
+#sudo cp /var/cuda-repo-wsl-ubuntu-12-3-local/cuda-*-keyring.gpg /usr/share/keyrings/
+#sudo apt-get update
+#sudo apt-get -y install cuda-toolkit-12-3
+#rm cuda-repo-wsl-ubuntu-12-3-local_12-3-local_12.3.0-1_amd64.deb
 
 # WARNING! This will fail if you don't get the deb file before running the
 # script
-printf "\n${GREEN}- Installing cuDNN for TensorFlow\n\n"
-sleep 1
-sudo dpkg -i cudnn-local-repo-ubuntu2204-8.9.7.29_1.0-1_amd64.deb
-sudo cp /var/cudnn-local-repo-ubuntu2204-8.9.7.29/cudnn-local-08A7D361-keyring.gpg /usr/share/keyrings/
-sudo apt-get update
-sudo apt-get install libcudnn8=8.9.7.29-1+cuda12.2
+#printf "\n${GREEN}- Installing cuDNN for TensorFlow\n\n"
+#sleep 1
+#sudo dpkg -i cudnn-local-repo-ubuntu2204-8.9.7.29_1.0-1_amd64.deb
+#sudo cp /var/cudnn-local-repo-ubuntu2204-8.9.7.29/cudnn-local-08A7D361-keyring.gpg /usr/share/keyrings/
+#sudo apt-get update
+#sudo apt-get install libcudnn8=8.9.7.29-1+cuda12.2
 
 printf "\n${GREEN}- Installing neofetch${NOCOLOR}\n\n"
 sleep 1

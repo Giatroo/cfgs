@@ -111,36 +111,10 @@ alias c:="cd /mnt/c/"
 
 alias ime="e: && cd _Estudos\ IME-USP/"
 alias bcc=ime
-alias 1sem="ime && cd 1_Semestre/"
-alias 2sem="ime && cd 2_Semestre/"
-alias 3sem="ime && cd 3_Semestre/"
-alias 4sem="ime && cd 4_Semestre/"
-alias 5sem="ime && cd 5_Semestre/"
-alias 6sem="ime && cd 6_Semestre/"
-alias 7sem="ime && cd 7_Semestre/"
-alias 8sem="ime && cd 8_Semestre/"
-alias 9sem="ime && cd 9_Semestre/"
-alias tcc="7sem && cd Trabalho_de_Conclusão_de_Curso_MAC0499/"
 
 alias coding="e: && cd Coding"
 alias ml="e: && cd Coding/machine_learning"
 alias pysource="source venv/bin/activate"
-alias turnrpg="coding && cd python_workspace/turnrpg/ && pysource && export PYTHONPATH="$PWD""
-
-alias estagio="e: && cd _Estgio_BigData"
-alias bigdata=estagio
-
-alias rpg="e: && cd Games/RPG/D\&D"
-alias sds="e: && cd Games/RPG/D\&D/Senhor\ das\ Sombras"
-alias foundry="rpg && .. && cd FoundryVTTData/Data/systems/sds"
-
-alias bee="coding && cd pythonWorkspace/BeeData/"
-alias beedata=bee
-
-alias ai="e: && cd Estudos/Artificial\ Intelligence"
-alias ds="e: && cd Estudos/DataScience"
-alias jn="jupyter notebook &"
-alias jl="jupyter-lab &"
 
 alias explorer="explorer.exe . &"
 alias nautilus=explorer
@@ -307,4 +281,3 @@ export NVM_DIR="$HOME/.nvm"
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 neofetch
-

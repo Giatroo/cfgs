@@ -132,9 +132,11 @@ sudo apt install neovim
 sudo apt install xclip ctags ripgrep luarocks
 sudo apt install python3-venv python3-pip
 sudo luarocks install jsregexp
-cp ./.vimrc $HOME/
 cp -r ./nvim/ $HOME/.config/
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# Also installing old vim:
+cp ./.vimrc $HOME/
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 printf "\n${GREEN}- Installing tmux and its dependencies${NOCOLOR}\n\n"
 sudo apt install tmux

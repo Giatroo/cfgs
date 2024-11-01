@@ -105,19 +105,7 @@ export WSL_DISTRO_NAME="Ubuntu"
 
 # Custom aliases:
 
-alias e:="cd /mnt/e/"
-alias d:="cd /mnt/d/"
-alias c:="cd /mnt/c/"
-
-alias ime="e: && cd _Estudos\ IME-USP/"
-alias bcc=ime
-
-alias coding="e: && cd Coding"
-alias ml="e: && cd Coding/machine_learning"
-alias pysource="source venv/bin/activate"
-
-alias explorer="explorer.exe . &"
-alias nautilus=explorer
+source ~/.zshrc_aliases
 
 # Configurations files aliases
 declare -A local giatro_path_dict

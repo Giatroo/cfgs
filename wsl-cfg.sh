@@ -103,6 +103,7 @@ printf "\n${BLUE}> oh-my-zsh${NOCOLOR}\n"
 sleep 1
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp ./.zshrc $HOME/
+cp ./.zshrc_aliases $HOME/
 
 printf "\n${BLUE}> powerlevel10k${NOCOLOR}\n"
 sleep 1

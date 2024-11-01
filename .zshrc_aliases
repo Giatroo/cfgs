@@ -1,4 +1,3 @@
-alias ls="ls --color"
 alias resource="source $HOME/.zshrc"
 
 alias c:="cd /mnt/c/"

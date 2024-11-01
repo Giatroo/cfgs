@@ -1,1 +1,2 @@
-require("giatro")
+require("native")
+require("lazy.lazy")

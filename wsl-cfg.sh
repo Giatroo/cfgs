@@ -130,7 +130,7 @@ printf "\n${GREEN}- Install nvim and its dependencies${NOCOLOR}\n\n"
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt install neovim
-sudo apt install xclip ctags ripgrep luarocks
+sudo apt install xclip ripgrep luarocks
 sudo apt install python3-venv python3-pip
 sudo luarocks install jsregexp
 cp -r ./nvim/ $HOME/.config/

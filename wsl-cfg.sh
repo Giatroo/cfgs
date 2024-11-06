@@ -33,7 +33,7 @@ cp ./.clang-format $HOME/
 
 printf "\n${LIGHT_GREEN}- Installing asdf - languages version manager${NOCOLOR}\n"
 sleep 1
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
 . $HOME/.asdf/asdf.sh
 alias asdf="$HOME/.asdf/bin/asdf"
 

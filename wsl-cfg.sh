@@ -139,6 +139,12 @@ cp -r ./nvim/ $HOME/.config/
 cp ./.vimrc $HOME/
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+printf "\n${GREEN}- Enabling ForwardX11${NOCOLOR}\n\n"
+sudo echo "    ForwardX11 yes" >> $HOME/.ssh/config
+sudo echo "    ForwardX11Trusted yes" >> $HOME/.ssh/config
+sudo echo "    ForwardX11 yes" >> /etc/ssh/ssh_config
+sudo echo "    ForwardX11Trusted yes" >> /etc/ssh/ssh_config
+
 printf "\n${GREEN}- Installing tmux and its dependencies${NOCOLOR}\n\n"
 sudo apt install tmux
 cp ./.tmux.conf $HOME/

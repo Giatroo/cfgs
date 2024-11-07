@@ -14,10 +14,10 @@ return {
             },
         },
         keys = {
-            { "<leader>s",  group = "Search" },
             { "<leader>sf", "<cmd>Telescope find_files<cr>",  desc = "Find files" },
             { "<leader>sg", "<cmd>Telescope git_files<cr>",   desc = "Git files" },
-            { "<leader>sw", "<cmd>Telescope grep_string<cr>", desc = "Word" },
+            { "<leader>ss", "<cmd>Telescope live_grep<cr>",   desc = "String" },
+            { "<leader>sw", "<cmd>Telescope grep_string<cr>", desc = "This word" },
             { "<leader>sb", "<cmd>Telescope buffers<cr>",     desc = "Buffers" },
             { "<leader>sc", "<cmd>Telescope colorscheme<cr>", desc = "Colorscheme" },
             { "<leader>sh", "<cmd>Telescope help_tags<cr>",   desc = "Find help" },
@@ -27,6 +27,11 @@ return {
             { "<leader>sk", "<cmd>Telescope keymaps<cr>",     desc = "Keymaps" },
             { "<leader>sC", "<cmd>Telescope commands<cr>",    desc = "Commands" },
         },
+        config = function()
+            require("which-key").add({
+                { "<leader>s", group = "Search" },
+            })
+        end,
     },
     {
         "nvim-telescope/telescope-ui-select.nvim",

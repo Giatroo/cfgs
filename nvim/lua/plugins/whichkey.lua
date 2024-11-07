@@ -1,10 +1,10 @@
 return {
     "folke/which-key.nvim",
-    event = "VeryLazy",
+    lazy = false,
     keys = {
         {
             "<leader>q",
-            "<cmd>q<cr>",
+            "<cmd>bdelete!<cr>",
             desc = "Close Buffer",
         },
         {
@@ -51,4 +51,20 @@ return {
         "echasnovski/mini.icons",
         "nvim-tree/nvim-web-devicons",
     },
+    opts = {
+        preset = "modern",
+    },
+    config = function()
+        local wk = require("which-key")
+        wk.add({
+            {
+                "<leader>",
+                group = "Leader",
+            },
+            {
+                "<leader>v",
+                group = "Vim",
+            },
+        })
+    end,
 }

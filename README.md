@@ -1,4 +1,4 @@
-# Programming Essencial Package
+# Programming Essential Package
 
 ![Visits Badge](https://badges.pufler.dev/visits/Giatroo/cfgs)
 ![Last update](https://img.shields.io/github/last-commit/Giatroo/cfgs)
@@ -23,3 +23,9 @@ You can also modify `wsl-cfg.sh` as you wish.
 ## Utilities
 
 This repository also contains a lot of utilities that I may use in my day-a-day, like README templates, LaTeX macros and other stuff.
+
+## Extra Configurations
+
+Additionally, to make this configuration even better, set the Catpuccin theme in
+your Windows Terminal. Use
+[this](https://github.com/catppuccin/windows-terminal) GitHub repository.

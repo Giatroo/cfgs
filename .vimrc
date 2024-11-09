@@ -1,18 +1,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ==:> Colorschemes
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"colorscheme slate
-"colorscheme desert
-"colorscheme torte
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Font and text
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set guifont=Courier\ New     " Seta a fonte para Courier New
 syntax on                    " Habilita o highlight de sintaxe
-set textwidth=80            " Limita a quantidade de caracteres por linha para 80
-set colorcolumn=80          " Coloca uma indicação visual da coluna limite para a linha
+set textwidth=80            " Limita a quantidade de characters por linha para 80
+set colorcolumn=80          " Coloca uma indicação visual da coluna limit para a linha
 set tabstop=4                " Faz com que o tab seja equivalente a duas barras de espaço
 set shiftwidth=4
 set softtabstop=4
@@ -20,33 +12,6 @@ set encoding=utf-8
 set expandtab                " Converte de tab para espaços
 set smartindent              " Identa algumas coisas para você
 set wrap                     " Se o texto passar da tela, ele pula para a linha de baixo
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ==:> Folding text
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Para os comandos abaixo funcionarem, precisamos criar a pasta ~/.vim/view/
-" autocmd BufWinLeave *.* mkview              " Salva as folds do arquivo quando saímos dele
-" autocmd BufWinEnter *.* silent loadview     " Abre o arquivo com as folds que criamos
-
-" Lembrete sobre as teclas:
-" V -> vai para o Line Visual Mode (para selecionar as linhas da fold que vamos criar)
-" zf (no Visual Mode) -> cria uma fold das linhas selecionadas
-" zf(movement) -> cria uma fold usando o movimento passado (e.g., zfa{ )
-" zc -> fecha a fold
-" zo -> abre a fold
-" zO -> abre todas as nested folds
-" zC -> fecha todas as nested folds
-" zd -> deleta a fold
-" zj -> move para a próxima fold (abaixo)
-" zk -> move para a fold anterior (acima)
-" [z -> move para o topo da fold atual
-" ]z -> move para o fim da fold atual
-" zR -> abre todas as folds
-" zM -> fecha todas as folds
-" zn -> desliga o modo fold
-" zN -> liga o modo fold
-" zE -> elimite todas as folds do documento
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ==:> Leader key
@@ -68,7 +33,7 @@ set number                        " Ativa o número das linhas na esquerda
 set relativenumber                " Faz com que os números de linha sejam relativos a onde o cursor está
 set mouse=a                       " Habilita o mouse no Vim de terminal
 set incsearch                     " Busca incremental (mostra em tempo real o que você busca)
-set hlsearch                      " Deixa todos os matchs de uma busca em highlight
+set hlsearch                      " Deixa todos os matches de uma busca em highlight
 
 autocmd BufWritePre * %s/\s\+$//e " Remove espaços após o final das linhas
 

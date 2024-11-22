@@ -26,6 +26,7 @@ return {
             { "<leader>sR", "<cmd>Telescope registers<cr>",   desc = "Registers" },
             { "<leader>sk", "<cmd>Telescope keymaps<cr>",     desc = "Keymaps" },
             { "<leader>sC", "<cmd>Telescope commands<cr>",    desc = "Commands" },
+            { "<leader>sd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
         },
         config = function()
             require("which-key").add({

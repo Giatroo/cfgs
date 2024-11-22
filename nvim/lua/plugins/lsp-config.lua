@@ -38,7 +38,7 @@ return {
             },
             {
                 "<leader>lr",
-                vim.lsp.buf.references,
+                "<cmd>Telescope lsp_references<cr>",
                 desc = "References",
             },
             {

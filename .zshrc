@@ -98,10 +98,10 @@ USERCONFIG=$HOME/.config/user/
 # X server windows
 export LIBGL_ALWAYS_INDIRECT=1
 export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
-export DISPLAY=$WSL_HOST:0
+# export DISPLAY=$WSL_HOST:0
 
 # Code (seems to need this =/)
-export WSL_DISTRO_NAME="Ubuntu"
+# export WSL_DISTRO_NAME="Ubuntu"
 
 # Custom aliases:
 
@@ -268,4 +268,4 @@ export NVM_DIR="$HOME/.nvm"
 # Syntax-Highlighting (must be at the end of the configuration file)
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-neofetch
+# neofetch

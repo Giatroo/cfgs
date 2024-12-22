@@ -13,6 +13,7 @@ return {
 			"query",
 			"gitignore",
 			"python",
+			"go",
 		},
 		sync_install = false,
 		auto_install = true,

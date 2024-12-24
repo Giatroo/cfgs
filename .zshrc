@@ -98,10 +98,10 @@ USERCONFIG=$HOME/.config/user/
 # X server windows
 export LIBGL_ALWAYS_INDIRECT=1
 export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
-# export DISPLAY=$WSL_HOST:0
+export DISPLAY=$WSL_HOST:0
 
 # Code (seems to need this =/)
-# export WSL_DISTRO_NAME="Ubuntu"
+export WSL_DISTRO_NAME="Ubuntu"
 
 # Custom aliases:
 
@@ -239,6 +239,9 @@ PATH="/home/giatro/.local/bin:$PATH"
 PATH="/usr/bin:$PATH"
 PATH="$HOME/.config/rofi/bin:$PATH"
 PATH="/usr/local/cuda-12.3/bin:$PATH"
+PATH="/usr/local/go/bin:$PATH"
+PATH="$HOME/go/bin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
 export PATH
 
 # Adding CUDA to LD_LIBRARY_PATH

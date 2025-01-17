@@ -1,0 +1,224 @@
+{
+  // explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    ".vscode*": true,
+    ".mypy_cache*": true,
+    ".pytest_cache*": true,
+    "**/__pycache__": true,
+    "**/.ipynb_checkpoints": true,
+    // "venv": true,
+  },
+  "explorer.compactFolders": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "requirements.txt": "requirements-*.txt",
+    "README.md": "*.md",
+  },
+
+  // layout
+  "editor.rulers": [80],
+  "editor.minimap.enabled": false,
+  "editor.inlineSuggest.enabled": true, // never change this to false (copilot)
+  "workbench.editor.labelFormat": "short",
+  "breadcrumbs.enabled": false,
+  "editor.snippetSuggestions": "bottom",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "auto",
+  "workbench.statusBar.visible": true,
+  "window.titleBarStyle": "custom",
+  "workbench.sideBar.location": "right",
+  "workbench.layoutControl.enabled": false,
+
+  // theming
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.iconTheme": "vscode-icons",
+  "symbols.hidesExplorerArrows": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "line",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderWhitespace": "selection",
+  "editor.renderLineHighlight": "gutter",
+  "editor.semanticHighlighting.enabled": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "editor.bracketPairColorization.enabled": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "editor.guides.indentation": false,
+  "editor.scrollbar.verticalScrollbarSize": 3,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+
+  // apc plugin
+  // seems like it's not working anymore:
+  // https://github.com/drcika/apc-extension/issues/230
+  "apc.header": {
+    "height": 18
+  },
+  "apc.listRow": {
+    "height": 24
+  },
+  "apc.font.family": "RobotoMono Nerd Font",
+  "apc.stylesheet": {
+    ".title-label > h2": "display: none",
+    ".editor-actions": "display: none",
+  },
+
+  // font
+  "editor.fontSize": 20,
+  "editor.lineHeight": 1.4,
+  "editor.fontFamily": "'Inconsolata Nerd Font','Courier New',monospace",
+  "editor.fontWeight": "300",
+  "editor.fontLigatures": true,
+  "editor.mouseWheelZoom": true,
+
+  // formatting
+  "files.trimTrailingWhitespace": true,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // vim
+  "editor.lineNumbers": "relative",
+  "vim.textwidth": 80,
+  "vim.autoindent": true,
+  "editor.cursorSurroundingLines": 10,
+
+  // python - general
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+
+  "black-formatter.args": ["--line-length", "80"],
+  "isort.args": ["--line-length", "80", "--profile", "black"],
+  "flake8.args": ["--max-line-length", "80"],
+  "pylint.args": ["--rcfile", "pyproject.toml"],
+  "autoDocstring.docstringFormat": "numpy",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "jupyter.askForKernelRestart": false,
+  "notebook.lineNumbers": "on",
+
+  // python - pytest
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": [
+    "--color=yes",
+    "-nauto",
+  ],
+
+  // other languages
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "html.format.wrapLineLength": 80,
+
+  // latex
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  // spell checker
+  "cSpell.language": "en,pt,pt-PT,pt-BR,en-US,en-GB",
+  "cSpell.enableFiletypes": ["makefile", "vimrc"],
+  "cSpell.userWords": [
+    "appendleft",
+    "astype",
+    "conjuracao",
+    "Coursera",
+    "customtkinter",
+    "dataframe",
+    "dont",
+    "dtype",
+    "duracao",
+    "fillna",
+    "Forastiere",
+    "iloc",
+    "imagehash",
+    "imread",
+    "imshow",
+    "inplace",
+    "isinstace",
+    "isna",
+    "isort",
+    "iterrows",
+    "joblib",
+    "keras",
+    "kmeans",
+    "matplotlib",
+    "mongodb",
+    "mongomock",
+    "ndarray",
+    "objs",
+    "Orda",
+    "ordas",
+    "Paiolla",
+    "PERC",
+    "plotly",
+    "pydantic",
+    "pygame",
+    "pymongo",
+    "pyplot",
+    "pytest",
+    "pytestmark",
+    "scipy",
+    "seaborn",
+    "sklearn",
+    "statsmodels",
+    "tensorflow",
+    "tqdm",
+    "trueskill",
+    "vectorizer",
+    "venv",
+    "xlabel",
+    "xlim",
+    "yfinance",
+    "ylabel",
+    "ylim"
+  ],
+
+  // misc
+  "workbench.startupEditor": "welcomePageInEmptyWorkbench",
+  "workbench.editorAssociations": {
+    "*.pdf": "pdf.view"
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "workbench.activityBar.location": "top",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "window.customTitleBarVisibility": "auto",
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.gpuAcceleration": "on",
+  "editor.codeLens": false,
+  "pythonTestExplorer.testFramework": "pytest",
+  "testing.followRunningTest": false,
+  "markdown-preview-enhanced.codeBlockTheme": "one-dark.css",
+  "markdown-preview-enhanced.enablePreviewZenMode": false,
+  "markdown-preview-enhanced.revealjsTheme": "league.css",
+  "markdown-preview-enhanced.previewTheme": "one-dark.css",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "godotTools.lsp.serverPort": 6005,
+  "[gdscript]": {
+    "editor.defaultFormatter": "geequlim.godot-tools"
+  },
+  "notebook.cellFocusIndicator": "border",
+  "notebook.cellToolbarVisibility": "hover",
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "vscode_custom_css.imports": [
+    "file:///c:/Users/lucas/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
+  ],
+  "workbench.editor.showTabs": "single",
+  "animations.Install-Method": "Custom CSS and JS",
+
+}
